@@ -138,6 +138,14 @@
   nav.primary button .idx{font-family:"IBM Plex Mono";font-size:10.5px;font-weight:600;color:var(--ink-muted);opacity:0.8;}
   nav.primary button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow), inset 0 0 0 1px color-mix(in srgb, var(--pick) 25%, transparent);}
   nav.primary button[aria-selected="true"] .idx{color:var(--pick);}
+  nav.primary a{
+    flex:1;padding:10px 12px;border:none;border-radius:9px;background:transparent;
+    font-family:"Space Grotesk";font-weight:600;font-size:14.5px;letter-spacing:0.01em;
+    color:var(--ink-2);cursor:pointer;transition:background .15s ease,color .15s ease;
+    display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;
+  }
+  nav.primary a .idx{font-family:"IBM Plex Mono";font-size:10.5px;font-weight:600;color:var(--ink-muted);opacity:0.8;}
+  nav.primary a:hover{background:var(--surface);color:var(--ink);}
 
   section.view{display:none;}
   section.view.active{display:block;}
@@ -312,6 +320,7 @@
     <button data-view="horses" aria-selected="false"><span class="idx">02</span> Horses</button>
     <button data-view="accuracy" aria-selected="false"><span class="idx">03</span> Track Record</button>
     <button data-view="wager" aria-selected="false"><span class="idx">04</span> Odds &amp; Bets</button>
+    <a href="ravens.html"><span class="idx">05</span> Ravens</a>
   </nav>
 
   <section class="view active" id="view-picks">
