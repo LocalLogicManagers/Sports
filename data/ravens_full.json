@@ -108,6 +108,11 @@
         "player": "Joe Fagnano",
         "pos": "QB",
         "note": "Undrafted rookie made the 53-man roster \u2014 first time the Ravens have kept 3 QBs since 2020"
+      },
+      {
+        "player": "Jake Moody",
+        "pos": "K",
+        "note": "Signed to push incumbent Tyler Loop in a kicking competition"
       }
     ]
   },
@@ -172,12 +177,27 @@
     {
       "player": "Kicker/center battles",
       "pos": "-",
-      "note": "Tyler Loop expected to start Week 1 over newly-signed veteran Jake Moody; center job still being decided between Jovaughn Gwyn and Ethan Pocic"
+      "note": "Tyler Loop expected to start Week 1 over newly-signed veteran Jake Moody; center job reopened between Jovaughn Gwyn and Ethan Pocic after Danny Pinter's injury (see below) \u2014 as of Sept 1, Minter still hadn't settled it"
     },
     {
       "player": "Tyler Loop",
       "pos": "K",
       "note": "Missed a 49-yard FG attempt before hitting from 42 later in the same game"
+    },
+    {
+      "player": "Danny Pinter",
+      "pos": "C",
+      "note": "New (as of 2026-09-03): signed in March to replace Tyler Linderbaum and had been the leading candidate to start at center \u2014 suffered a torn patellar tendon in a joint practice with the Vikings and is out for the 2026 season"
+    },
+    {
+      "player": "Zay Flowers",
+      "pos": "WR",
+      "note": "New (as of 2026-09-03): missed practice with a lower-body (thigh/quad) contusion; per a Sept 1 report Minter called it not serious and Flowers is expected back to full practice and on track to play Week 1 vs. the Colts"
+    },
+    {
+      "player": "Travis Jones",
+      "pos": "DT",
+      "note": "New (as of 2026-09-03): working back into practice from a pectoral injury (PUP)"
     }
   ],
   "super_bowl_odds_history": [
@@ -432,18 +452,18 @@
       "date": "2026-09-13",
       "neutral": false,
       "market_odds": {
-        "ravens": "-196",
-        "opponent": "+164",
+        "ravens": "-178",
+        "opponent": "+150",
         "spread": "Ravens -3.5",
         "total": 47.5,
-        "book": "FanDuel (opening)"
+        "book": "FanDuel"
       },
       "ravens_win_prob": 0.422,
       "model_odds": "+125",
       "value_bet": {
-        "market_implied_prob": 0.662,
+        "market_implied_prob": 0.64,
         "model_prob": 0.422,
-        "edge_pts": -0.24,
+        "edge_pts": -0.218,
         "read": "Large disagreement with the market \u2014 more likely our simple model is missing context (injuries, coaching change, roster turnover) than a real edge over Vegas's pricing.",
         "large_disagreement": true
       }

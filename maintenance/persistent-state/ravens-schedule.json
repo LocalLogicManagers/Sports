@@ -1,21 +1,135 @@
 [
-  {"week": 1, "opponent": "Indianapolis Colts", "location": "away", "date": "2026-09-13", "neutral": false,
-   "market_odds": {"ravens": "-196", "opponent": "+164", "spread": "Ravens -3.5", "total": 47.5, "book": "FanDuel (opening)"}},
-  {"week": 2, "opponent": "New Orleans Saints", "location": "home", "date": "2026-09-20", "neutral": false},
-  {"week": 3, "opponent": "Dallas Cowboys", "location": "away", "date": "2026-09-27", "neutral": true, "site": "Rio de Janeiro, Brazil"},
-  {"week": 4, "opponent": "Tennessee Titans", "location": "home", "date": "2026-10-04", "neutral": false},
-  {"week": 5, "opponent": "Atlanta Falcons", "location": "away", "date": "2026-10-11", "neutral": false},
-  {"week": 6, "opponent": "Cleveland Browns", "location": "away", "date": "2026-10-18", "neutral": false},
-  {"week": 7, "opponent": "Cincinnati Bengals", "location": "home", "date": "2026-10-25", "neutral": false},
-  {"week": 8, "opponent": "Buffalo Bills", "location": "away", "date": "2026-11-01", "neutral": false},
-  {"week": 9, "opponent": "Jacksonville Jaguars", "location": "home", "date": "2026-11-05", "neutral": false},
-  {"week": 10, "opponent": "Los Angeles Chargers", "location": "home", "date": "2026-11-16", "neutral": false},
-  {"week": 11, "opponent": "Carolina Panthers", "location": "away", "date": "2026-11-22", "neutral": false},
-  {"week": 12, "opponent": "Houston Texans", "location": "away", "date": "2026-11-29", "neutral": false},
-  {"week": 13, "opponent": null, "bye": true, "date": "2026-12-06"},
-  {"week": 14, "opponent": "Tampa Bay Buccaneers", "location": "home", "date": "2026-12-13", "neutral": false},
-  {"week": 15, "opponent": "Pittsburgh Steelers", "location": "away", "date": "2026-12-20", "neutral": false},
-  {"week": 16, "opponent": "Cleveland Browns", "location": "home", "date": "2026-12-27", "neutral": false},
-  {"week": 17, "opponent": "Cincinnati Bengals", "location": "away", "date": "2026-12-31", "neutral": false},
-  {"week": 18, "opponent": "Pittsburgh Steelers", "location": "home", "date": "2027-01-10", "neutral": false}
+  {
+    "week": 1,
+    "opponent": "Indianapolis Colts",
+    "location": "away",
+    "date": "2026-09-13",
+    "neutral": false,
+    "market_odds": {
+      "ravens": "-178",
+      "opponent": "+150",
+      "spread": "Ravens -3.5",
+      "total": 47.5,
+      "book": "FanDuel"
+    }
+  },
+  {
+    "week": 2,
+    "opponent": "New Orleans Saints",
+    "location": "home",
+    "date": "2026-09-20",
+    "neutral": false
+  },
+  {
+    "week": 3,
+    "opponent": "Dallas Cowboys",
+    "location": "away",
+    "date": "2026-09-27",
+    "neutral": true,
+    "site": "Rio de Janeiro, Brazil"
+  },
+  {
+    "week": 4,
+    "opponent": "Tennessee Titans",
+    "location": "home",
+    "date": "2026-10-04",
+    "neutral": false
+  },
+  {
+    "week": 5,
+    "opponent": "Atlanta Falcons",
+    "location": "away",
+    "date": "2026-10-11",
+    "neutral": false
+  },
+  {
+    "week": 6,
+    "opponent": "Cleveland Browns",
+    "location": "away",
+    "date": "2026-10-18",
+    "neutral": false
+  },
+  {
+    "week": 7,
+    "opponent": "Cincinnati Bengals",
+    "location": "home",
+    "date": "2026-10-25",
+    "neutral": false
+  },
+  {
+    "week": 8,
+    "opponent": "Buffalo Bills",
+    "location": "away",
+    "date": "2026-11-01",
+    "neutral": false
+  },
+  {
+    "week": 9,
+    "opponent": "Jacksonville Jaguars",
+    "location": "home",
+    "date": "2026-11-05",
+    "neutral": false
+  },
+  {
+    "week": 10,
+    "opponent": "Los Angeles Chargers",
+    "location": "home",
+    "date": "2026-11-16",
+    "neutral": false
+  },
+  {
+    "week": 11,
+    "opponent": "Carolina Panthers",
+    "location": "away",
+    "date": "2026-11-22",
+    "neutral": false
+  },
+  {
+    "week": 12,
+    "opponent": "Houston Texans",
+    "location": "away",
+    "date": "2026-11-29",
+    "neutral": false
+  },
+  {
+    "week": 13,
+    "opponent": null,
+    "bye": true,
+    "date": "2026-12-06"
+  },
+  {
+    "week": 14,
+    "opponent": "Tampa Bay Buccaneers",
+    "location": "home",
+    "date": "2026-12-13",
+    "neutral": false
+  },
+  {
+    "week": 15,
+    "opponent": "Pittsburgh Steelers",
+    "location": "away",
+    "date": "2026-12-20",
+    "neutral": false
+  },
+  {
+    "week": 16,
+    "opponent": "Cleveland Browns",
+    "location": "home",
+    "date": "2026-12-27",
+    "neutral": false
+  },
+  {
+    "week": 17,
+    "opponent": "Cincinnati Bengals",
+    "location": "away",
+    "date": "2026-12-31",
+    "neutral": false
+  },
+  {
+    "week": 18,
+    "opponent": "Pittsburgh Steelers",
+    "location": "home",
+    "date": "2027-01-10",
+    "neutral": false
+  }
 ]
