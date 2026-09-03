@@ -222,7 +222,7 @@
     </div>
     <div class="eyebrow" id="asOfLine">As of —</div>
     <h1>Baltimore <span class="accent">Ravens</span> HQ</h1>
-    <span class="tagline">gambling picks for nerds</span>
+    
     <div class="sub">A dedicated deep-dive on the Ravens: full 2026 schedule with weekly win probability, roster changes, who's standing out this preseason, and week-by-week Super Bowl odds tracking — all from the same model and methodology as the main site.</div>
     <div class="coach-banner" id="coachBanner"></div>
   </header>
@@ -279,7 +279,950 @@
 </div>
 
 <script>
-const DATA = {"team": "Baltimore Ravens", "as_of": "2026-08-29", "record": {"w": 0, "l": 0, "t": 0, "note": "Preseason \u2014 regular season opens Sept 13, 2026"}, "coaching_change": {"headline": "New head coach for 2026: Jesse Minter (4th HC in franchise history), replacing John Harbaugh after 18 seasons.", "details": ["New offensive coordinator: Declan Doyle", "New defensive coordinator: Anthony Weaver"]}, "roster_changes": {"departures": [{"player": "Isaiah Likely", "pos": "TE", "note": "Followed Harbaugh to NY Giants"}, {"player": "Patrick Ricard", "pos": "FB", "note": "Followed Harbaugh to NY Giants"}, {"player": "Daniel Faalele", "pos": "OL", "note": "Followed Harbaugh to NY Giants"}, {"player": "Jordan Stout", "pos": "P", "note": "Followed Harbaugh to NY Giants"}, {"player": "Ar'Darius Washington", "pos": "S", "note": "Followed Harbaugh to NY Giants"}, {"player": "Jaire Alexander", "pos": "CB", "note": "Traded to Philadelphia Eagles"}, {"player": "Odafe Oweh", "pos": "OLB", "note": "Traded to LA Chargers"}], "acquisitions": [{"player": "Dre'Mont Jones", "pos": "OLB", "note": "Acquired from Tennessee Titans"}, {"player": "Alohi Gilman", "pos": "S", "note": "Acquired from LA Chargers"}, {"player": "Tre'Davious White", "pos": "CB", "note": "Acquired from LA Rams"}, {"player": "Trey Hendrickson", "pos": "LB", "note": "Offseason addition"}]}, "preseason_standouts": [{"player": "Ja'Kobi Lane", "pos": "WR", "note": "3 rec, 38 yds, 1 TD vs Eagles \u2014 rookie opened the scoring on a 16-yard TD catch"}, {"player": "Matt Hibner", "pos": "TE", "note": "5 rec, 61 yds vs Eagles, including a 29-yard grab \u2014 versatile route running"}, {"player": "Elijah Sarratt", "pos": "WR", "note": "6 rec, 66 yds vs Eagles \u2014 consistently got open"}, {"player": "Adam Randall", "pos": "RB", "note": "12 car, 46 yds, 1 TD vs Eagles \u2014 5th-round rookie ran with authority"}, {"player": "Vega Ioane", "pos": "G", "note": "First-round rookie guard, physical/aggressive blocking in limited series"}], "preseason_concerns": [{"player": "Tyler Loop", "pos": "K", "note": "Missed a 49-yard FG attempt before hitting from 42 later in the same game"}], "super_bowl_odds_history": [{"date": "2026-08-29", "american_odds": "+1000", "book": "consensus (RotoWire)"}], "projected_record_note": "Outside consensus projection: 13-4, 6-0 AFC North (RotoWire, as of 2026-08-29 \u2014 a projection, not a guarantee)", "roster": {"Quarterbacks": [{"name": "Lamar Jackson", "num": "8"}, {"name": "Tyler Huntley", "num": "5"}, {"name": "Joe Fagnano", "num": "12"}], "Running Backs": [{"name": "Derrick Henry", "num": "22"}, {"name": "Justice Hill", "num": "43"}, {"name": "Rasheen Ali", "num": "26"}, {"name": "Adam Randall", "num": "23"}], "Wide Receivers": [{"name": "Zay Flowers", "num": "4"}, {"name": "Rashod Bateman", "num": "7"}, {"name": "Ja'Kobi Lane", "num": "6"}, {"name": "LaJohntay Wester", "num": "10"}, {"name": "Elijah Sarratt", "num": "13"}, {"name": "Devontez Walker", "num": "81"}, {"name": "Cornelius Johnson", "num": "86"}], "Tight Ends": [{"name": "Mark Andrews", "num": "89"}, {"name": "Durham Smythe", "num": "80"}, {"name": "Matt Hibner", "num": "88"}], "Offensive Line": [{"name": "Ronnie Stanley", "num": "79", "pos": "OT"}, {"name": "Roger Rosengarten", "num": "70", "pos": "OT"}, {"name": "Carson Vinson", "num": "76", "pos": "OT"}, {"name": "Ethan Pocic", "num": "77", "pos": "C"}, {"name": "Andrew Vorhees", "num": "72", "pos": "G"}, {"name": "John Simpson", "num": "74", "pos": "G"}, {"name": "Olaivavega Ioane", "num": "71", "pos": "G"}, {"name": "Jovaughn Gwyn", "num": "54", "pos": "G"}], "Defensive Line": [{"name": "Nnamdi Madubuike", "num": "92", "pos": "DT"}, {"name": "Travis Jones", "num": "98", "pos": "DT"}, {"name": "John Jenkins", "num": "94", "pos": "DT"}, {"name": "Calais Campbell", "num": "93", "pos": "DE"}, {"name": "Broderick Washington", "num": "96", "pos": "DT"}], "Linebackers": [{"name": "Roquan Smith", "pos": "ILB"}, {"name": "Trenton Simpson", "num": "32", "pos": "ILB"}, {"name": "Dre'Mont Jones", "pos": "OLB", "note": "Acquired from Titans, 2026"}, {"name": "Kyle Van Noy", "pos": "OLB"}, {"name": "Adisa Isaac", "num": "50", "pos": "OLB"}, {"name": "Tavius Robinson", "num": "95", "pos": "OLB"}], "Defensive Backs": [{"name": "Marlon Humphrey", "num": "44", "pos": "CB"}, {"name": "Nate Wiggins", "num": "2", "pos": "CB"}, {"name": "Chidobe Awuzie", "num": "3", "pos": "CB"}, {"name": "Tre'Davious White", "pos": "CB", "note": "Acquired from LA Rams, 2026"}, {"name": "Kyle Hamilton", "num": "14", "pos": "S"}, {"name": "Malaki Starks", "num": "24", "pos": "S"}, {"name": "Jaylinn Hawkins", "num": "21", "pos": "S"}, {"name": "Alohi Gilman", "pos": "S", "note": "Acquired from LA Chargers, 2026"}], "Special Teams": [{"name": "Tyler Loop", "num": "33", "pos": "K"}, {"name": "Ryan Eckley", "num": "30", "pos": "P"}, {"name": "Nick Moore", "num": "46", "pos": "LS"}]}, "schedule": [{"week": 1, "opponent": "Indianapolis Colts", "location": "away", "date": "2026-09-13", "neutral": false, "market_odds": {"ravens": "-196", "opponent": "+164", "spread": "Ravens -3.5", "total": 47.5, "book": "FanDuel (opening)"}, "ravens_win_prob": 0.422, "model_odds": "+125", "value_bet": {"market_implied_prob": 0.662, "model_prob": 0.422, "edge_pts": -0.24, "read": "Large disagreement with the market \u2014 more likely our simple model is missing context (injuries, coaching change, roster turnover) than a real edge over Vegas's pricing.", "large_disagreement": true}}, {"week": 2, "opponent": "New Orleans Saints", "location": "home", "date": "2026-09-20", "neutral": false, "ravens_win_prob": 0.665, "model_odds": "-217"}, {"week": 3, "opponent": "Dallas Cowboys", "location": "away", "date": "2026-09-27", "neutral": true, "site": "Rio de Janeiro, Brazil", "ravens_win_prob": 0.58, "model_odds": "-151"}, {"week": 4, "opponent": "Tennessee Titans", "location": "home", "date": "2026-10-04", "neutral": false, "ravens_win_prob": 0.783, "model_odds": "-396"}, {"week": 5, "opponent": "Atlanta Falcons", "location": "away", "date": "2026-10-11", "neutral": false, "ravens_win_prob": 0.546, "model_odds": "-131"}, {"week": 6, "opponent": "Cleveland Browns", "location": "away", "date": "2026-10-18", "neutral": false, "ravens_win_prob": 0.608, "model_odds": "-170"}, {"week": 7, "opponent": "Cincinnati Bengals", "location": "home", "date": "2026-10-25", "neutral": false, "ravens_win_prob": 0.666, "model_odds": "-218"}, {"week": 8, "opponent": "Buffalo Bills", "location": "away", "date": "2026-11-01", "neutral": false, "ravens_win_prob": 0.35, "model_odds": "+170"}, {"week": 9, "opponent": "Jacksonville Jaguars", "location": "home", "date": "2026-11-05", "neutral": false, "ravens_win_prob": 0.409, "model_odds": "+132"}, {"week": 10, "opponent": "Los Angeles Chargers", "location": "home", "date": "2026-11-16", "neutral": false, "ravens_win_prob": 0.542, "model_odds": "-129"}, {"week": 11, "opponent": "Carolina Panthers", "location": "away", "date": "2026-11-22", "neutral": false, "ravens_win_prob": 0.571, "model_odds": "-146"}, {"week": 12, "opponent": "Houston Texans", "location": "away", "date": "2026-11-29", "neutral": false, "ravens_win_prob": 0.358, "model_odds": "+164"}, {"week": 13, "opponent": null, "bye": true, "date": "2026-12-06"}, {"week": 14, "opponent": "Tampa Bay Buccaneers", "location": "home", "date": "2026-12-13", "neutral": false, "ravens_win_prob": 0.612, "model_odds": "-173"}, {"week": 15, "opponent": "Pittsburgh Steelers", "location": "away", "date": "2026-12-20", "neutral": false, "ravens_win_prob": 0.475, "model_odds": "+101"}, {"week": 16, "opponent": "Cleveland Browns", "location": "home", "date": "2026-12-27", "neutral": false, "ravens_win_prob": 0.69, "model_odds": "-244"}, {"week": 17, "opponent": "Cincinnati Bengals", "location": "away", "date": "2026-12-31", "neutral": false, "ravens_win_prob": 0.582, "model_odds": "-152"}, {"week": 18, "opponent": "Pittsburgh Steelers", "location": "home", "date": "2027-01-10", "neutral": false, "ravens_win_prob": 0.564, "model_odds": "-141"}], "expected_wins_naive": 9.4, "games_count": 17, "bet_log": [{"week": 1, "opponent": "Indianapolis Colts", "date": "2026-09-13", "location": "away", "ravens_win_prob": 0.422, "model_odds": "+125", "verdict": "PASS", "side": "none", "side_prob": 0.422, "tone": "warn", "headline": "Model and market disagree too much to trust here", "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 66%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 2, "opponent": "New Orleans Saints", "date": "2026-09-20", "location": "home", "ravens_win_prob": 0.665, "model_odds": "-217", "verdict": "BET RAVENS", "side": "ravens", "side_prob": 0.665, "tone": "ravens", "headline": "Model likes the Ravens here (moderate favorite)", "reasoning": "The model gives the Ravens a 66% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 3, "opponent": "Dallas Cowboys", "date": "2026-09-27", "location": "away", "ravens_win_prob": 0.58, "model_odds": "-151", "verdict": "LEAN RAVENS", "side": "ravens", "side_prob": 0.58, "tone": "ravens", "headline": "Model likes the Ravens here (lean favorite)", "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 4, "opponent": "Tennessee Titans", "date": "2026-10-04", "location": "home", "ravens_win_prob": 0.783, "model_odds": "-396", "verdict": "BET RAVENS", "side": "ravens", "side_prob": 0.783, "tone": "ravens", "headline": "Model likes the Ravens here (moderate favorite)", "reasoning": "The model gives the Ravens a 78% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 5, "opponent": "Atlanta Falcons", "date": "2026-10-11", "location": "away", "ravens_win_prob": 0.546, "model_odds": "-131", "verdict": "PASS", "side": "none", "side_prob": 0.546, "tone": "off", "headline": "Too close to call", "reasoning": "The model has this game at 55% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 6, "opponent": "Cleveland Browns", "date": "2026-10-18", "location": "away", "ravens_win_prob": 0.608, "model_odds": "-170", "verdict": "LEAN RAVENS", "side": "ravens", "side_prob": 0.608, "tone": "ravens", "headline": "Model likes the Ravens here (lean favorite)", "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 7, "opponent": "Cincinnati Bengals", "date": "2026-10-25", "location": "home", "ravens_win_prob": 0.666, "model_odds": "-218", "verdict": "BET RAVENS", "side": "ravens", "side_prob": 0.666, "tone": "ravens", "headline": "Model likes the Ravens here (moderate favorite)", "reasoning": "The model gives the Ravens a 67% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 8, "opponent": "Buffalo Bills", "date": "2026-11-01", "location": "away", "ravens_win_prob": 0.35, "model_odds": "+170", "verdict": "FADE RAVENS", "side": "opponent", "side_prob": 0.65, "tone": "away", "headline": "Model favors the opponent here (moderate favorite)", "reasoning": "The model gives the Ravens only a 35% win probability (Moderate tier against them) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 9, "opponent": "Jacksonville Jaguars", "date": "2026-11-05", "location": "home", "ravens_win_prob": 0.409, "model_odds": "+132", "verdict": "LEAN OPPONENT", "side": "opponent", "side_prob": 0.591, "tone": "away", "headline": "Model favors the opponent here (lean favorite)", "reasoning": "The model gives the Ravens only a 41% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 10, "opponent": "Los Angeles Chargers", "date": "2026-11-16", "location": "home", "ravens_win_prob": 0.542, "model_odds": "-129", "verdict": "PASS", "side": "none", "side_prob": 0.542, "tone": "off", "headline": "Too close to call", "reasoning": "The model has this game at 54% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 11, "opponent": "Carolina Panthers", "date": "2026-11-22", "location": "away", "ravens_win_prob": 0.571, "model_odds": "-146", "verdict": "LEAN RAVENS", "side": "ravens", "side_prob": 0.571, "tone": "ravens", "headline": "Model likes the Ravens here (lean favorite)", "reasoning": "The model gives the Ravens a 57% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 12, "opponent": "Houston Texans", "date": "2026-11-29", "location": "away", "ravens_win_prob": 0.358, "model_odds": "+164", "verdict": "LEAN OPPONENT", "side": "opponent", "side_prob": 0.642, "tone": "away", "headline": "Model favors the opponent here (lean favorite)", "reasoning": "The model gives the Ravens only a 36% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 14, "opponent": "Tampa Bay Buccaneers", "date": "2026-12-13", "location": "home", "ravens_win_prob": 0.612, "model_odds": "-173", "verdict": "LEAN RAVENS", "side": "ravens", "side_prob": 0.612, "tone": "ravens", "headline": "Model likes the Ravens here (lean favorite)", "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 15, "opponent": "Pittsburgh Steelers", "date": "2026-12-20", "location": "away", "ravens_win_prob": 0.475, "model_odds": "+101", "verdict": "PASS", "side": "none", "side_prob": 0.475, "tone": "off", "headline": "Too close to call", "reasoning": "The model has this game at 48% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 16, "opponent": "Cleveland Browns", "date": "2026-12-27", "location": "home", "ravens_win_prob": 0.69, "model_odds": "-244", "verdict": "BET RAVENS", "side": "ravens", "side_prob": 0.69, "tone": "ravens", "headline": "Model likes the Ravens here (moderate favorite)", "reasoning": "The model gives the Ravens a 69% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 17, "opponent": "Cincinnati Bengals", "date": "2026-12-31", "location": "away", "ravens_win_prob": 0.582, "model_odds": "-152", "verdict": "LEAN RAVENS", "side": "ravens", "side_prob": 0.582, "tone": "ravens", "headline": "Model likes the Ravens here (lean favorite)", "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}, {"week": 18, "opponent": "Pittsburgh Steelers", "date": "2027-01-10", "location": "home", "ravens_win_prob": 0.564, "model_odds": "-141", "verdict": "LEAN RAVENS", "side": "ravens", "side_prob": 0.564, "tone": "ravens", "headline": "Model likes the Ravens here (lean favorite)", "reasoning": "The model gives the Ravens a 56% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}], "bet_track_record": {"total_calls": 17, "graded": 0, "pending": 17, "pass_calls": 4, "actionable_graded": 0, "wins": 0, "losses": 0, "hit_rate": null, "flat_50_staked": 0.0, "flat_50_returned": 0.0, "flat_50_profit": 0.0}, "this_week_call": {"week": 1, "opponent": "Indianapolis Colts", "date": "2026-09-13", "location": "away", "ravens_win_prob": 0.422, "model_odds": "+125", "verdict": "PASS", "side": "none", "side_prob": 0.422, "tone": "warn", "headline": "Model and market disagree too much to trust here", "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 66%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.", "logged_at": "2026-08-29", "graded": false, "actual_winner": null, "side_won": null}};
+const DATA = {
+  "team": "Baltimore Ravens",
+  "as_of": "2026-09-03",
+  "record": {
+    "w": 0,
+    "l": 0,
+    "t": 0,
+    "note": "Preseason complete, 53-man roster set \u2014 regular season opens Sept 13, 2026 at Indianapolis"
+  },
+  "coaching_change": {
+    "headline": "New head coach for 2026: Jesse Minter (4th HC in franchise history), replacing John Harbaugh after 18 seasons.",
+    "details": [
+      "New offensive coordinator: Declan Doyle",
+      "New defensive coordinator: Anthony Weaver",
+      "New special teams coordinator: Anthony Levine Sr."
+    ]
+  },
+  "roster_changes": {
+    "departures": [
+      {
+        "player": "Isaiah Likely",
+        "pos": "TE",
+        "note": "Followed Harbaugh to NY Giants"
+      },
+      {
+        "player": "Patrick Ricard",
+        "pos": "FB",
+        "note": "Followed Harbaugh to NY Giants"
+      },
+      {
+        "player": "Daniel Faalele",
+        "pos": "OL",
+        "note": "Followed Harbaugh to NY Giants"
+      },
+      {
+        "player": "Jordan Stout",
+        "pos": "P",
+        "note": "Followed Harbaugh to NY Giants"
+      },
+      {
+        "player": "Ar'Darius Washington",
+        "pos": "S",
+        "note": "Followed Harbaugh to NY Giants"
+      },
+      {
+        "player": "Jaire Alexander",
+        "pos": "CB",
+        "note": "Traded to Philadelphia Eagles"
+      },
+      {
+        "player": "Odafe Oweh",
+        "pos": "OLB",
+        "note": "Traded to LA Chargers"
+      },
+      {
+        "player": "C.J. Okoye",
+        "pos": "DL",
+        "note": "Traded to NY Giants for a 2028 7th-round pick"
+      },
+      {
+        "player": "Diego Pounds",
+        "pos": "OT",
+        "note": "Traded to Kansas City Chiefs for a conditional 2028 6th-round pick"
+      },
+      {
+        "player": "Jonathan Ward",
+        "pos": "RB",
+        "note": "Cut in final roster trim"
+      },
+      {
+        "player": "Chris Moore",
+        "pos": "WR",
+        "note": "Cut in final roster trim"
+      },
+      {
+        "player": "Xavier Guillory",
+        "pos": "WR",
+        "note": "Cut in final roster trim"
+      },
+      {
+        "player": "Lucas Scott",
+        "pos": "TE",
+        "note": "Cut in final roster trim"
+      }
+    ],
+    "acquisitions": [
+      {
+        "player": "Dre'Mont Jones",
+        "pos": "OLB",
+        "note": "Acquired from Tennessee Titans"
+      },
+      {
+        "player": "Alohi Gilman",
+        "pos": "S",
+        "note": "Acquired from LA Chargers"
+      },
+      {
+        "player": "Tre'Davious White",
+        "pos": "CB",
+        "note": "Acquired from LA Rams"
+      },
+      {
+        "player": "Trey Hendrickson",
+        "pos": "LB",
+        "note": "Offseason addition"
+      },
+      {
+        "player": "Joe Fagnano",
+        "pos": "QB",
+        "note": "Undrafted rookie made the 53-man roster \u2014 first time the Ravens have kept 3 QBs since 2020"
+      }
+    ]
+  },
+  "preseason_standouts": [
+    {
+      "player": "Ja'Kobi Lane",
+      "pos": "WR",
+      "note": "Emerged as the No. 3 receiver through preseason and roster cuts"
+    },
+    {
+      "player": "Ethan Burke",
+      "pos": "OLB",
+      "note": "Undrafted rookie made the 53-man roster"
+    },
+    {
+      "player": "Joe Fagnano",
+      "pos": "QB",
+      "note": "Undrafted rookie QB made the roster as the No. 3"
+    },
+    {
+      "player": "Matt Hibner",
+      "pos": "TE",
+      "note": "5 rec, 61 yds vs Eagles, including a 29-yard grab \u2014 versatile route running"
+    },
+    {
+      "player": "Elijah Sarratt",
+      "pos": "WR",
+      "note": "6 rec, 66 yds vs Eagles \u2014 consistently got open"
+    },
+    {
+      "player": "Adam Randall",
+      "pos": "RB",
+      "note": "12 car, 46 yds, 1 TD vs Eagles \u2014 5th-round rookie ran with authority"
+    },
+    {
+      "player": "Vega Ioane",
+      "pos": "G",
+      "note": "First-round rookie guard, physical/aggressive blocking in limited series"
+    }
+  ],
+  "preseason_concerns": [
+    {
+      "player": "Nnamdi Madubuike",
+      "pos": "DT",
+      "note": "Recovering from a neck injury; kept on the active roster rather than IR \u2014 HC Jesse Minter said he doesn't expect Madubuike to miss many games"
+    },
+    {
+      "player": "Teddye Buchanan",
+      "pos": "ILB",
+      "note": "Recovering from an ACL tear; kept on the active roster"
+    },
+    {
+      "player": "Adam Randall",
+      "pos": "RB",
+      "note": "Placed on injured reserve (designated to return) after a strong preseason finale"
+    },
+    {
+      "player": "Bilhal Kone",
+      "pos": "CB",
+      "note": "Placed on injured reserve (designated to return) with a significant knee injury"
+    },
+    {
+      "player": "Kicker/center battles",
+      "pos": "-",
+      "note": "Tyler Loop expected to start Week 1 over newly-signed veteran Jake Moody; center job still being decided between Jovaughn Gwyn and Ethan Pocic"
+    },
+    {
+      "player": "Tyler Loop",
+      "pos": "K",
+      "note": "Missed a 49-yard FG attempt before hitting from 42 later in the same game"
+    }
+  ],
+  "super_bowl_odds_history": [
+    {
+      "date": "2026-08-29",
+      "american_odds": "+1000",
+      "book": "consensus (RotoWire)"
+    }
+  ],
+  "projected_record_note": "Outside consensus projection: 13-4, 6-0 AFC North (RotoWire, as of 2026-08-29 \u2014 a projection, not a guarantee)",
+  "roster": {
+    "Quarterbacks": [
+      {
+        "name": "Lamar Jackson",
+        "num": "8"
+      },
+      {
+        "name": "Tyler Huntley",
+        "num": "5"
+      },
+      {
+        "name": "Joe Fagnano",
+        "num": "12"
+      }
+    ],
+    "Running Backs": [
+      {
+        "name": "Derrick Henry",
+        "num": "22"
+      },
+      {
+        "name": "Justice Hill",
+        "num": "43"
+      },
+      {
+        "name": "Rasheen Ali",
+        "num": "26"
+      },
+      {
+        "name": "Adam Randall",
+        "num": "23"
+      }
+    ],
+    "Wide Receivers": [
+      {
+        "name": "Zay Flowers",
+        "num": "4"
+      },
+      {
+        "name": "Rashod Bateman",
+        "num": "7"
+      },
+      {
+        "name": "Ja'Kobi Lane",
+        "num": "6"
+      },
+      {
+        "name": "LaJohntay Wester",
+        "num": "10"
+      },
+      {
+        "name": "Elijah Sarratt",
+        "num": "13"
+      },
+      {
+        "name": "Devontez Walker",
+        "num": "81"
+      },
+      {
+        "name": "Cornelius Johnson",
+        "num": "86"
+      }
+    ],
+    "Tight Ends": [
+      {
+        "name": "Mark Andrews",
+        "num": "89"
+      },
+      {
+        "name": "Durham Smythe",
+        "num": "80"
+      },
+      {
+        "name": "Matt Hibner",
+        "num": "88"
+      }
+    ],
+    "Offensive Line": [
+      {
+        "name": "Ronnie Stanley",
+        "num": "79",
+        "pos": "OT"
+      },
+      {
+        "name": "Roger Rosengarten",
+        "num": "70",
+        "pos": "OT"
+      },
+      {
+        "name": "Carson Vinson",
+        "num": "76",
+        "pos": "OT"
+      },
+      {
+        "name": "Ethan Pocic",
+        "num": "77",
+        "pos": "C"
+      },
+      {
+        "name": "Andrew Vorhees",
+        "num": "72",
+        "pos": "G"
+      },
+      {
+        "name": "John Simpson",
+        "num": "74",
+        "pos": "G"
+      },
+      {
+        "name": "Olaivavega Ioane",
+        "num": "71",
+        "pos": "G"
+      },
+      {
+        "name": "Jovaughn Gwyn",
+        "num": "54",
+        "pos": "G"
+      }
+    ],
+    "Defensive Line": [
+      {
+        "name": "Nnamdi Madubuike",
+        "num": "92",
+        "pos": "DT"
+      },
+      {
+        "name": "Travis Jones",
+        "num": "98",
+        "pos": "DT"
+      },
+      {
+        "name": "John Jenkins",
+        "num": "94",
+        "pos": "DT"
+      },
+      {
+        "name": "Calais Campbell",
+        "num": "93",
+        "pos": "DE"
+      },
+      {
+        "name": "Broderick Washington",
+        "num": "96",
+        "pos": "DT"
+      }
+    ],
+    "Linebackers": [
+      {
+        "name": "Roquan Smith",
+        "pos": "ILB"
+      },
+      {
+        "name": "Trenton Simpson",
+        "num": "32",
+        "pos": "ILB"
+      },
+      {
+        "name": "Dre'Mont Jones",
+        "pos": "OLB",
+        "note": "Acquired from Titans, 2026"
+      },
+      {
+        "name": "Kyle Van Noy",
+        "pos": "OLB"
+      },
+      {
+        "name": "Adisa Isaac",
+        "num": "50",
+        "pos": "OLB"
+      },
+      {
+        "name": "Tavius Robinson",
+        "num": "95",
+        "pos": "OLB"
+      }
+    ],
+    "Defensive Backs": [
+      {
+        "name": "Marlon Humphrey",
+        "num": "44",
+        "pos": "CB"
+      },
+      {
+        "name": "Nate Wiggins",
+        "num": "2",
+        "pos": "CB"
+      },
+      {
+        "name": "Chidobe Awuzie",
+        "num": "3",
+        "pos": "CB"
+      },
+      {
+        "name": "Tre'Davious White",
+        "pos": "CB",
+        "note": "Acquired from LA Rams, 2026"
+      },
+      {
+        "name": "Kyle Hamilton",
+        "num": "14",
+        "pos": "S"
+      },
+      {
+        "name": "Malaki Starks",
+        "num": "24",
+        "pos": "S"
+      },
+      {
+        "name": "Jaylinn Hawkins",
+        "num": "21",
+        "pos": "S"
+      },
+      {
+        "name": "Alohi Gilman",
+        "pos": "S",
+        "note": "Acquired from LA Chargers, 2026"
+      }
+    ],
+    "Special Teams": [
+      {
+        "name": "Tyler Loop",
+        "num": "33",
+        "pos": "K"
+      },
+      {
+        "name": "Ryan Eckley",
+        "num": "30",
+        "pos": "P"
+      },
+      {
+        "name": "Nick Moore",
+        "num": "46",
+        "pos": "LS"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "week": 1,
+      "opponent": "Indianapolis Colts",
+      "location": "away",
+      "date": "2026-09-13",
+      "neutral": false,
+      "market_odds": {
+        "ravens": "-196",
+        "opponent": "+164",
+        "spread": "Ravens -3.5",
+        "total": 47.5,
+        "book": "FanDuel (opening)"
+      },
+      "ravens_win_prob": 0.422,
+      "model_odds": "+125",
+      "value_bet": {
+        "market_implied_prob": 0.662,
+        "model_prob": 0.422,
+        "edge_pts": -0.24,
+        "read": "Large disagreement with the market \u2014 more likely our simple model is missing context (injuries, coaching change, roster turnover) than a real edge over Vegas's pricing.",
+        "large_disagreement": true
+      }
+    },
+    {
+      "week": 2,
+      "opponent": "New Orleans Saints",
+      "location": "home",
+      "date": "2026-09-20",
+      "neutral": false,
+      "ravens_win_prob": 0.665,
+      "model_odds": "-217"
+    },
+    {
+      "week": 3,
+      "opponent": "Dallas Cowboys",
+      "location": "away",
+      "date": "2026-09-27",
+      "neutral": true,
+      "site": "Rio de Janeiro, Brazil",
+      "ravens_win_prob": 0.58,
+      "model_odds": "-151"
+    },
+    {
+      "week": 4,
+      "opponent": "Tennessee Titans",
+      "location": "home",
+      "date": "2026-10-04",
+      "neutral": false,
+      "ravens_win_prob": 0.783,
+      "model_odds": "-396"
+    },
+    {
+      "week": 5,
+      "opponent": "Atlanta Falcons",
+      "location": "away",
+      "date": "2026-10-11",
+      "neutral": false,
+      "ravens_win_prob": 0.546,
+      "model_odds": "-131"
+    },
+    {
+      "week": 6,
+      "opponent": "Cleveland Browns",
+      "location": "away",
+      "date": "2026-10-18",
+      "neutral": false,
+      "ravens_win_prob": 0.608,
+      "model_odds": "-170"
+    },
+    {
+      "week": 7,
+      "opponent": "Cincinnati Bengals",
+      "location": "home",
+      "date": "2026-10-25",
+      "neutral": false,
+      "ravens_win_prob": 0.666,
+      "model_odds": "-218"
+    },
+    {
+      "week": 8,
+      "opponent": "Buffalo Bills",
+      "location": "away",
+      "date": "2026-11-01",
+      "neutral": false,
+      "ravens_win_prob": 0.35,
+      "model_odds": "+170"
+    },
+    {
+      "week": 9,
+      "opponent": "Jacksonville Jaguars",
+      "location": "home",
+      "date": "2026-11-05",
+      "neutral": false,
+      "ravens_win_prob": 0.409,
+      "model_odds": "+132"
+    },
+    {
+      "week": 10,
+      "opponent": "Los Angeles Chargers",
+      "location": "home",
+      "date": "2026-11-16",
+      "neutral": false,
+      "ravens_win_prob": 0.542,
+      "model_odds": "-129"
+    },
+    {
+      "week": 11,
+      "opponent": "Carolina Panthers",
+      "location": "away",
+      "date": "2026-11-22",
+      "neutral": false,
+      "ravens_win_prob": 0.571,
+      "model_odds": "-146"
+    },
+    {
+      "week": 12,
+      "opponent": "Houston Texans",
+      "location": "away",
+      "date": "2026-11-29",
+      "neutral": false,
+      "ravens_win_prob": 0.358,
+      "model_odds": "+164"
+    },
+    {
+      "week": 13,
+      "opponent": null,
+      "bye": true,
+      "date": "2026-12-06"
+    },
+    {
+      "week": 14,
+      "opponent": "Tampa Bay Buccaneers",
+      "location": "home",
+      "date": "2026-12-13",
+      "neutral": false,
+      "ravens_win_prob": 0.612,
+      "model_odds": "-173"
+    },
+    {
+      "week": 15,
+      "opponent": "Pittsburgh Steelers",
+      "location": "away",
+      "date": "2026-12-20",
+      "neutral": false,
+      "ravens_win_prob": 0.475,
+      "model_odds": "+101"
+    },
+    {
+      "week": 16,
+      "opponent": "Cleveland Browns",
+      "location": "home",
+      "date": "2026-12-27",
+      "neutral": false,
+      "ravens_win_prob": 0.69,
+      "model_odds": "-244"
+    },
+    {
+      "week": 17,
+      "opponent": "Cincinnati Bengals",
+      "location": "away",
+      "date": "2026-12-31",
+      "neutral": false,
+      "ravens_win_prob": 0.582,
+      "model_odds": "-152"
+    },
+    {
+      "week": 18,
+      "opponent": "Pittsburgh Steelers",
+      "location": "home",
+      "date": "2027-01-10",
+      "neutral": false,
+      "ravens_win_prob": 0.564,
+      "model_odds": "-141"
+    }
+  ],
+  "expected_wins_naive": 9.4,
+  "games_count": 17,
+  "bet_log": [
+    {
+      "week": 1,
+      "opponent": "Indianapolis Colts",
+      "date": "2026-09-13",
+      "location": "away",
+      "ravens_win_prob": 0.422,
+      "model_odds": "+125",
+      "verdict": "PASS",
+      "side": "none",
+      "side_prob": 0.422,
+      "tone": "warn",
+      "headline": "Model and market disagree too much to trust here",
+      "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 66%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 2,
+      "opponent": "New Orleans Saints",
+      "date": "2026-09-20",
+      "location": "home",
+      "ravens_win_prob": 0.665,
+      "model_odds": "-217",
+      "verdict": "BET RAVENS",
+      "side": "ravens",
+      "side_prob": 0.665,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (moderate favorite)",
+      "reasoning": "The model gives the Ravens a 66% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 3,
+      "opponent": "Dallas Cowboys",
+      "date": "2026-09-27",
+      "location": "away",
+      "ravens_win_prob": 0.58,
+      "model_odds": "-151",
+      "verdict": "LEAN RAVENS",
+      "side": "ravens",
+      "side_prob": 0.58,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (lean favorite)",
+      "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 4,
+      "opponent": "Tennessee Titans",
+      "date": "2026-10-04",
+      "location": "home",
+      "ravens_win_prob": 0.783,
+      "model_odds": "-396",
+      "verdict": "BET RAVENS",
+      "side": "ravens",
+      "side_prob": 0.783,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (moderate favorite)",
+      "reasoning": "The model gives the Ravens a 78% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 5,
+      "opponent": "Atlanta Falcons",
+      "date": "2026-10-11",
+      "location": "away",
+      "ravens_win_prob": 0.546,
+      "model_odds": "-131",
+      "verdict": "PASS",
+      "side": "none",
+      "side_prob": 0.546,
+      "tone": "off",
+      "headline": "Too close to call",
+      "reasoning": "The model has this game at 55% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 6,
+      "opponent": "Cleveland Browns",
+      "date": "2026-10-18",
+      "location": "away",
+      "ravens_win_prob": 0.608,
+      "model_odds": "-170",
+      "verdict": "LEAN RAVENS",
+      "side": "ravens",
+      "side_prob": 0.608,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (lean favorite)",
+      "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 7,
+      "opponent": "Cincinnati Bengals",
+      "date": "2026-10-25",
+      "location": "home",
+      "ravens_win_prob": 0.666,
+      "model_odds": "-218",
+      "verdict": "BET RAVENS",
+      "side": "ravens",
+      "side_prob": 0.666,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (moderate favorite)",
+      "reasoning": "The model gives the Ravens a 67% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 8,
+      "opponent": "Buffalo Bills",
+      "date": "2026-11-01",
+      "location": "away",
+      "ravens_win_prob": 0.35,
+      "model_odds": "+170",
+      "verdict": "FADE RAVENS",
+      "side": "opponent",
+      "side_prob": 0.65,
+      "tone": "away",
+      "headline": "Model favors the opponent here (moderate favorite)",
+      "reasoning": "The model gives the Ravens only a 35% win probability (Moderate tier against them) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 9,
+      "opponent": "Jacksonville Jaguars",
+      "date": "2026-11-05",
+      "location": "home",
+      "ravens_win_prob": 0.409,
+      "model_odds": "+132",
+      "verdict": "LEAN OPPONENT",
+      "side": "opponent",
+      "side_prob": 0.591,
+      "tone": "away",
+      "headline": "Model favors the opponent here (lean favorite)",
+      "reasoning": "The model gives the Ravens only a 41% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 10,
+      "opponent": "Los Angeles Chargers",
+      "date": "2026-11-16",
+      "location": "home",
+      "ravens_win_prob": 0.542,
+      "model_odds": "-129",
+      "verdict": "PASS",
+      "side": "none",
+      "side_prob": 0.542,
+      "tone": "off",
+      "headline": "Too close to call",
+      "reasoning": "The model has this game at 54% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 11,
+      "opponent": "Carolina Panthers",
+      "date": "2026-11-22",
+      "location": "away",
+      "ravens_win_prob": 0.571,
+      "model_odds": "-146",
+      "verdict": "LEAN RAVENS",
+      "side": "ravens",
+      "side_prob": 0.571,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (lean favorite)",
+      "reasoning": "The model gives the Ravens a 57% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 12,
+      "opponent": "Houston Texans",
+      "date": "2026-11-29",
+      "location": "away",
+      "ravens_win_prob": 0.358,
+      "model_odds": "+164",
+      "verdict": "LEAN OPPONENT",
+      "side": "opponent",
+      "side_prob": 0.642,
+      "tone": "away",
+      "headline": "Model favors the opponent here (lean favorite)",
+      "reasoning": "The model gives the Ravens only a 36% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 14,
+      "opponent": "Tampa Bay Buccaneers",
+      "date": "2026-12-13",
+      "location": "home",
+      "ravens_win_prob": 0.612,
+      "model_odds": "-173",
+      "verdict": "LEAN RAVENS",
+      "side": "ravens",
+      "side_prob": 0.612,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (lean favorite)",
+      "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 15,
+      "opponent": "Pittsburgh Steelers",
+      "date": "2026-12-20",
+      "location": "away",
+      "ravens_win_prob": 0.475,
+      "model_odds": "+101",
+      "verdict": "PASS",
+      "side": "none",
+      "side_prob": 0.475,
+      "tone": "off",
+      "headline": "Too close to call",
+      "reasoning": "The model has this game at 48% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 16,
+      "opponent": "Cleveland Browns",
+      "date": "2026-12-27",
+      "location": "home",
+      "ravens_win_prob": 0.69,
+      "model_odds": "-244",
+      "verdict": "BET RAVENS",
+      "side": "ravens",
+      "side_prob": 0.69,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (moderate favorite)",
+      "reasoning": "The model gives the Ravens a 69% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 17,
+      "opponent": "Cincinnati Bengals",
+      "date": "2026-12-31",
+      "location": "away",
+      "ravens_win_prob": 0.582,
+      "model_odds": "-152",
+      "verdict": "LEAN RAVENS",
+      "side": "ravens",
+      "side_prob": 0.582,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (lean favorite)",
+      "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    },
+    {
+      "week": 18,
+      "opponent": "Pittsburgh Steelers",
+      "date": "2027-01-10",
+      "location": "home",
+      "ravens_win_prob": 0.564,
+      "model_odds": "-141",
+      "verdict": "LEAN RAVENS",
+      "side": "ravens",
+      "side_prob": 0.564,
+      "tone": "ravens",
+      "headline": "Model likes the Ravens here (lean favorite)",
+      "reasoning": "The model gives the Ravens a 56% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
+      "logged_at": "2026-08-29",
+      "graded": false,
+      "actual_winner": null,
+      "side_won": null
+    }
+  ],
+  "bet_track_record": {
+    "total_calls": 17,
+    "graded": 0,
+    "pending": 17,
+    "pass_calls": 4,
+    "actionable_graded": 0,
+    "wins": 0,
+    "losses": 0,
+    "hit_rate": null,
+    "flat_50_staked": 0.0,
+    "flat_50_returned": 0.0,
+    "flat_50_profit": 0.0
+  },
+  "this_week_call": {
+    "week": 1,
+    "opponent": "Indianapolis Colts",
+    "date": "2026-09-13",
+    "location": "away",
+    "ravens_win_prob": 0.422,
+    "model_odds": "+125",
+    "verdict": "PASS",
+    "side": "none",
+    "side_prob": 0.422,
+    "tone": "warn",
+    "headline": "Model and market disagree too much to trust here",
+    "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 66%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.",
+    "logged_at": "2026-08-29",
+    "graded": false,
+    "actual_winner": null,
+    "side_won": null
+  }
+};
 
 function pct(p){ return Math.round(p*100); }
 function fmtDate(iso){ const d = new Date(iso + "T12:00:00Z"); return d.toLocaleDateString("en-US", {weekday:"short", month:"short", day:"numeric"}); }

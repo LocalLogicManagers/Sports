@@ -114,12 +114,9 @@ def read_csv(name):
 with open(os.path.join(DATA, "model_params.json")) as f:
     PARAMS = json.load(f)["leagues"]["nfl"]
 
-nfl_rows = read_csv("nfl_2025_final.csv")
-ratings = {}
-for r in nfl_rows:
-    w, l, t = int(r["w"]), int(r["l"]), int(r["t"])
-    gp = w + l + t
-    ratings[r["team"]] = round((int(r["point_diff"]) / gp) * 0.70, 3)  # same preseason carryover regression as compute.py
+# Same static final-2025-derived ratings as compute.py (see that file's comment) --
+# kept in sync here since compute_ravens.py needs the Ravens' + each opponent's rating.
+ratings = {"Denver Broncos": 3.706, "New England Patriots": 7.0, "Jacksonville Jaguars": 5.682, "Pittsburgh Steelers": 0.412, "Houston Texans": 4.488, "Buffalo Bills": 4.776, "Los Angeles Chargers": 1.153, "Indianapolis Colts": 2.224, "Baltimore Ravens": 1.071, "Miami Dolphins": -3.171, "Cincinnati Bengals": -3.212, "Kansas City Chiefs": 1.4, "Cleveland Browns": -4.118, "Las Vegas Raiders": -7.865, "New York Jets": -8.359, "Tennessee Titans": -7.988, "Seattle Seahawks": 7.865, "Chicago Bears": 1.071, "Philadelphia Eagles": 2.224, "Los Angeles Rams": 7.082, "San Francisco 49ers": 2.718, "Carolina Panthers": -2.841, "Tampa Bay Buccaneers": -1.276, "Atlanta Falcons": -1.976, "Green Bay Packers": 1.276, "Minnesota Vikings": 0.453, "Detroit Lions": 2.8, "Dallas Cowboys": -1.647, "New Orleans Saints": -3.171, "Washington Commanders": -3.912, "New York Giants": -2.388, "Arizona Cardinals": -5.476}
 
 with open(os.path.join(DATA, "ravens_schedule.json")) as f:
     schedule = json.load(f)

@@ -1,8 +1,9 @@
-import csv, math, json, os, sys
+import csv, math, json, os, sys, datetime
 sys.path.insert(0, "/home/claude/sportspredict")
 from engine import win_prob, shrink, make_pick
 
 DATA = "/home/claude/sportspredict/data"
+TODAY = datetime.date.today().isoformat()
 
 def read_csv(name):
     with open(os.path.join(DATA, name)) as f:
@@ -23,16 +24,23 @@ def build_game(league, away, home, date, rh, ra, note=None):
     g.update(make_pick(away, home, home_prob))
     return g
 
-results = {"generated_at": "2026-08-29", "model_version": PARAMS["version"], "leagues": {}}
+# NOTE on design: league blocks below fall into two shapes.
+#   (a) "live" leagues (MLB/EPL/MLS/PLL fixtures) read their ratings/schedule
+#       from data files (CSVs) that a refresh step regenerates from real
+#       current sources each run -- this file itself never hardcodes a game
+#       date or matchup for these.
+#   (b) "point-in-time" leagues (NFL/NCAAF Week 1, PLL's regular-season
+#       ratings, NBA/NCAAB/UCL off-season placeholders) are genuinely static
+#       until their season progresses -- real, already-scheduled/final data,
+#       not stand-ins for a live fetch -- so they stay as literals here on
+#       purpose. Revisit NFL/NCAAF once Week 1 has been played.
 
-# ---------------- NFL ----------------
-nfl_rows = read_csv("nfl_2025_final.csv")
-nfl_ratings = {}
-for r in nfl_rows:
-    w, l, t = int(r["w"]), int(r["l"]), int(r["t"])
-    gp = w + l + t
-    pd_per_game = int(r["point_diff"]) / gp
-    nfl_ratings[r["team"]] = round(pd_per_game * 0.70, 3)  # preseason carryover regression
+results = {"generated_at": TODAY, "model_version": PARAMS["version"], "leagues": {}}
+
+# ---------------- NFL (point-in-time: final-2025-derived ratings + real Week 1 schedule, not yet played) ----------------
+# Ratings below = final-2025-standings point-diff-per-game * 0.70 preseason carryover
+# regression, already computed once — static until Week 1 is actually played.
+nfl_ratings = {"Denver Broncos": 3.706, "New England Patriots": 7.0, "Jacksonville Jaguars": 5.682, "Pittsburgh Steelers": 0.412, "Houston Texans": 4.488, "Buffalo Bills": 4.776, "Los Angeles Chargers": 1.153, "Indianapolis Colts": 2.224, "Baltimore Ravens": 1.071, "Miami Dolphins": -3.171, "Cincinnati Bengals": -3.212, "Kansas City Chiefs": 1.4, "Cleveland Browns": -4.118, "Las Vegas Raiders": -7.865, "New York Jets": -8.359, "Tennessee Titans": -7.988, "Seattle Seahawks": 7.865, "Chicago Bears": 1.071, "Philadelphia Eagles": 2.224, "Los Angeles Rams": 7.082, "San Francisco 49ers": 2.718, "Carolina Panthers": -2.841, "Tampa Bay Buccaneers": -1.276, "Atlanta Falcons": -1.976, "Green Bay Packers": 1.276, "Minnesota Vikings": 0.453, "Detroit Lions": 2.8, "Dallas Cowboys": -1.647, "New Orleans Saints": -3.171, "Washington Commanders": -3.912, "New York Giants": -2.388, "Arizona Cardinals": -5.476}
 
 nfl_week1 = [
     ("New England Patriots", "Seattle Seahawks", "2026-09-09"),
@@ -59,7 +67,7 @@ results["leagues"]["nfl"] = {
     "ratings": nfl_ratings, "games": nfl_games,
 }
 
-# ---------------- MLB ----------------
+# ---------------- MLB (live: fresh standings + slate each refresh) ----------------
 mlb_rows = read_csv("mlb_2026_standings.csv")
 mlb_ratings = {}
 for r in mlb_rows:
@@ -68,19 +76,11 @@ for r in mlb_rows:
     raw = int(r["run_diff"]) / gp
     mlb_ratings[r["team"]] = round(shrink(raw, gp, P("mlb")["shrink_k"]), 3)
 
-mlb_upcoming = [
-    ("Miami Marlins", "Washington Nationals", "2026-08-30"),
-    ("Boston Red Sox", "New York Yankees", "2026-08-30"),
-    ("Colorado Rockies", "Atlanta Braves", "2026-08-30"),
-    ("Seattle Mariners", "Toronto Blue Jays", "2026-08-30"),
-    ("Kansas City Royals", "Cleveland Guardians", "2026-08-30"),
-    ("Los Angeles Dodgers", "Detroit Tigers", "2026-08-30"),
-    ("San Diego Padres", "Tampa Bay Rays", "2026-08-30"),
-]
-mlb_games = [build_game("mlb", a, h, d, mlb_ratings.get(h, 0), mlb_ratings.get(a, 0)) for a, h, d in mlb_upcoming]
+mlb_slate = [(r["away"], r["home"], r["date"]) for r in read_csv("mlb_slate.csv")]
+mlb_games = [build_game("mlb", a, h, d, mlb_ratings.get(h, 0), mlb_ratings.get(a, 0)) for a, h, d in mlb_slate]
 results["leagues"]["mlb"] = {"label": "MLB", "status": "in season", "ratings": mlb_ratings, "games": mlb_games}
 
-# ---------------- Premier League ----------------
+# ---------------- Premier League (live) ----------------
 epl_rows = read_csv("epl_2026_27_standings.csv")
 epl_ratings = {}
 for r in epl_rows:
@@ -88,23 +88,15 @@ for r in epl_rows:
     raw = int(r["gd"]) / gp if gp else 0
     epl_ratings[r["team"]] = round(shrink(raw, gp, P("epl")["shrink_k"]), 3)
 
-epl_upcoming = [
-    ("Nottingham Forest", "Liverpool", "2026-08-29"),
-    ("Everton", "AFC Bournemouth", "2026-08-29"),
-    ("Hull City", "Coventry City", "2026-08-29"),
-    ("Newcastle United", "Tottenham Hotspur", "2026-08-29"),
-    ("Brighton and Hove Albion", "Chelsea", "2026-08-30"),
-    ("Brentford", "Leeds United", "2026-08-30"),
-    ("Fulham", "Sunderland", "2026-08-30"),
-]
-epl_games = [build_game("epl", a, h, d, epl_ratings.get(h, 0), epl_ratings.get(a, 0)) for a, h, d in epl_upcoming]
+epl_fixtures = [(r["away"], r["home"], r["date"]) for r in read_csv("epl_fixtures.csv")]
+epl_games = [build_game("epl", a, h, d, epl_ratings.get(h, 0), epl_ratings.get(a, 0)) for a, h, d in epl_fixtures]
 results["leagues"]["epl"] = {
     "label": "Premier League",
-    "status": "in season (matchweek 2) — early-season ratings are heavily shrunk toward league average",
+    "status": "in season — early-season ratings are heavily shrunk toward league average",
     "ratings": epl_ratings, "games": epl_games,
 }
 
-# ---------------- MLS ----------------
+# ---------------- MLS (live) ----------------
 mls_rows = read_csv("mls_2026_standings.csv")
 mls_ratings = {}
 for r in mls_rows:
@@ -112,39 +104,25 @@ for r in mls_rows:
     raw = int(r["gd"]) / gp if gp else 0
     mls_ratings[r["team"]] = round(shrink(raw, gp, P("mls")["shrink_k"]), 3)
 
-mls_upcoming = [
-    ("Chicago Fire FC", "Seattle Sounders FC", "2026-08-29"),
-    ("New England Revolution", "Columbus Crew", "2026-08-29"),
-    ("Charlotte FC", "Atlanta United FC", "2026-08-29"),
-    ("LAFC", "D.C. United", "2026-08-29"),
-    ("CF Montreal", "Inter Miami CF", "2026-08-29"),
-    ("Philadelphia Union", "Red Bull New York", "2026-08-29"),
-    ("New York City FC", "Toronto FC", "2026-08-29"),
-]
-mls_games = [build_game("mls", a, h, d, mls_ratings.get(h, 0), mls_ratings.get(a, 0)) for a, h, d in mls_upcoming]
+mls_fixtures = [(r["away"], r["home"], r["date"]) for r in read_csv("mls_fixtures.csv")]
+mls_games = [build_game("mls", a, h, d, mls_ratings.get(h, 0), mls_ratings.get(a, 0)) for a, h, d in mls_fixtures]
 results["leagues"]["mls"] = {"label": "MLS", "status": "in season", "ratings": mls_ratings, "games": mls_games}
 
-# ---------------- PLL Lacrosse ----------------
-pll_rows = read_csv("pll_2026_standings.csv")
-pll_ratings = {}
-for r in pll_rows:
-    w, l = int(r["w"]), int(r["l"])
-    gp = w + l
-    win_pct = w / gp if gp else 0.5
-    pll_ratings[r["team"]] = round((win_pct - 0.5) * 10, 3)
-
-pll_playoffs = [
-    ("California Redwoods", "Denver Outlaws", "2026-08-29", "Quarterfinal"),
-    ("Boston Cannons", "Maryland Whipsnakes", "2026-08-29", "Quarterfinal"),
-]
-pll_games = [build_game("pll", a, h, d, pll_ratings.get(h, 0), pll_ratings.get(a, 0), note) for a, h, d, note in pll_playoffs]
+# ---------------- PLL Lacrosse (regular-season ratings are final/static; fixtures are live) ----------------
+pll_ratings = {
+    "Philadelphia Waterdogs": 2.5, "Boston Cannons": 0.833, "Maryland Whipsnakes": -0.833,
+    "New York Atlas": -2.5, "Utah Archers": 0.833, "California Redwoods": 0.0,
+    "Denver Outlaws": 0.0, "Carolina Chaos": -0.833,
+}
+pll_fixtures = [(r["away"], r["home"], r["date"], r["note"]) for r in read_csv("pll_fixtures.csv")]
+pll_games = [build_game("pll", a, h, d, pll_ratings.get(h, 0), pll_ratings.get(a, 0), note) for a, h, d, note in pll_fixtures]
 results["leagues"]["pll"] = {
     "label": "PLL Lacrosse",
-    "status": "playoffs (quarterfinals) — neutral site, no home advantage applied",
+    "status": "playoffs (semifinals) — neutral site, no home advantage applied",
     "ratings": pll_ratings, "games": pll_games,
 }
 
-# ---------------- NCAA Football (AP rank proxy) ----------------
+# ---------------- NCAA Football (point-in-time: real Week 1 schedule, AP Top 25 preseason poll) ----------------
 ap25 = ["Ohio State","Oregon","Georgia","Notre Dame","Texas","Indiana","Miami","Texas A&M",
         "Ole Miss","Oklahoma","LSU","Texas Tech","Alabama","BYU","USC","Michigan","Washington",
         "Penn State","SMU","Tennessee","Utah","Iowa","Houston","Louisville","Missouri"]
@@ -163,13 +141,8 @@ results["leagues"]["ncaaf"] = {
     "ratings": ncaaf_ratings, "games": ncaaf_games,
 }
 
-# ---------------- NBA (offseason, ratings only) ----------------
-nba_rows = read_csv("nba_2025_26_final.csv")
-nba_ratings = {}
-for r in nba_rows:
-    w, l = int(r["w"]), int(r["l"])
-    win_pct = w / (w + l)
-    nba_ratings[r["team"]] = round((win_pct - 0.5) * 20, 3)
+# ---------------- NBA (offseason, ratings only, static until 2026-27 tips off) ----------------
+nba_ratings = {"Oklahoma City Thunder": 5.61, "San Antonio Spurs": 5.122, "Detroit Pistons": 4.634, "Denver Nuggets": 3.171, "Los Angeles Lakers": 2.927, "Boston Celtics": 3.659, "New York Knicks": 2.927, "Houston Rockets": 2.683, "Cleveland Cavaliers": 2.683, "Minnesota Timberwolves": 1.951, "Toronto Raptors": 1.22, "Atlanta Hawks": 1.22, "Portland Trail Blazers": 0.244, "Los Angeles Clippers": 0.244, "Philadelphia 76ers": 0.976, "Orlando Magic": 0.976, "Phoenix Suns": 0.976, "Charlotte Hornets": 0.732, "Miami Heat": 0.488, "Golden State Warriors": -0.976, "Milwaukee Bucks": -2.195, "Chicago Bulls": -2.439, "New Orleans Pelicans": -3.659, "Dallas Mavericks": -3.659, "Memphis Grizzlies": -3.902, "Sacramento Kings": -4.634, "Utah Jazz": -4.634, "Indiana Pacers": -5.366, "Washington Wizards": -5.854, "Brooklyn Nets": -5.122}
 
 results["leagues"]["nba"] = {
     "label": "NBA",

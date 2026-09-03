@@ -1,17 +1,18 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-08-29",
+  "as_of": "2026-09-03",
   "record": {
     "w": 0,
     "l": 0,
     "t": 0,
-    "note": "Preseason \u2014 regular season opens Sept 13, 2026"
+    "note": "Preseason complete, 53-man roster set \u2014 regular season opens Sept 13, 2026 at Indianapolis"
   },
   "coaching_change": {
     "headline": "New head coach for 2026: Jesse Minter (4th HC in franchise history), replacing John Harbaugh after 18 seasons.",
     "details": [
       "New offensive coordinator: Declan Doyle",
-      "New defensive coordinator: Anthony Weaver"
+      "New defensive coordinator: Anthony Weaver",
+      "New special teams coordinator: Anthony Levine Sr."
     ]
   },
   "roster_changes": {
@@ -50,6 +51,36 @@
         "player": "Odafe Oweh",
         "pos": "OLB",
         "note": "Traded to LA Chargers"
+      },
+      {
+        "player": "C.J. Okoye",
+        "pos": "DL",
+        "note": "Traded to NY Giants for a 2028 7th-round pick"
+      },
+      {
+        "player": "Diego Pounds",
+        "pos": "OT",
+        "note": "Traded to Kansas City Chiefs for a conditional 2028 6th-round pick"
+      },
+      {
+        "player": "Jonathan Ward",
+        "pos": "RB",
+        "note": "Cut in final roster trim"
+      },
+      {
+        "player": "Chris Moore",
+        "pos": "WR",
+        "note": "Cut in final roster trim"
+      },
+      {
+        "player": "Xavier Guillory",
+        "pos": "WR",
+        "note": "Cut in final roster trim"
+      },
+      {
+        "player": "Lucas Scott",
+        "pos": "TE",
+        "note": "Cut in final roster trim"
       }
     ],
     "acquisitions": [
@@ -72,6 +103,11 @@
         "player": "Trey Hendrickson",
         "pos": "LB",
         "note": "Offseason addition"
+      },
+      {
+        "player": "Joe Fagnano",
+        "pos": "QB",
+        "note": "Undrafted rookie made the 53-man roster \u2014 first time the Ravens have kept 3 QBs since 2020"
       }
     ]
   },
@@ -79,7 +115,17 @@
     {
       "player": "Ja'Kobi Lane",
       "pos": "WR",
-      "note": "3 rec, 38 yds, 1 TD vs Eagles \u2014 rookie opened the scoring on a 16-yard TD catch"
+      "note": "Emerged as the No. 3 receiver through preseason and roster cuts"
+    },
+    {
+      "player": "Ethan Burke",
+      "pos": "OLB",
+      "note": "Undrafted rookie made the 53-man roster"
+    },
+    {
+      "player": "Joe Fagnano",
+      "pos": "QB",
+      "note": "Undrafted rookie QB made the roster as the No. 3"
     },
     {
       "player": "Matt Hibner",
@@ -103,6 +149,31 @@
     }
   ],
   "preseason_concerns": [
+    {
+      "player": "Nnamdi Madubuike",
+      "pos": "DT",
+      "note": "Recovering from a neck injury; kept on the active roster rather than IR \u2014 HC Jesse Minter said he doesn't expect Madubuike to miss many games"
+    },
+    {
+      "player": "Teddye Buchanan",
+      "pos": "ILB",
+      "note": "Recovering from an ACL tear; kept on the active roster"
+    },
+    {
+      "player": "Adam Randall",
+      "pos": "RB",
+      "note": "Placed on injured reserve (designated to return) after a strong preseason finale"
+    },
+    {
+      "player": "Bilhal Kone",
+      "pos": "CB",
+      "note": "Placed on injured reserve (designated to return) with a significant knee injury"
+    },
+    {
+      "player": "Kicker/center battles",
+      "pos": "-",
+      "note": "Tyler Loop expected to start Week 1 over newly-signed veteran Jake Moody; center job still being decided between Jovaughn Gwyn and Ethan Pocic"
+    },
     {
       "player": "Tyler Loop",
       "pos": "K",
