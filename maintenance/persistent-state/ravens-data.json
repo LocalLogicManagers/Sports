@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-03",
+  "as_of": "2026-09-04",
   "record": {
     "w": 0,
     "l": 0,
@@ -157,7 +157,7 @@
     {
       "player": "Nnamdi Madubuike",
       "pos": "DT",
-      "note": "Recovering from a neck injury; kept on the active roster rather than IR \u2014 HC Jesse Minter said he doesn't expect Madubuike to miss many games"
+      "note": "Updated 2026-09-04: rejoined full team drills (previously limited to individual conditioning work) \u2014 team called it \"great things ahead\"; recovering from a neck injury, kept on the active roster rather than IR"
     },
     {
       "player": "Teddye Buchanan",
@@ -177,7 +177,7 @@
     {
       "player": "Kicker/center battles",
       "pos": "-",
-      "note": "Tyler Loop expected to start Week 1 over newly-signed veteran Jake Moody; center job reopened between Jovaughn Gwyn and Ethan Pocic after Danny Pinter's injury (see below) \u2014 as of Sept 1, Minter still hadn't settled it"
+      "note": "Updated 2026-09-04: center job is effectively resolved \u2014 with Pinter out for the year, veteran Ethan Pocic (signed specifically as insurance) is expected to start Week 1 over Jovaughn Gwyn (11 career offensive snaps). Kicker still technically open \u2014 Minter said (Sept 1) he has \"a lot of confidence\" in Tyler Loop and expects him to start at Indianapolis, but the newly-signed Jake Moody remains on the practice squad as competition."
     },
     {
       "player": "Tyler Loop",
@@ -192,7 +192,7 @@
     {
       "player": "Zay Flowers",
       "pos": "WR",
-      "note": "New (as of 2026-09-03): missed practice with a lower-body (thigh/quad) contusion; per a Sept 1 report Minter called it not serious and Flowers is expected back to full practice and on track to play Week 1 vs. the Colts"
+      "note": "Updated 2026-09-04: returned to practice Sept 3 after missing two weeks with a lower-body (thigh/quad) contusion, seen running full-field on the side — trending toward playing Week 1 vs. the Colts"
     },
     {
       "player": "Travis Jones",
@@ -205,6 +205,11 @@
       "date": "2026-08-29",
       "american_odds": "+1000",
       "book": "consensus (RotoWire)"
+    },
+    {
+      "date": "2026-09-04",
+      "american_odds": "+1100",
+      "book": "consensus (RotoWire) — range +1000 (DraftKings/theScore) to +1500 (Circa); drifted out slightly from 08-29, likely reflecting Pinter/Madubuike/Buchanan injury uncertainty plus new-coach transition risk"
     }
   ],
   "projected_record_note": "Outside consensus projection: 13-4, 6-0 AFC North (RotoWire, as of 2026-08-29 \u2014 a projection, not a guarantee)",
