@@ -18,7 +18,14 @@
     "opponent": "New Orleans Saints",
     "location": "home",
     "date": "2026-09-20",
-    "neutral": false
+    "neutral": false,
+    "market_odds": {
+      "ravens": "-355",
+      "opponent": "+280",
+      "spread": "Ravens -7.5",
+      "total": 46.5,
+      "book": "DraftKings"
+    }
   },
   {
     "week": 3,
