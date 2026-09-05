@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-04",
+  "as_of": "2026-09-05",
   "record": {
     "w": 0,
     "l": 0,
@@ -177,7 +177,7 @@
     {
       "player": "Kicker/center battles",
       "pos": "-",
-      "note": "Updated 2026-09-04: center job is effectively resolved \u2014 with Pinter out for the year, veteran Ethan Pocic (signed specifically as insurance) is expected to start Week 1 over Jovaughn Gwyn (11 career offensive snaps). Kicker still technically open \u2014 Minter said (Sept 1) he has \"a lot of confidence\" in Tyler Loop and expects him to start at Indianapolis, but the newly-signed Jake Moody remains on the practice squad as competition."
+      "note": "Updated 2026-09-05: resolved \u2014 HC Jesse Minter confirmed (Aug 31) Tyler Loop as the Week 1 starting kicker at Indianapolis (\"I expect him to be our kicker\"); Jake Moody stays on the practice squad as insurance. Loop is considered on thin ice after missing kicks in the preseason finale. Center job remains Ethan Pocic over Jovaughn Gwyn with Pinter out for the year."
     },
     {
       "player": "Tyler Loop",
@@ -192,12 +192,32 @@
     {
       "player": "Zay Flowers",
       "pos": "WR",
-      "note": "Updated 2026-09-04: returned to practice Sept 3 after missing two weeks with a lower-body (thigh/quad) contusion, seen running full-field on the side — trending toward playing Week 1 vs. the Colts"
+      "note": "Updated 2026-09-04: returned to practice Sept 3 after missing two weeks with a lower-body (thigh/quad) contusion, seen running full-field on the side \u2014 trending toward playing Week 1 vs. the Colts"
     },
     {
       "player": "Travis Jones",
       "pos": "DT",
-      "note": "New (as of 2026-09-03): working back into practice from a pectoral injury (PUP)"
+      "note": "Updated 2026-09-05: correction \u2014 actually returned to practice and came off PUP back on Aug 11, 2026; not on the current injury report at all. Not a Week 1 concern."
+    },
+    {
+      "player": "Jahquez Robinson",
+      "pos": "S",
+      "note": "New (as of 2026-09-05): placed on injured reserve, undisclosed injury"
+    },
+    {
+      "player": "Skylar Thompson",
+      "pos": "QB",
+      "note": "New (as of 2026-09-05): placed on injured reserve, undisclosed injury"
+    },
+    {
+      "player": "Aeneas Peebles",
+      "pos": "DT",
+      "note": "New (as of 2026-09-05): listed Questionable for Week 1, undisclosed injury"
+    },
+    {
+      "player": "Jay Higgins",
+      "pos": "LB",
+      "note": "New (as of 2026-09-05): listed Questionable for Week 1 with a concussion"
     }
   ],
   "super_bowl_odds_history": [
@@ -209,7 +229,12 @@
     {
       "date": "2026-09-04",
       "american_odds": "+1100",
-      "book": "consensus (RotoWire) — range +1000 (DraftKings/theScore) to +1500 (Circa); drifted out slightly from 08-29, likely reflecting Pinter/Madubuike/Buchanan injury uncertainty plus new-coach transition risk"
+      "book": "consensus (RotoWire) \u2014 range +1000 (DraftKings/theScore) to +1500 (Circa); drifted out slightly from 08-29, likely reflecting Pinter/Madubuike/Buchanan injury uncertainty plus new-coach transition risk"
+    },
+    {
+      "date": "2026-09-05",
+      "american_odds": "+1000 to +1200",
+      "book": "range across books (DraftKings +1000, FanDuel +1200) \u2014 essentially flat vs. 09-04 consensus, normal book-to-book variance"
     }
   ],
   "projected_record_note": "Outside consensus projection: 13-4, 6-0 AFC North (RotoWire, as of 2026-08-29 \u2014 a projection, not a guarantee)",

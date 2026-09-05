@@ -1,16 +1,73 @@
 {
   "version": 1,
-  "last_calibrated": null,
+  "last_calibrated": "2026-09-05",
   "leagues": {
-    "nfl":   {"home_adv": 1.5,  "sigma": 13.5, "shrink_k": 4,  "unit": "pt"},
-    "mlb":   {"home_adv": 0.15, "sigma": 4.6,  "shrink_k": 20, "unit": "run"},
-    "epl":   {"home_adv": 0.35, "sigma": 1.7,  "shrink_k": 6,  "unit": "goal"},
-    "mls":   {"home_adv": 0.30, "sigma": 1.75, "shrink_k": 6,  "unit": "goal"},
-    "pll":   {"home_adv": 0.0,  "sigma": 3.2,  "shrink_k": 4,  "unit": "goal-eq."},
-    "ncaaf": {"home_adv": 2.0,  "sigma": 17.0, "shrink_k": 4,  "unit": "rank-pt"},
-    "nba":   {"home_adv": 2.5,  "sigma": 12.0, "shrink_k": 15, "unit": "pt"},
-    "ncaab": {"home_adv": 3.0,  "sigma": 12.0, "shrink_k": 10, "unit": "pt"},
-    "ucl":   {"home_adv": 0.35, "sigma": 1.7,  "shrink_k": 6,  "unit": "goal"}
+    "nfl": {
+      "home_adv": 1.5,
+      "sigma": 13.5,
+      "shrink_k": 4,
+      "unit": "pt"
+    },
+    "mlb": {
+      "home_adv": 0.65,
+      "sigma": 3.6,
+      "shrink_k": 20,
+      "unit": "run"
+    },
+    "epl": {
+      "home_adv": 0.35,
+      "sigma": 1.7,
+      "shrink_k": 6,
+      "unit": "goal"
+    },
+    "mls": {
+      "home_adv": 0.3,
+      "sigma": 1.75,
+      "shrink_k": 6,
+      "unit": "goal"
+    },
+    "pll": {
+      "home_adv": 0.0,
+      "sigma": 3.2,
+      "shrink_k": 4,
+      "unit": "goal-eq."
+    },
+    "ncaaf": {
+      "home_adv": 2.0,
+      "sigma": 17.0,
+      "shrink_k": 4,
+      "unit": "rank-pt"
+    },
+    "nba": {
+      "home_adv": 2.5,
+      "sigma": 12.0,
+      "shrink_k": 15,
+      "unit": "pt"
+    },
+    "ncaab": {
+      "home_adv": 3.0,
+      "sigma": 12.0,
+      "shrink_k": 10,
+      "unit": "pt"
+    },
+    "ucl": {
+      "home_adv": 0.35,
+      "sigma": 1.7,
+      "shrink_k": 6,
+      "unit": "goal"
+    }
   },
-  "calibration_log": []
+  "calibration_log": [
+    {
+      "date": "2026-09-05",
+      "league": "mlb",
+      "old_home_adv": 0.15,
+      "new_home_adv": 0.65,
+      "old_sigma": 4.6,
+      "new_sigma": 3.6,
+      "n": 29,
+      "old_brier": 0.2277,
+      "new_brier": 0.217
+    }
+  ]
 }
