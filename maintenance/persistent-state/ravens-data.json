@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-05",
+  "as_of": "2026-09-06",
   "record": {
     "w": 0,
     "l": 0,
@@ -157,7 +157,7 @@
     {
       "player": "Nnamdi Madubuike",
       "pos": "DT",
-      "note": "Updated 2026-09-04: rejoined full team drills (previously limited to individual conditioning work) \u2014 team called it \"great things ahead\"; recovering from a neck injury, kept on the active roster rather than IR"
+      "note": "Updated 2026-09-06: still unresolved for Week 1 \u2014 as of 2026-08-24 the coaching staff had no definitive answer on his availability (limited to individual work, no live contact); as of 2026-08-31 the Ravens notably did NOT place him on short-term IR, seen as a positive signal but a roster decision, not medical clearance. Recovering from a neck injury."
     },
     {
       "player": "Teddye Buchanan",
@@ -192,7 +192,7 @@
     {
       "player": "Zay Flowers",
       "pos": "WR",
-      "note": "Updated 2026-09-04: returned to practice Sept 3 after missing two weeks with a lower-body (thigh/quad) contusion, seen running full-field on the side \u2014 trending toward playing Week 1 vs. the Colts"
+      "note": "Updated 2026-09-06: confirmed trending positive \u2014 per a 2026-09-01 report the full expectation is he'll be good to go for Week 1 vs. the Colts; back at full practice as of Sept 3 after a two-week absence with a lower-body (thigh/quad) contusion"
     },
     {
       "player": "Travis Jones",
@@ -202,12 +202,12 @@
     {
       "player": "Jahquez Robinson",
       "pos": "S",
-      "note": "New (as of 2026-09-05): placed on injured reserve, undisclosed injury"
+      "note": "Updated 2026-09-06: placed on IR (reverted after clearing waivers, Aug 19); expected to miss the full 2026 season"
     },
     {
       "player": "Skylar Thompson",
       "pos": "QB",
-      "note": "New (as of 2026-09-05): placed on injured reserve, undisclosed injury"
+      "note": "Updated 2026-09-06: on IR (placed ~Aug 12-24); Ravens signed QB Austin Reed as a corresponding roster move to add QB depth behind Lamar Jackson"
     },
     {
       "player": "Aeneas Peebles",
