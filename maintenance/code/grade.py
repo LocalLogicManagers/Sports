@@ -45,7 +45,8 @@ def grade_open(actual_results):
 
     print(f"graded {len(newly_graded)} predictions, {len(still_open)} remain open")
     if newly_graded:
-        summary = summarize(history["graded"])
+        team_sport_graded = [g for g in history["graded"] if g.get("league") != "horse_racing"]
+        summary = summarize(team_sport_graded)
         print(json.dumps(summary, indent=2))
     return newly_graded, still_open, history
 
