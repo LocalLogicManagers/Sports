@@ -128,16 +128,16 @@ ap25 = ["Ohio State","Oregon","Georgia","Notre Dame","Texas","Indiana","Miami","
         "Penn State","SMU","Tennessee","Utah","Iowa","Houston","Louisville","Missouri"]
 ncaaf_ratings = {team: round(max(0, 26 - (i + 1)) * 2.4, 3) for i, team in enumerate(ap25)}
 
-ncaaf_week1 = [
-    ("Clemson", "LSU", "2026-09-05"),
-    ("East Carolina", "Alabama", "2026-09-05"),
-    ("Texas State", "Texas", "2026-09-05"),
-    ("Boise State", "Oregon", "2026-09-05"),
-]
-ncaaf_games = [build_game("ncaaf", a, h, d, ncaaf_ratings.get(h, 0), ncaaf_ratings.get(a, 0)) for a, h, d in ncaaf_week1]
+# Week 1 (2026-09-05) has been played and graded (all 4 favorites covered — see
+# predictions-history.json). The Week-2+ file-driven pipeline (CSV-based
+# standings/fixtures like MLB/EPL/MLS) hasn't been built yet -- flagged for
+# Zak rather than guessing at a new hardcoded slate with no real ranking
+# update methodology behind it. Leaving games empty (rather than re-showing
+# the finished Week 1 slate as if it were still upcoming) until that's built.
+ncaaf_games = []
 results["leagues"]["ncaaf"] = {
     "label": "NCAA Football",
-    "status": "Week 1 — unranked opponent ratings treated as replacement level (0); scoped to AP Top 25 preseason poll",
+    "status": "Week 1 complete (all graded) — Week 2+ needs a file-driven pipeline (not yet built); scoped to AP Top 25 preseason poll",
     "ratings": ncaaf_ratings, "games": ncaaf_games,
 }
 
