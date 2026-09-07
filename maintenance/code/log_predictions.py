@@ -26,7 +26,7 @@ for league, lg in preds["leagues"].items():
             "pick_prob": g["pick_prob"],
             "confidence": g["confidence"],
             "note": g.get("note"),
-            "model_version": preds["model_version"],
+            "model_version": lg.get("model_version", preds["model_version"]),
             "logged_at": preds["generated_at"],
             "graded": False,
         })

@@ -1,6 +1,6 @@
 import csv, math, json, os, sys, datetime
 sys.path.insert(0, "/home/claude/sportspredict")
-from engine import win_prob, shrink, make_pick
+from engine import win_prob, shrink, make_pick, nfl_team_rating_v2, nfl_regime_change_sigma
 
 DATA = "/home/claude/sportspredict/data"
 TODAY = datetime.date.today().isoformat()
@@ -15,12 +15,15 @@ with open(os.path.join(DATA, "model_params.json")) as f:
 def P(league):
     return PARAMS["leagues"][league]
 
-def build_game(league, away, home, date, rh, ra, note=None):
+def build_game(league, away, home, date, rh, ra, note=None, sigma_override=None, model_version=None):
     p = P(league)
-    home_prob = win_prob(rh, ra, p["home_adv"], p["sigma"])
+    sigma = sigma_override if sigma_override is not None else p["sigma"]
+    home_prob = win_prob(rh, ra, p["home_adv"], sigma)
     g = {"away": away, "home": home, "date": date, "home_win_prob": round(home_prob, 3)}
     if note:
         g["note"] = note
+    if model_version is not None:
+        g["model_version"] = model_version
     g.update(make_pick(away, home, home_prob))
     return g
 
@@ -37,10 +40,64 @@ def build_game(league, away, home, date, rh, ra, note=None):
 
 results = {"generated_at": TODAY, "model_version": PARAMS["version"], "leagues": {}}
 
-# ---------------- NFL (point-in-time: final-2025-derived ratings + real Week 1 schedule, not yet played) ----------------
-# Ratings below = final-2025-standings point-diff-per-game * 0.70 preseason carryover
-# regression, already computed once — static until Week 1 is actually played.
-nfl_ratings = {"Denver Broncos": 3.706, "New England Patriots": 7.0, "Jacksonville Jaguars": 5.682, "Pittsburgh Steelers": 0.412, "Houston Texans": 4.488, "Buffalo Bills": 4.776, "Los Angeles Chargers": 1.153, "Indianapolis Colts": 2.224, "Baltimore Ravens": 1.071, "Miami Dolphins": -3.171, "Cincinnati Bengals": -3.212, "Kansas City Chiefs": 1.4, "Cleveland Browns": -4.118, "Las Vegas Raiders": -7.865, "New York Jets": -8.359, "Tennessee Titans": -7.988, "Seattle Seahawks": 7.865, "Chicago Bears": 1.071, "Philadelphia Eagles": 2.224, "Los Angeles Rams": 7.082, "San Francisco 49ers": 2.718, "Carolina Panthers": -2.841, "Tampa Bay Buccaneers": -1.276, "Atlanta Falcons": -1.976, "Green Bay Packers": 1.276, "Minnesota Vikings": 0.453, "Detroit Lions": 2.8, "Dallas Cowboys": -1.647, "New Orleans Saints": -3.171, "Washington Commanders": -3.912, "New York Giants": -2.388, "Arizona Cardinals": -5.476}
+# ---------------- NFL (v2: win-total-baseline ratings + situational adjustments) ----------------
+# v2 replaces v1's point-diff-carryover ratings, which backtested at Brier
+# 0.263 on real 2024 games (worse than a coin flip) because they were never
+# anchored to anything with real predictive content -- see "Team rating
+# methodology v2" in sports-predictor-app.md for the full diagnosis. Baseline
+# = each team's real 2026 sportsbook season win total run through
+# nfl_win_total_baseline() (inside nfl_team_rating_v2); layered with injury/
+# turnover adjustments where we have specific sourced data, and a sigma bump
+# for any team in its first season under a new head coach. Every NFL game
+# built here is tagged model_version 2 -- already-logged v1 picks (e.g. the
+# locked Week 1 slate) are a separate, untouched record; this only affects
+# what gets computed/logged from here on.
+
+NFL_SEASON_WIN_TOTALS = {  # 2026 season win totals, sourced via WebSearch/WebFetch (FOX Sports/DraftKings-derived), 2026-09-07
+    "Arizona Cardinals": 3.5, "Atlanta Falcons": 6.5, "Baltimore Ravens": 11.5,
+    "Buffalo Bills": 10.5, "Carolina Panthers": 7.5, "Chicago Bears": 9.5,
+    "Cincinnati Bengals": 10.5, "Cleveland Browns": 5.5, "Dallas Cowboys": 9.5,
+    "Denver Broncos": 9.5, "Detroit Lions": 10.5, "Green Bay Packers": 9.5,
+    "Houston Texans": 9.5, "Indianapolis Colts": 7.5, "Jacksonville Jaguars": 8.5,
+    "Kansas City Chiefs": 10.5, "Las Vegas Raiders": 5.5, "Los Angeles Chargers": 9.5,
+    "Los Angeles Rams": 11.5, "Miami Dolphins": 4.5, "Minnesota Vikings": 8.5,
+    "New England Patriots": 10.5, "New Orleans Saints": 7.5, "New York Giants": 7.5,
+    "New York Jets": 5.5, "Philadelphia Eagles": 10.5, "Pittsburgh Steelers": 8.5,
+    "San Francisco 49ers": 9.5, "Seattle Seahawks": 10.5, "Tampa Bay Buccaneers": 8.5,
+    "Tennessee Titans": 6.5, "Washington Commanders": 7.5,
+}
+
+NFL_NEW_HC_TEAMS = {  # first season under a new head coach, 2026 -- drives the regime-change sigma bump
+    "Buffalo Bills", "Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens",
+    "Cleveland Browns", "Las Vegas Raiders", "Miami Dolphins", "New York Giants",
+    "Pittsburgh Steelers", "Tennessee Titans",
+}
+
+# Injury/turnover adjustments where we have specific, sourced data (currently
+# just the Ravens -- see ravens-data.json). Teams not listed here get 0 for
+# both, an honest default: the win-total baseline already does nearly all the
+# work per the Ravens diagnostic. Extend opportunistically as real injury/
+# transaction news gets sourced for other teams.
+NFL_INJURY_TURNOVER = {
+    "Baltimore Ravens": {
+        "injuries": [
+            {"pos": "C", "severity": "out"},              # Danny Pinter, out extended time
+            {"pos": "DT", "severity": "positive_return"},  # Nnamdi Madubuike, back to full-contact practice
+        ],
+        "departures": ["TE", "FB", "OT", "P", "S", "CB", "OLB", "WR"],  # Likely, Ricard, Faalele, Stout, Washington, Alexander, Oweh, C.Johnson
+        "acquisitions": ["OLB", "S", "CB", "LB", "ILB"],                 # D.Jones, Gilman, White, Hendrickson, Barrett
+    },
+}
+
+nfl_ratings = {}
+for team, win_total in NFL_SEASON_WIN_TOTALS.items():
+    extra = NFL_INJURY_TURNOVER.get(team, {})
+    nfl_ratings[team] = round(nfl_team_rating_v2(
+        win_total,
+        injuries=extra.get("injuries"),
+        departures=extra.get("departures"),
+        acquisitions=extra.get("acquisitions"),
+    ), 3)
 
 nfl_week1 = [
     ("New England Patriots", "Seattle Seahawks", "2026-09-09"),
@@ -60,10 +117,22 @@ nfl_week1 = [
     ("Dallas Cowboys", "New York Giants", "2026-09-13"),
     ("Denver Broncos", "Kansas City Chiefs", "2026-09-14"),
 ]
-nfl_games = [build_game("nfl", a, h, d, nfl_ratings.get(h, 0), nfl_ratings.get(a, 0)) for a, h, d in nfl_week1]
+nfl_games = [
+    build_game(
+        "nfl", a, h, d, nfl_ratings.get(h, 0), nfl_ratings.get(a, 0),
+        sigma_override=nfl_regime_change_sigma(
+            P("nfl")["sigma"],
+            home_new_coach=h in NFL_NEW_HC_TEAMS,
+            away_new_coach=a in NFL_NEW_HC_TEAMS,
+        ),
+        model_version=2,
+    )
+    for a, h, d in nfl_week1
+]
 results["leagues"]["nfl"] = {
     "label": "NFL",
-    "status": "preseason — ratings carried over (regressed) from final 2025 standings",
+    "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Week 1 not yet played",
+    "model_version": 2,
     "ratings": nfl_ratings, "games": nfl_games,
 }
 

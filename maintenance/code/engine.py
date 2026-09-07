@@ -289,3 +289,78 @@ def fit_home_adv_sigma(graded_predictions, ratings_lookup, current_home_adv, cur
         "old_brier": round(avg_brier(current_home_adv, current_sigma), 4),
         "new_brier": round(best_score, 4),
     }
+
+
+# ---------- NFL team rating v2 (win-total baseline + situational adjustments) ----------
+# Replaces v1's point-diff-carryover NFL ratings, which backtested at Brier
+# 0.263 on real 2024 games -- worse than a coin flip -- because they were never
+# anchored to anything with real predictive content. See "Team rating
+# methodology v2" in sports-predictor-app.md for the full diagnosis. NFL only
+# so far; other leagues still use the plain shrink()-based carryover rating.
+
+NFL_POSITION_WEIGHT = {
+    "QB": 7.0,
+    "CB": 2.5, "EDGE": 2.5, "OLB": 2.5,
+    "WR": 2.0,
+    "S": 1.5, "OT": 1.5, "C": 1.5, "DT": 1.5, "RB": 1.5,
+    "TE": 1.0, "G": 1.0, "ILB": 1.0,
+    "K": 0.3, "P": 0.2, "LS": 0.1,
+}
+NFL_DEFAULT_POSITION_WEIGHT = 1.0  # fallback for a position not in the table above
+
+def nfl_win_total_baseline(season_win_total, avg_win_total=8.5, pts_per_win=2.5):
+    """v2 baseline team rating from the sportsbook's full-season win total (not
+    this game's own line -- avoids just copying the matchup's own market
+    price). avg_win_total=8.5 = 'average team' in a 17-game season;
+    pts_per_win=2.5 is an approximate NFL points-per-marginal-win conversion
+    (commonly cited range ~2.2-2.7; revisit if a better-sourced constant turns
+    up)."""
+    return (season_win_total - avg_win_total) * pts_per_win
+
+def nfl_injury_adjustment(injuries):
+    """injuries: list of {"pos": "QB", "severity": "out"|"questionable"|"positive_return"}.
+    Returns one additive points adjustment (negative = worse off). "out" =
+    out extended time/season-ending (-1.0x weight), "questionable" =
+    week-to-week (-0.4x weight), "positive_return" = notable return from
+    injury (+0.3x weight)."""
+    total = 0.0
+    for inj in injuries:
+        weight = NFL_POSITION_WEIGHT.get(inj["pos"], NFL_DEFAULT_POSITION_WEIGHT)
+        sev = inj["severity"]
+        if sev == "out":
+            total -= weight * 1.0
+        elif sev == "questionable":
+            total -= weight * 0.4
+        elif sev == "positive_return":
+            total += weight * 0.3
+        else:
+            raise ValueError(f"unknown injury severity: {sev!r}")
+    return total
+
+def nfl_turnover_adjustment(departures, acquisitions, cap=3.0):
+    """departures/acquisitions: list of position strings for real roster moves
+    only (trades, cuts, notable free-agent signings -- not unproven draft
+    picks). Net turnover, additive, capped at +/-cap points."""
+    dep_weight = sum(NFL_POSITION_WEIGHT.get(p, NFL_DEFAULT_POSITION_WEIGHT) for p in departures)
+    acq_weight = sum(NFL_POSITION_WEIGHT.get(p, NFL_DEFAULT_POSITION_WEIGHT) for p in acquisitions)
+    adj = -(dep_weight - acq_weight) * 0.15
+    return max(-cap, min(cap, adj))
+
+def nfl_team_rating_v2(season_win_total, injuries=None, departures=None, acquisitions=None,
+                        avg_win_total=8.5, pts_per_win=2.5):
+    """Full v2 NFL team rating: win-total baseline + injury adjustment + net
+    roster-turnover adjustment. injuries/departures/acquisitions each default
+    to none (a team with no specific sourced situational data just gets the
+    baseline, which does nearly all the work per the Ravens diagnostic)."""
+    rating = nfl_win_total_baseline(season_win_total, avg_win_total, pts_per_win)
+    rating += nfl_injury_adjustment(injuries or [])
+    rating += nfl_turnover_adjustment(departures or [], acquisitions or [])
+    return rating
+
+def nfl_regime_change_sigma(base_sigma, home_new_coach=False, away_new_coach=False, multiplier=1.15):
+    """Inflate sigma for a game involving a team in its first season under a
+    new head coach -- more variance, less predictability. Uses the higher of
+    the two teams' multipliers if both qualify (a documented simplification,
+    not a rigorous variance decomposition)."""
+    factor = multiplier if (home_new_coach or away_new_coach) else 1.0
+    return base_sigma * factor
