@@ -1,6 +1,6 @@
 import csv, math, json, os, sys, datetime
 sys.path.insert(0, "/home/claude/sportspredict")
-from engine import win_prob, shrink, make_pick, nfl_team_rating_v2, nfl_regime_change_sigma
+from engine import win_prob, shrink, make_pick, nfl_team_rating_v2, nfl_regime_change_sigma, attach_market
 
 DATA = "/home/claude/sportspredict/data"
 TODAY = datetime.date.today().isoformat()
@@ -14,6 +14,11 @@ with open(os.path.join(DATA, "model_params.json")) as f:
 
 def P(league):
     return PARAMS["leagues"][league]
+
+def blend_weight_for(league):
+    """Fitted market-blend weight for a league (0-1), or None if it hasn't
+    been backtested yet -- see model_params.json's market_blend_weight."""
+    return PARAMS.get("market_blend_weight", {}).get(league)
 
 def build_game(league, away, home, date, rh, ra, note=None, sigma_override=None, model_version=None):
     p = P(league)
@@ -117,8 +122,31 @@ nfl_week1 = [
     ("Dallas Cowboys", "New York Giants", "2026-09-13"),
     ("Denver Broncos", "Kansas City Chiefs", "2026-09-14"),
 ]
-nfl_games = [
-    build_game(
+# Real current market lines for the open Week 1 slate (FanDuel moneylines, sourced
+# via WebSearch/WebFetch, 2026-08-31) -- keyed by (away, home). A game not in this
+# dict just doesn't get a market_odds/value_bet/blended_prob block attached.
+NFL_MARKET_ODDS = {
+    ("New England Patriots", "Seattle Seahawks"): {"home_ml": "+164", "away_ml": "-196", "spread": "NE -3.5", "book": "FanDuel"},
+    ("San Francisco 49ers", "Los Angeles Rams"): {"home_ml": "+168", "away_ml": "-200", "spread": "SF -3.5", "book": "FanDuel"},
+    ("Chicago Bears", "Carolina Panthers"): {"home_ml": "+132", "away_ml": "-156", "spread": "CHI -2.5", "book": "FanDuel"},
+    ("Tampa Bay Buccaneers", "Cincinnati Bengals"): {"home_ml": "+166", "away_ml": "-198", "spread": "TB -3.5", "book": "FanDuel"},
+    ("New Orleans Saints", "Detroit Lions"): {"home_ml": "-360", "away_ml": "+290", "spread": "DET -7.0", "book": "FanDuel"},
+    ("Buffalo Bills", "Houston Texans"): {"home_ml": "-102", "away_ml": "-116", "spread": "BUF -1.5", "book": "FanDuel"},
+    ("Baltimore Ravens", "Indianapolis Colts"): {"home_ml": "+164", "away_ml": "-196", "spread": "BAL -3.5", "book": "FanDuel"},
+    ("Cleveland Browns", "Jacksonville Jaguars"): {"home_ml": "-420", "away_ml": "+330", "spread": "JAX -7.5", "book": "FanDuel"},
+    ("Atlanta Falcons", "Pittsburgh Steelers"): {"home_ml": "-168", "away_ml": "+142", "spread": "PIT -3.0", "book": "FanDuel"},
+    ("New York Jets", "Tennessee Titans"): {"home_ml": "-138", "away_ml": "+118", "spread": "TEN -2.5", "book": "FanDuel"},
+    ("Arizona Cardinals", "Los Angeles Chargers"): {"home_ml": "-650", "away_ml": "+480", "spread": "LAC -10.5", "book": "FanDuel"},
+    ("Miami Dolphins", "Las Vegas Raiders"): {"home_ml": "+162", "away_ml": "-194", "spread": "MIA -3.5", "book": "FanDuel"},
+    ("Green Bay Packers", "Minnesota Vikings"): {"home_ml": "-118", "away_ml": "+100", "spread": "MIN -1.5", "book": "FanDuel"},
+    ("Washington Commanders", "Philadelphia Eagles"): {"home_ml": "-240", "away_ml": "+198", "spread": "PHI -5.5", "book": "FanDuel"},
+    ("Dallas Cowboys", "New York Giants"): {"home_ml": "+122", "away_ml": "-144", "spread": "DAL -2.5", "book": "FanDuel"},
+    ("Denver Broncos", "Kansas City Chiefs"): {"home_ml": "-144", "away_ml": "+122", "spread": "KC -2.5", "book": "FanDuel"},
+}
+
+nfl_games = []
+for a, h, d in nfl_week1:
+    g = build_game(
         "nfl", a, h, d, nfl_ratings.get(h, 0), nfl_ratings.get(a, 0),
         sigma_override=nfl_regime_change_sigma(
             P("nfl")["sigma"],
@@ -127,8 +155,10 @@ nfl_games = [
         ),
         model_version=2,
     )
-    for a, h, d in nfl_week1
-]
+    market = NFL_MARKET_ODDS.get((a, h))
+    if market:
+        g = attach_market(g, market, blend_weight=blend_weight_for("nfl"))
+    nfl_games.append(g)
 results["leagues"]["nfl"] = {
     "label": "NFL",
     "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Week 1 not yet played",
@@ -157,8 +187,21 @@ for r in epl_rows:
     raw = int(r["gd"]) / gp if gp else 0
     epl_ratings[r["team"]] = round(shrink(raw, gp, P("epl")["shrink_k"]), 3)
 
+# Real current market lines for specific EPL games where we have a clean 3-way
+# consensus price (Covers.com) -- keyed by (away, home). Most EPL games won't be
+# in this dict; it's populated opportunistically, not every fixture.
+EPL_MARKET_ODDS = {
+    ("Arsenal", "Aston Villa"): {"home_win_prob": 0.13, "draw_prob": 0.23, "away_win_prob": 0.65, "book": "Covers.com consensus"},
+}
+
 epl_fixtures = [(r["away"], r["home"], r["date"]) for r in read_csv("epl_fixtures.csv")]
-epl_games = [build_game("epl", a, h, d, epl_ratings.get(h, 0), epl_ratings.get(a, 0)) for a, h, d in epl_fixtures]
+epl_games = []
+for a, h, d in epl_fixtures:
+    g = build_game("epl", a, h, d, epl_ratings.get(h, 0), epl_ratings.get(a, 0))
+    market = EPL_MARKET_ODDS.get((a, h))
+    if market:
+        g = attach_market(g, market, blend_weight=blend_weight_for("epl"))
+    epl_games.append(g)
 results["leagues"]["epl"] = {
     "label": "Premier League",
     "status": "in season — early-season ratings are heavily shrunk toward league average",

@@ -364,3 +364,94 @@ def nfl_regime_change_sigma(base_sigma, home_new_coach=False, away_new_coach=Fal
     not a rigorous variance decomposition)."""
     factor = multiplier if (home_new_coach or away_new_coach) else 1.0
     return base_sigma * factor
+
+
+# ---------- market blending (real market vs. model) ----------
+# Compares/combines a model probability with a REAL market probability (not
+# the simulated wager-calculator odds above). Used once a real market line is
+# available for a game (see NFL_MARKET_ODDS etc. in compute.py).
+
+def devig_two_way(odds_a, odds_b):
+    """American moneyline odds for both sides of a two-way market -> fair
+    (no-vig) probabilities for each side, normalized so they sum to 1.
+    odds_a/odds_b: American odds as strings or numbers, e.g. '-196', '+164' --
+    order-independent (works whichever side is listed first)."""
+    def implied(odds):
+        a = float(str(odds).replace("+", ""))
+        return -a / (-a + 100) if a < 0 else 100 / (a + 100)
+    p_a, p_b = implied(odds_a), implied(odds_b)
+    total = p_a + p_b
+    return p_a / total, p_b / total
+
+def market_value_read(model_prob, market_prob, large_disagreement_pts=0.15):
+    """Compare a model probability to a real market probability (same side,
+    e.g. both home-team win prob). Returns a plain-language 'read' plus the
+    edge in probability points -- the same 'agree / lean / large disagreement'
+    framing used on the Ravens page's value-bet block, generalized so it's not
+    Ravens-specific. Thresholds: <0.02 = agree, >=large_disagreement_pts (default
+    0.15) = large disagreement, otherwise a directional 'leans' read."""
+    edge = round(model_prob - market_prob, 3)
+    large = abs(edge) >= large_disagreement_pts
+    if large:
+        read = "Large disagreement with the market — more likely our simple model is missing context than a real edge over the book's pricing."
+    elif abs(edge) < 0.02:
+        read = "Model roughly agrees with the market."
+    elif edge > 0:
+        read = "Model leans slightly more toward the home side than the market does."
+    else:
+        read = "Model leans slightly more toward the away side than the market does."
+    return {
+        "market_implied_prob": round(market_prob, 3),
+        "model_prob": round(model_prob, 3),
+        "edge_pts": edge,
+        "read": read,
+        "large_disagreement": large,
+    }
+
+def blend_prob(model_prob, market_prob, market_weight):
+    """Simple weighted average of a model probability and a real market
+    probability (both same side, e.g. home-team win prob). market_weight is
+    clamped to [0,1] -- 1.0 means 'trust the market entirely', 0.0 'ignore the
+    market entirely'. Weight comes from model_params.json's
+    market_blend_weight, fit by backtesting (see the runbook)."""
+    w = min(1.0, max(0.0, market_weight))
+    return w * market_prob + (1 - w) * model_prob
+
+def attach_market(game, market_entry, blend_weight=None):
+    """Merge real market data into a built game dict (non-mutating -- returns
+    a new dict, game itself is untouched). market_entry shapes handled:
+      - two-way moneyline: {'home_ml':..., 'away_ml':..., 'spread':..., 'book':...}
+        -> devigged market_home_prob, a value_bet block, and (if blend_weight
+        is given) a blended_prob block.
+      - three-way (soccer): {'home_win_prob':..., 'draw_prob':..., 'away_win_prob':...,
+        'book':...} -> market_home_prob = home_win_prob directly, value_bet
+        flagged with a note that this is a 3-way-vs-binary approximation since
+        our model doesn't price a draw. No blended_prob (not backtested for
+        3-way leagues).
+      - spread-only, no moneyline: {'spread':..., 'book':...} -> market_odds
+        attached, no value_bet/blended_prob (no probability to devig).
+    """
+    out = dict(game)
+    out["market_odds"] = dict(market_entry)
+
+    if "home_ml" in market_entry and "away_ml" in market_entry:
+        market_home_prob, _ = devig_two_way(market_entry["home_ml"], market_entry["away_ml"])
+        out["value_bet"] = market_value_read(game["home_win_prob"], market_home_prob)
+        if blend_weight is not None:
+            blended_home = blend_prob(game["home_win_prob"], market_home_prob, blend_weight)
+            pick = game["home"] if blended_home >= 0.5 else game["away"]
+            pick_prob = blended_home if blended_home >= 0.5 else 1 - blended_home
+            out["blended_prob"] = {
+                "home_win_prob": round(blended_home, 3),
+                "market_weight": blend_weight,
+                "pick": pick,
+                "pick_prob": round(pick_prob, 3),
+            }
+    elif "home_win_prob" in market_entry:
+        market_home_prob = market_entry["home_win_prob"]
+        vb = market_value_read(game["home_win_prob"], market_home_prob)
+        vb["note"] = "Market prob is a 3-way (home/draw/away) line; our model does not yet price a draw outcome, so this comparison is approximate."
+        out["value_bet"] = vb
+        # no blended_prob here -- not backtested for 3-way/soccer leagues yet
+
+    return out
