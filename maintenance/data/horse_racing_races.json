@@ -18,5 +18,24 @@
       {"post": 11, "horse": "Vasy", "ml_odds": "15-1"},
       {"post": 12, "horse": "Obliteration", "ml_odds": "8-1"}
     ]
+  },
+  {
+    "race": "Blackwood Dueling Grounds Oaks Invitational Stakes",
+    "grade": "G3",
+    "track": "Kentucky Downs",
+    "date": "2026-09-09",
+    "field": [
+      {"post": 1, "horse": "Bless Her", "ml_odds": "15-1"},
+      {"post": 2, "horse": "Charm of Venice", "ml_odds": "20-1"},
+      {"post": 3, "horse": "Haute Diva", "ml_odds": "10-1"},
+      {"post": 4, "horse": "Turner's Charm", "ml_odds": "10-1"},
+      {"post": 5, "horse": "Embrace Time", "ml_odds": "12-1"},
+      {"post": 6, "horse": "Call On Me", "ml_odds": "15-1"},
+      {"post": 7, "horse": "Bohemian", "ml_odds": "8-1"},
+      {"post": 8, "horse": "La Fogata", "ml_odds": "4-1"},
+      {"post": 9, "horse": "Kentucky Belle", "ml_odds": "3-1"},
+      {"post": 10, "horse": "Dakotah Blue", "ml_odds": "8-1"},
+      {"post": 11, "horse": "Time to Dream", "ml_odds": "9-2"}
+    ]
   }
 ]
