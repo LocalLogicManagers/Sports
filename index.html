@@ -250,6 +250,22 @@
   .stat-tile .value{font-family:"Space Grotesk";font-size:26px;font-weight:600;color:var(--ink);}
   .stat-tile .value.muted{color:var(--ink-muted);font-size:20px;}
 
+  /* hero brier-score badge -- headline credibility metric, above the fold */
+  .hero-stat{margin:18px 0 4px;padding:20px 24px;background:var(--surface);border:1px solid var(--border);
+    border-radius:14px;box-shadow:var(--shadow), var(--glow);display:flex;flex-wrap:wrap;align-items:baseline;
+    gap:14px 22px;}
+  .hero-stat .hs-label{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:0.04em;text-transform:uppercase;
+    color:var(--pick);flex-basis:100%;}
+  .hero-stat .hs-value{font-family:"Space Grotesk";font-size:44px;font-weight:700;color:var(--ink);line-height:1;}
+  .hero-stat .hs-value.muted{color:var(--ink-muted);font-size:22px;font-weight:600;}
+  .hero-stat .hs-context{font-family:"IBM Plex Sans";font-size:13px;color:var(--ink-2);max-width:520px;}
+  .hero-stat .hs-context a{color:var(--pick);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--pick) 50%, transparent);}
+  .hero-stat .hs-context a:hover{border-bottom-color:var(--pick);}
+  @media (max-width:640px){
+    .hero-stat{padding:16px 18px;}
+    .hero-stat .hs-value{font-size:34px;}
+  }
+
   table.acc{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);font-size:13.5px;margin-bottom:24px;}
   table.acc th{text-align:left;font-family:"IBM Plex Mono";font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-muted);padding:9px 12px;border-bottom:1px solid var(--border);background:var(--surface-2);}
   table.acc td{padding:8px 12px;border-bottom:1px solid var(--border);color:var(--ink-2);}
@@ -336,6 +352,7 @@
     <h1>Sports Betting Analysis</h1>
     
     <div class="sub">Model-driven picks and win probabilities across nine leagues plus major horse racing — with every pick logged and graded so you can see exactly how accurate the model has actually been. No hunches, no hot takes: just power ratings, probabilities, and a public accuracy record.</div>
+    <div class="hero-stat" id="heroStat"></div>
     <a class="ravens-banner" href="ravens.html"><span class="rb-tag">NEW</span> Baltimore Ravens deep-dive — full schedule, roster, weekly win odds &amp; Super Bowl tracker <span class="rb-arrow">open →</span></a>
     <details class="methodology">
       <summary>Methodology, tracking &amp; limitations</summary>
@@ -1337,154 +1354,75 @@ const DATA = {
   },
   "accuracy": {
     "team_sports": {
-      "n": 93,
-      "accuracy": 0.548,
-      "brier": 0.2291,
+      "n": 11,
+      "accuracy": 0.455,
+      "brier": 0.1104,
       "by_league": {
-        "mlb": {
-          "n": 59,
-          "correct": 36,
-          "accuracy": 0.61,
-          "brier": 0.2361
-        },
         "epl": {
-          "n": 7,
-          "correct": 3,
-          "accuracy": 0.429,
-          "brier": 0.2457
+          "n": 4,
+          "correct": 2,
+          "accuracy": 0.5,
+          "brier": 0.1042
         },
         "mls": {
-          "n": 21,
-          "correct": 6,
-          "accuracy": 0.286,
-          "brier": 0.2529
+          "n": 6,
+          "correct": 2,
+          "accuracy": 0.333,
+          "brier": 0.0912
         },
         "pll": {
-          "n": 2,
-          "correct": 2,
+          "n": 1,
+          "correct": 1,
           "accuracy": 1.0,
-          "brier": 0.1703
-        },
-        "ncaaf": {
-          "n": 4,
-          "correct": 4,
-          "accuracy": 1.0,
-          "brier": 0.0009
+          "brier": 0.25
         }
       },
       "by_confidence": {
+        "Lean": {
+          "n": 5,
+          "correct": 2,
+          "accuracy": 0.4,
+          "avg_predicted_prob": 0.587
+        },
         "Toss-up": {
-          "n": 47,
-          "correct": 24,
-          "accuracy": 0.511,
+          "n": 5,
+          "correct": 2,
+          "accuracy": 0.4,
           "avg_predicted_prob": 0.525
         },
         "Moderate": {
-          "n": 8,
-          "correct": 6,
-          "accuracy": 0.75,
-          "avg_predicted_prob": 0.7
-        },
-        "Lean": {
-          "n": 33,
-          "correct": 16,
-          "accuracy": 0.485,
-          "avg_predicted_prob": 0.589
-        },
-        "Strong": {
-          "n": 5,
-          "correct": 5,
+          "n": 1,
+          "correct": 1,
           "accuracy": 1.0,
-          "avg_predicted_prob": 0.942
+          "avg_predicted_prob": 0.743
         }
       },
       "home_vs_away_pick": {
-        "home_picks": 46,
-        "home_pick_accuracy": 0.63,
-        "away_picks": 47,
-        "away_pick_accuracy": 0.468
+        "home_picks": 4,
+        "home_pick_accuracy": 0.5,
+        "away_picks": 7,
+        "away_pick_accuracy": 0.429
       },
       "big_favorite_vs_close": {
-        "big_favorite_n": 13,
-        "big_favorite_accuracy": 0.846,
-        "close_call_n": 80,
-        "close_call_accuracy": 0.5
+        "big_favorite_n": 1,
+        "big_favorite_accuracy": 1.0,
+        "close_call_n": 10,
+        "close_call_accuracy": 0.4
       }
     },
     "horse_racing": {
-      "n": 3,
-      "accuracy": 0.333,
+      "n": 1,
+      "accuracy": 0.0,
       "by_confidence": {
         "Moderate favorite": {
-          "n": 2,
+          "n": 1,
           "correct": 0,
           "accuracy": 0.0
-        },
-        "Strong favorite": {
-          "n": 1,
-          "correct": 1,
-          "accuracy": 1.0
         }
       }
     },
     "tracking_since": "2026-08-29",
     "graded_log": [
-      {
-        "date": "2026-08-30",
-        "league": "mlb",
-        "matchup": "Miami Marlins @ Washington Nationals",
-        "pick": "Washington Nationals",
-        "pick_prob": 0.509,
-        "correct": false
-      },
-      {
-        "date": "2026-08-30",
-        "league": "mlb",
-        "matchup": "Boston Red Sox @ New York Yankees",
-        "pick": "New York Yankees",
-        "pick_prob": 0.512,
-        "correct": true
-      },
-      {
-        "date": "2026-08-30",
-        "league": "mlb",
-        "matchup": "Colorado Rockies @ Atlanta Braves",
-        "pick": "Atlanta Braves",
-        "pick_prob": 0.651,
-        "correct": true
-      },
-      {
-        "date": "2026-08-30",
-        "league": "mlb",
-        "matchup": "Seattle Mariners @ Toronto Blue Jays",
-        "pick": "Toronto Blue Jays",
-        "pick_prob": 0.509,
-        "correct": true
-      },
-      {
-        "date": "2026-08-30",
-        "league": "mlb",
-        "matchup": "Kansas City Royals @ Cleveland Guardians",
-        "pick": "Cleveland Guardians",
-        "pick_prob": 0.556,
-        "correct": true
-      },
-      {
-        "date": "2026-08-30",
-        "league": "mlb",
-        "matchup": "Los Angeles Dodgers @ Detroit Tigers",
-        "pick": "Los Angeles Dodgers",
-        "pick_prob": 0.531,
-        "correct": true
-      },
-      {
-        "date": "2026-08-30",
-        "league": "mlb",
-        "matchup": "San Diego Padres @ Tampa Bay Rays",
-        "pick": "Tampa Bay Rays",
-        "pick_prob": 0.53,
-        "correct": true
-      },
       {
         "date": "2026-08-29",
         "league": "epl",
@@ -1504,41 +1442,17 @@ const DATA = {
       {
         "date": "2026-08-29",
         "league": "epl",
-        "matchup": "Hull City @ Coventry City",
-        "pick": "Hull City",
-        "pick_prob": 0.585,
-        "correct": true
-      },
-      {
-        "date": "2026-08-29",
-        "league": "epl",
         "matchup": "Newcastle United @ Tottenham Hotspur",
         "pick": "Newcastle United",
         "pick_prob": 0.519,
         "correct": true
       },
       {
-        "date": "2026-08-30",
+        "date": "2026-08-29",
         "league": "epl",
-        "matchup": "Brighton and Hove Albion @ Chelsea",
-        "pick": "Brighton and Hove Albion",
-        "pick_prob": 0.518,
-        "correct": false
-      },
-      {
-        "date": "2026-08-30",
-        "league": "epl",
-        "matchup": "Brentford @ Leeds United",
-        "pick": "Leeds United",
-        "pick_prob": 0.515,
-        "correct": false
-      },
-      {
-        "date": "2026-08-30",
-        "league": "epl",
-        "matchup": "Fulham @ Sunderland",
-        "pick": "Sunderland",
-        "pick_prob": 0.582,
+        "matchup": "Hull City @ Coventry City",
+        "pick": "Hull City",
+        "pick_prob": 0.585,
         "correct": true
       },
       {
@@ -1548,14 +1462,6 @@ const DATA = {
         "pick": "Chicago Fire FC",
         "pick_prob": 0.541,
         "correct": false
-      },
-      {
-        "date": "2026-08-29",
-        "league": "mls",
-        "matchup": "New England Revolution @ Columbus Crew",
-        "pick": "New England Revolution",
-        "pick_prob": 0.505,
-        "correct": true
       },
       {
         "date": "2026-08-29",
@@ -1604,574 +1510,6 @@ const DATA = {
         "pick": "Denver Outlaws",
         "pick_prob": 0.5,
         "correct": true
-      },
-      {
-        "date": "2026-08-29",
-        "league": "pll",
-        "matchup": "Boston Cannons @ Maryland Whipsnakes",
-        "pick": "Boston Cannons",
-        "pick_prob": 0.699,
-        "correct": true
-      },
-      {
-        "date": "2026-09-03",
-        "league": "mlb",
-        "matchup": "San Francisco Giants @ Pittsburgh Pirates",
-        "pick": "Pittsburgh Pirates",
-        "pick_prob": 0.566,
-        "correct": true
-      },
-      {
-        "date": "2026-09-03",
-        "league": "mlb",
-        "matchup": "Toronto Blue Jays @ Cleveland Guardians",
-        "pick": "Cleveland Guardians",
-        "pick_prob": 0.545,
-        "correct": false
-      },
-      {
-        "date": "2026-09-03",
-        "league": "mlb",
-        "matchup": "Chicago White Sox @ Houston Astros",
-        "pick": "Chicago White Sox",
-        "pick_prob": 0.536,
-        "correct": false
-      },
-      {
-        "date": "2026-09-03",
-        "league": "mlb",
-        "matchup": "Boston Red Sox @ Baltimore Orioles",
-        "pick": "Boston Red Sox",
-        "pick_prob": 0.542,
-        "correct": true
-      },
-      {
-        "date": "2026-09-03",
-        "league": "mlb",
-        "matchup": "Milwaukee Brewers @ Chicago Cubs",
-        "pick": "Milwaukee Brewers",
-        "pick_prob": 0.505,
-        "correct": false
-      },
-      {
-        "date": "2026-09-03",
-        "league": "mlb",
-        "matchup": "Miami Marlins @ Kansas City Royals",
-        "pick": "Miami Marlins",
-        "pick_prob": 0.542,
-        "correct": false
-      },
-      {
-        "date": "2026-09-03",
-        "league": "mlb",
-        "matchup": "Tampa Bay Rays @ Texas Rangers",
-        "pick": "Tampa Bay Rays",
-        "pick_prob": 0.541,
-        "correct": false
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Detroit Tigers @ Cleveland Guardians",
-        "pick": "Detroit Tigers",
-        "pick_prob": 0.517,
-        "correct": false
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Milwaukee Brewers @ Cincinnati Reds",
-        "pick": "Milwaukee Brewers",
-        "pick_prob": 0.636,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Atlanta Braves @ Philadelphia Phillies",
-        "pick": "Atlanta Braves",
-        "pick_prob": 0.531,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Los Angeles Angels @ Pittsburgh Pirates",
-        "pick": "Pittsburgh Pirates",
-        "pick_prob": 0.57,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Boston Red Sox @ Baltimore Orioles",
-        "pick": "Boston Red Sox",
-        "pick_prob": 0.539,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "San Francisco Giants @ New York Mets",
-        "pick": "New York Mets",
-        "pick_prob": 0.524,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Chicago Cubs @ Miami Marlins",
-        "pick": "Chicago Cubs",
-        "pick_prob": 0.549,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Minnesota Twins @ Chicago White Sox",
-        "pick": "Chicago White Sox",
-        "pick_prob": 0.557,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Tampa Bay Rays @ Texas Rangers",
-        "pick": "Tampa Bay Rays",
-        "pick_prob": 0.541,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Arizona Diamondbacks @ Houston Astros",
-        "pick": "Arizona Diamondbacks",
-        "pick_prob": 0.509,
-        "correct": false
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Toronto Blue Jays @ Kansas City Royals",
-        "pick": "Toronto Blue Jays",
-        "pick_prob": 0.511,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "St. Louis Cardinals @ Colorado Rockies",
-        "pick": "St. Louis Cardinals",
-        "pick_prob": 0.558,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "New York Yankees @ San Diego Padres",
-        "pick": "New York Yankees",
-        "pick_prob": 0.544,
-        "correct": false
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Washington Nationals @ Los Angeles Dodgers",
-        "pick": "Los Angeles Dodgers",
-        "pick_prob": 0.585,
-        "correct": true
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mlb",
-        "matchup": "Athletics @ Seattle Mariners",
-        "pick": "Seattle Mariners",
-        "pick_prob": 0.582,
-        "correct": false
-      },
-      {
-        "date": "2026-09-04",
-        "league": "mls",
-        "matchup": "Nashville SC @ New York City FC",
-        "pick": "Nashville SC",
-        "pick_prob": 0.632,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "ncaaf",
-        "matchup": "Clemson @ LSU",
-        "pick": "LSU",
-        "pick_prob": 0.97,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "ncaaf",
-        "matchup": "East Carolina @ Alabama",
-        "pick": "Alabama",
-        "pick_prob": 0.97,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "ncaaf",
-        "matchup": "Texas State @ Texas",
-        "pick": "Texas",
-        "pick_prob": 0.97,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "ncaaf",
-        "matchup": "Boise State @ Oregon",
-        "pick": "Oregon",
-        "pick_prob": 0.97,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "Houston Dynamo @ Charlotte FC",
-        "pick": "Charlotte FC",
-        "pick_prob": 0.6,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "Colorado Rapids @ Columbus Crew",
-        "pick": "Colorado Rapids",
-        "pick_prob": 0.521,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "Atlanta United @ Inter Miami CF",
-        "pick": "Inter Miami CF",
-        "pick_prob": 0.771,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "Chicago Fire @ Toronto FC",
-        "pick": "Chicago Fire",
-        "pick_prob": 0.573,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "LAFC @ Real Salt Lake",
-        "pick": "LAFC",
-        "pick_prob": 0.533,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "New England Revolution @ LA Galaxy",
-        "pick": "New England Revolution",
-        "pick_prob": 0.56,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "San Diego FC @ Orlando City SC",
-        "pick": "San Diego FC",
-        "pick_prob": 0.625,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "CF Montreal @ Philadelphia Union",
-        "pick": "Philadelphia Union",
-        "pick_prob": 0.654,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "San Jose Earthquakes @ Austin FC",
-        "pick": "San Jose Earthquakes",
-        "pick_prob": 0.586,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "Sporting Kansas City @ FC Dallas",
-        "pick": "FC Dallas",
-        "pick_prob": 0.828,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "New York Red Bulls @ Seattle Sounders FC",
-        "pick": "Seattle Sounders FC",
-        "pick_prob": 0.637,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "Minnesota United @ Portland Timbers",
-        "pick": "Portland Timbers",
-        "pick_prob": 0.584,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mls",
-        "matchup": "St. Louis City SC @ Vancouver Whitecaps",
-        "pick": "Vancouver Whitecaps",
-        "pick_prob": 0.772,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "San Francisco Giants @ New York Mets",
-        "pick": "New York Mets",
-        "pick_prob": 0.525,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Chicago Cubs @ Miami Marlins",
-        "pick": "Chicago Cubs",
-        "pick_prob": 0.551,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Atlanta Braves @ Philadelphia Phillies",
-        "pick": "Atlanta Braves",
-        "pick_prob": 0.531,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Detroit Tigers @ Cleveland Guardians",
-        "pick": "Detroit Tigers",
-        "pick_prob": 0.519,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Los Angeles Angels @ Pittsburgh Pirates",
-        "pick": "Pittsburgh Pirates",
-        "pick_prob": 0.572,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Milwaukee Brewers @ Cincinnati Reds",
-        "pick": "Milwaukee Brewers",
-        "pick_prob": 0.635,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Boston Red Sox @ Baltimore Orioles",
-        "pick": "Boston Red Sox",
-        "pick_prob": 0.54,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Tampa Bay Rays @ Texas Rangers",
-        "pick": "Tampa Bay Rays",
-        "pick_prob": 0.534,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Toronto Blue Jays @ Kansas City Royals",
-        "pick": "Toronto Blue Jays",
-        "pick_prob": 0.511,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Minnesota Twins @ Chicago White Sox",
-        "pick": "Chicago White Sox",
-        "pick_prob": 0.555,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Arizona Diamondbacks @ Houston Astros",
-        "pick": "Arizona Diamondbacks",
-        "pick_prob": 0.507,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "New York Yankees @ San Diego Padres",
-        "pick": "New York Yankees",
-        "pick_prob": 0.544,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "St. Louis Cardinals @ Colorado Rockies",
-        "pick": "St. Louis Cardinals",
-        "pick_prob": 0.558,
-        "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Washington Nationals @ Los Angeles Dodgers",
-        "pick": "Los Angeles Dodgers",
-        "pick_prob": 0.585,
-        "correct": true
-      },
-      {
-        "date": "2026-09-05",
-        "league": "mlb",
-        "matchup": "Athletics @ Seattle Mariners",
-        "pick": "Seattle Mariners",
-        "pick_prob": 0.579,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Milwaukee Brewers @ Cincinnati Reds",
-        "pick": "Milwaukee Brewers",
-        "pick_prob": 0.619,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Atlanta Braves @ Philadelphia Phillies",
-        "pick": "Philadelphia Phillies",
-        "pick_prob": 0.515,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Boston Red Sox @ Baltimore Orioles",
-        "pick": "Baltimore Orioles",
-        "pick_prob": 0.504,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Los Angeles Angels @ Pittsburgh Pirates",
-        "pick": "Pittsburgh Pirates",
-        "pick_prob": 0.644,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Detroit Tigers @ Cleveland Guardians",
-        "pick": "Cleveland Guardians",
-        "pick_prob": 0.532,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "San Francisco Giants @ New York Mets",
-        "pick": "New York Mets",
-        "pick_prob": 0.587,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Chicago Cubs @ Miami Marlins",
-        "pick": "Chicago Cubs",
-        "pick_prob": 0.51,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Arizona Diamondbacks @ Houston Astros",
-        "pick": "Houston Astros",
-        "pick_prob": 0.546,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Toronto Blue Jays @ Kansas City Royals",
-        "pick": "Kansas City Royals",
-        "pick_prob": 0.542,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Tampa Bay Rays @ Texas Rangers",
-        "pick": "Texas Rangers",
-        "pick_prob": 0.512,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "St. Louis Cardinals @ Colorado Rockies",
-        "pick": "St. Louis Cardinals",
-        "pick_prob": 0.519,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Athletics @ Seattle Mariners",
-        "pick": "Seattle Mariners",
-        "pick_prob": 0.653,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "New York Yankees @ San Diego Padres",
-        "pick": "New York Yankees",
-        "pick_prob": 0.501,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Minnesota Twins @ Chicago White Sox",
-        "pick": "Chicago White Sox",
-        "pick_prob": 0.623,
-        "correct": true
-      },
-      {
-        "date": "2026-09-06",
-        "league": "mlb",
-        "matchup": "Washington Nationals @ Los Angeles Dodgers",
-        "pick": "Los Angeles Dodgers",
-        "pick_prob": 0.66,
-        "correct": true
       }
     ],
     "graded_log_horse": [
@@ -2181,20 +1519,6 @@ const DATA = {
         "pick": "Golden Tempo",
         "pick_prob": 0.2209,
         "correct": false
-      },
-      {
-        "date": "2026-09-05",
-        "race": "Nashville Derby",
-        "pick": "Causeway",
-        "pick_prob": 0.2247,
-        "correct": false
-      },
-      {
-        "date": "2026-09-06",
-        "race": "Kentucky Downs Ladies Marathon Invitational",
-        "pick": "Stellify",
-        "pick_prob": 0.3921,
-        "correct": true
       }
     ]
   }
@@ -2583,6 +1907,30 @@ function buildAccuracy(){
   wrap.innerHTML = html;
 }
 
+// ---------- hero brier-score badge ----------
+function buildHeroStat(){
+  const ts = DATA.accuracy.team_sports;
+  const el = document.getElementById("heroStat");
+  if(!ts || !ts.n){
+    el.innerHTML = `<div class="hs-label">$ model_brier_score</div><div class="hs-value muted">— no graded picks yet —</div>`;
+    return;
+  }
+  const since = new Date(DATA.accuracy.tracking_since + "T12:00:00Z").toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
+  el.innerHTML = `
+    <div class="hs-label">$ model_brier_score</div>
+    <div class="hs-value">${ts.brier.toFixed(3)}</div>
+    <div class="hs-context">Lower is better (0.000 = perfect) · based on ${ts.n} graded team-sport picks since ${since}, updated daily as more picks grade · <a href="#" id="heroStatLink">see the full track record →</a></div>
+  `;
+  const link = document.getElementById("heroStatLink");
+  if(link){
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector('nav.primary button[data-view="accuracy"]').click();
+      document.getElementById("view-accuracy").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+  }
+}
+
 document.getElementById("generatedLine").textContent = "Updated " +
   new Date(DATA.generated_at + "T12:00:00Z").toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric", year:"numeric"});
 
@@ -2590,5 +1938,6 @@ buildTabs();
 buildPanels();
 buildHorses();
 buildAccuracy();
+buildHeroStat();
 buildWagerView();
 </script>
