@@ -124,6 +124,19 @@ NFL_INJURY_TURNOVER = {
             {"pos": "TE", "severity": "questionable"},  # George Kittle, Achilles, Week 1 return unlikely per reports but not ruled out
         ],
     },
+    # 2026-09-08: two more Week 1 injury items sourced (WebSearch: Heavy.com/Colts beat,
+    # The Big Lead RB roundup + Adam Schefter report) -- both teams playing in the
+    # currently-tracked Week 1 slate.
+    "Indianapolis Colts": {
+        "injuries": [
+            {"pos": "S", "severity": "questionable"},  # AJ Haulcy, rookie 3rd-rounder, ankle, Week 1 status undecided per HC Steichen (9/8)
+        ],
+    },
+    "New England Patriots": {
+        "injuries": [
+            {"pos": "RB", "severity": "out"},  # TreVeyon Henderson, ankle -- Schefter: "hard to imagine he's going to play" Week 1
+        ],
+    },
 }
 
 nfl_ratings = {}
@@ -251,7 +264,7 @@ pll_fixtures = [(r["away"], r["home"], r["date"], r["note"]) for r in read_csv("
 pll_games = [build_game("pll", a, h, d, pll_ratings.get(h, 0), pll_ratings.get(a, 0), note) for a, h, d, note in pll_fixtures]
 results["leagues"]["pll"] = {
     "label": "PLL Lacrosse",
-    "status": "playoffs (semifinals) — neutral site, no home advantage applied",
+    "status": "championship (Sept 20, neutral site — Sports Illustrated Stadium, Harrison NJ) — no home advantage applied",
     "ratings": pll_ratings, "games": pll_games,
 }
 
