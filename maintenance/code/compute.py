@@ -92,6 +92,38 @@ NFL_INJURY_TURNOVER = {
         "departures": ["TE", "FB", "OT", "P", "S", "CB", "OLB", "WR"],  # Likely, Ricard, Faalele, Stout, Washington, Alexander, Oweh, C.Johnson
         "acquisitions": ["OLB", "S", "CB", "LB", "ILB"],                 # D.Jones, Gilman, White, Hendrickson, Barrett
     },
+    # 2026-09-08: extended beyond the Ravens for the first time, sourced via WebSearch/WebFetch
+    # (Bleacher Report injury roundup + NFL.com's Week 1 report). Injuries only -- no sourced
+    # roster-turnover (departures/acquisitions) data for these teams yet, an honest default per the
+    # same convention as every other team. Only covers teams playing in the currently-tracked Week 1
+    # slate; extend opportunistically as news comes in.
+    "Carolina Panthers": {
+        "injuries": [
+            {"pos": "OT", "severity": "out"},  # Ikem Ekwonu, ruptured patellar tendon, out most/all season
+            {"pos": "OT", "severity": "out"},  # Taylor Moton, blood clot in lung, out extended time
+        ],
+    },
+    "Detroit Lions": {
+        "injuries": [
+            {"pos": "S", "severity": "out"},          # Brian Branch, ruptured Achilles, targeting Dec return
+            {"pos": "S", "severity": "questionable"},  # Kerby Joseph, nagging knee, recovery timeline unclear
+        ],
+    },
+    "Green Bay Packers": {
+        "injuries": [
+            {"pos": "EDGE", "severity": "out"},  # Micah Parsons, torn ACL, targeting a playoff return
+        ],
+    },
+    "Seattle Seahawks": {
+        "injuries": [
+            {"pos": "RB", "severity": "out"},  # Zach Charbonnet, torn ACL, timing unfavorable for Week 1
+        ],
+    },
+    "San Francisco 49ers": {
+        "injuries": [
+            {"pos": "TE", "severity": "questionable"},  # George Kittle, Achilles, Week 1 return unlikely per reports but not ruled out
+        ],
+    },
 }
 
 nfl_ratings = {}
@@ -104,24 +136,13 @@ for team, win_total in NFL_SEASON_WIN_TOTALS.items():
         acquisitions=extra.get("acquisitions"),
     ), 3)
 
-nfl_week1 = [
-    ("New England Patriots", "Seattle Seahawks", "2026-09-09"),
-    ("San Francisco 49ers", "Los Angeles Rams", "2026-09-10"),
-    ("Chicago Bears", "Carolina Panthers", "2026-09-13"),
-    ("Tampa Bay Buccaneers", "Cincinnati Bengals", "2026-09-13"),
-    ("New Orleans Saints", "Detroit Lions", "2026-09-13"),
-    ("Buffalo Bills", "Houston Texans", "2026-09-13"),
-    ("Baltimore Ravens", "Indianapolis Colts", "2026-09-13"),
-    ("Cleveland Browns", "Jacksonville Jaguars", "2026-09-13"),
-    ("Atlanta Falcons", "Pittsburgh Steelers", "2026-09-13"),
-    ("New York Jets", "Tennessee Titans", "2026-09-13"),
-    ("Arizona Cardinals", "Los Angeles Chargers", "2026-09-13"),
-    ("Miami Dolphins", "Las Vegas Raiders", "2026-09-13"),
-    ("Green Bay Packers", "Minnesota Vikings", "2026-09-13"),
-    ("Washington Commanders", "Philadelphia Eagles", "2026-09-13"),
-    ("Dallas Cowboys", "New York Giants", "2026-09-13"),
-    ("Denver Broncos", "Kansas City Chiefs", "2026-09-14"),
-]
+# 2026-09-08: was a hardcoded Week-1-only literal list; now reads from nfl_slate.csv
+# (away,home,date -- same convention as mlb_slate.csv/epl_fixtures.csv/etc.) so adding Week 2+
+# is a data update, not a code change. Currently seeded with the same 16 Week 1 games as before
+# (byte-identical behavior) -- replace/append rows in nfl_slate.csv once Week 1 is played and a
+# real Week 2 slate is sourced. log_predictions.py's append-only/no-duplicate logic still governs
+# whether new rows here actually produce new logged picks.
+nfl_week1 = [(r["away"], r["home"], r["date"]) for r in read_csv("nfl_slate.csv")]
 # Real current market lines for the open Week 1 slate (FanDuel moneylines, sourced
 # via WebSearch/WebFetch, 2026-08-31) -- keyed by (away, home). A game not in this
 # dict just doesn't get a market_odds/value_bet/blended_prob block attached.
