@@ -265,6 +265,11 @@
     .hero-stat{padding:16px 18px;}
     .hero-stat .hs-value{font-size:34px;}
   }
+  .projections-section{margin:18px 0 4px;}
+  .projections-section .proj-block{margin-bottom:14px;}
+  .projections-section .proj-label{font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:0.03em;color:var(--ink-2);margin:0 0 8px 2px;}
+  .projections-section .proj-label strong{color:var(--ink);}
+  @media (max-width:640px){ .projections-section .stat-row{grid-template-columns:repeat(2,1fr);} }
 
   table.acc{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);font-size:13.5px;margin-bottom:24px;}
   table.acc th{text-align:left;font-family:"IBM Plex Mono";font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-muted);padding:9px 12px;border-bottom:1px solid var(--border);background:var(--surface-2);}
@@ -354,6 +359,7 @@
     <div class="sub">Model-driven picks and win probabilities across nine leagues plus major horse racing — with every pick logged and graded so you can see exactly how accurate the model has actually been. No hunches, no hot takes: just power ratings, probabilities, and a public accuracy record.</div>
     <div class="hero-stat" id="heroStat"></div>
     <a class="ravens-banner" href="ravens.html"><span class="rb-tag">NEW</span> Baltimore Ravens deep-dive — full schedule, roster, weekly win odds &amp; Super Bowl tracker <span class="rb-arrow">open →</span></a>
+    <div class="projections-section" id="projectionsSection"></div>
     <details class="methodology">
       <summary>Methodology, tracking &amp; limitations</summary>
       <div class="body">
@@ -1908,6 +1914,60 @@ function buildAccuracy(){
 }
 
 // ---------- hero brier-score badge ----------
+function flatStakeResult(log, stake){
+  let totalStaked = 0, totalReturned = 0, wins = 0;
+  log.forEach(p => {
+    const odds = probToAmericanOdds(p.pick_prob);
+    totalStaked += stake;
+    if (p.correct){ totalReturned += stake * americanToDecimal(odds); wins++; }
+  });
+  const profit = totalReturned - totalStaked;
+  const roi = totalStaked ? (profit/totalStaked*100) : 0;
+  return {n: log.length, wins, totalStaked, totalReturned, profit, roi};
+}
+
+function buildProjections(){
+  const el = document.getElementById("projectionsSection");
+  const log = (DATA.accuracy.graded_log || []).concat(DATA.accuracy.graded_log_horse || []);
+  if (!log.length){
+    el.innerHTML = `<h2 class="section-title">Projections — what a flat bet would have done</h2>
+      <div class="empty-note">No graded picks yet — check back once today's games finish.</div>`;
+    return;
+  }
+  const blocks = [5, 10].map(stake => {
+    const r = flatStakeResult(log, stake);
+    const color = r.profit >= 0 ? "var(--home)" : "var(--away)";
+    return `<div class="proj-block">
+      <div class="proj-label">Flat <strong>$${stake}</strong> on every one of our ${r.n} graded picks so far (${r.wins} won)</div>
+      <div class="stat-row">
+        <div class="stat-tile"><div class="label">Total staked</div><div class="value">$${r.totalStaked.toFixed(2)}</div></div>
+        <div class="stat-tile"><div class="label">Total returned</div><div class="value">$${r.totalReturned.toFixed(2)}</div></div>
+        <div class="stat-tile"><div class="label">Net profit/loss</div><div class="value" style="color:${color}">${r.profit>=0?"+":"-"}$${Math.abs(r.profit).toFixed(2)}</div></div>
+        <div class="stat-tile"><div class="label">ROI</div><div class="value" style="color:${color}">${r.roi>=0?"+":""}${r.roi.toFixed(1)}%</div></div>
+      </div>
+    </div>`;
+  }).join("");
+  el.innerHTML = `<h2 class="section-title">Projections — what a flat bet would have done</h2>
+    ${blocks}
+    <div class="empty-note" style="box-shadow:none;">Based on all ${log.length} picks graded so far — still a small sample, so treat this as illustrative, not predictive. Odds are the model's own simulated line (standard vig, not a live sportsbook price) at the time each pick was made. Updates automatically as more picks grade — see the full <a href="#" id="projLink" style="color:var(--pick);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--pick) 50%, transparent);">track record</a> or try your own stake in the <a href="#" id="projWagerLink" style="color:var(--pick);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--pick) 50%, transparent);">bankroll simulator</a>.</div>`;
+  const trackLink = document.getElementById("projLink");
+  if (trackLink){
+    trackLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector('nav.primary button[data-view="accuracy"]').click();
+      document.getElementById("view-accuracy").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+  }
+  const wagerLink = document.getElementById("projWagerLink");
+  if (wagerLink){
+    wagerLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector('nav.primary button[data-view="wager"]').click();
+      document.getElementById("view-wager").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+  }
+}
+
 function buildHeroStat(){
   const ts = DATA.accuracy.team_sports;
   const el = document.getElementById("heroStat");
@@ -1939,5 +1999,6 @@ buildPanels();
 buildHorses();
 buildAccuracy();
 buildHeroStat();
+buildProjections();
 buildWagerView();
 </script>
