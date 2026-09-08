@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-07",
+  "as_of": "2026-09-08",
   "record": {
     "w": 0,
     "l": 0,
@@ -218,6 +218,16 @@
       "player": "Jay Higgins",
       "pos": "LB",
       "note": "New (as of 2026-09-05): listed Questionable for Week 1 with a concussion"
+    },
+    {
+      "player": "Center battle",
+      "pos": "-",
+      "note": "Updated 2026-09-08: resolved -- Jovaughn Gwyn officially named the Week 1 starting center over Ethan Pocic, filling the vacancy created by Danny Pinter's season-ending injury. HC Jesse Minter: \"Got a lot of confidence in him.\""
+    },
+    {
+      "player": "Nnamdi Madubuike / Teddye Buchanan",
+      "pos": "DT / ILB",
+      "note": "Updated 2026-09-08: neither player was placed on injured reserve, so both retain a realistic chance to play within the first four weeks of the season (Week 1 availability still not confirmed)."
     }
   ],
   "super_bowl_odds_history": [
@@ -354,7 +364,8 @@
       {
         "name": "Jovaughn Gwyn",
         "num": "54",
-        "pos": "G"
+        "pos": "G",
+        "note": "Named Week 1 starting center over Ethan Pocic (2026-09-07)"
       }
     ],
     "Defensive Line": [
