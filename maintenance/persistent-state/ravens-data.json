@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-09",
   "record": {
     "w": 0,
     "l": 0,
@@ -12,7 +12,8 @@
     "details": [
       "New offensive coordinator: Declan Doyle",
       "New defensive coordinator: Anthony Weaver",
-      "New special teams coordinator: Anthony Levine Sr."
+      "New special teams coordinator: Anthony Levine Sr.",
+      "Updated 2026-09-09: Minter named five permanent captains for 2026 — Lamar Jackson (QB), Derrick Henry (RB), Roquan Smith (ILB), Kyle Hamilton (S), Calais Campbell (DL)."
     ]
   },
   "roster_changes": {
@@ -228,6 +229,11 @@
       "player": "Nnamdi Madubuike / Teddye Buchanan",
       "pos": "DT / ILB",
       "note": "Updated 2026-09-08: neither player was placed on injured reserve, so both retain a realistic chance to play within the first four weeks of the season (Week 1 availability still not confirmed)."
+    },
+    {
+      "player": "Devontez Walker",
+      "pos": "WR",
+      "note": "New (as of 2026-09-09): listed Questionable for Week 1, undisclosed injury."
     }
   ],
   "super_bowl_odds_history": [
