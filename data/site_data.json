@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-09",
+  "generated_at": "2026-09-10",
   "model_version": 1,
   "leagues": {
     "nfl": {
       "label": "NFL",
-      "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) \u2014 Week 1 not yet played",
+      "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) \u2014 Week 1 underway \u2014 some games final, rest kick off Sept 13-14",
       "model_version": 2,
       "ratings": {
         "Arizona Cardinals": -12.5,
@@ -415,172 +415,82 @@
       "label": "MLB",
       "status": "in season",
       "ratings": {
-        "Tampa Bay Rays": 0.288,
-        "New York Yankees": 0.718,
-        "Boston Red Sox": 0.539,
-        "Toronto Blue Jays": -0.236,
-        "Baltimore Orioles": -0.164,
-        "Chicago White Sox": 0.301,
-        "Cleveland Guardians": -0.097,
-        "Minnesota Twins": -0.299,
-        "Detroit Tigers": 0.311,
-        "Kansas City Royals": -0.539,
-        "Houston Astros": -0.232,
-        "Texas Rangers": -0.268,
-        "Seattle Mariners": -0.433,
-        "Athletics": -1.133,
-        "Los Angeles Angels": -0.488,
-        "Atlanta Braves": 0.726,
-        "Philadelphia Phillies": 0.213,
-        "Miami Marlins": 0.061,
-        "Washington Nationals": 0.048,
-        "New York Mets": -0.262,
+        "Tampa Bay Rays": 0.323,
+        "New York Yankees": 0.726,
+        "Boston Red Sox": 0.506,
+        "Toronto Blue Jays": -0.223,
+        "Baltimore Orioles": -0.187,
+        "Chicago White Sox": 0.262,
+        "Cleveland Guardians": -0.072,
+        "Minnesota Twins": -0.291,
+        "Detroit Tigers": 0.303,
+        "Kansas City Royals": -0.548,
+        "Houston Astros": -0.224,
+        "Texas Rangers": -0.236,
+        "Seattle Mariners": -0.461,
+        "Athletics": -1.139,
+        "Los Angeles Angels": -0.455,
+        "Atlanta Braves": 0.685,
+        "Philadelphia Phillies": 0.206,
+        "Miami Marlins": 0.048,
+        "Washington Nationals": 0.042,
+        "New York Mets": -0.248,
         "Milwaukee Brewers": 1.024,
-        "Chicago Cubs": 0.794,
-        "St. Louis Cardinals": -0.061,
-        "Pittsburgh Pirates": 0.159,
-        "Cincinnati Reds": -0.659,
+        "Chicago Cubs": 0.783,
+        "St. Louis Cardinals": -0.066,
+        "Pittsburgh Pirates": 0.194,
+        "Cincinnati Reds": -0.661,
         "Los Angeles Dodgers": 0.945,
-        "Arizona Diamondbacks": 0.0,
-        "San Diego Padres": 0.055,
-        "San Francisco Giants": -0.448,
-        "Colorado Rockies": -0.859
+        "Arizona Diamondbacks": 0.012,
+        "San Diego Padres": 0.061,
+        "San Francisco Giants": -0.44,
+        "Colorado Rockies": -0.866
       },
       "games": [
         {
-          "away": "Minnesota Twins",
-          "home": "Detroit Tigers",
-          "date": "2026-09-09",
-          "home_win_prob": 0.651,
-          "pick": "Detroit Tigers",
-          "pick_prob": 0.651,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Toronto Blue Jays",
-          "home": "Athletics",
-          "date": "2026-09-09",
-          "home_win_prob": 0.424,
-          "pick": "Toronto Blue Jays",
-          "pick_prob": 0.576,
-          "confidence": "Lean"
-        },
-        {
-          "away": "St. Louis Cardinals",
-          "home": "San Francisco Giants",
-          "date": "2026-09-09",
-          "home_win_prob": 0.502,
-          "pick": "San Francisco Giants",
-          "pick_prob": 0.502,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Washington Nationals",
-          "home": "San Diego Padres",
-          "date": "2026-09-09",
-          "home_win_prob": 0.562,
-          "pick": "San Diego Padres",
-          "pick_prob": 0.562,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Texas Rangers",
-          "home": "Seattle Mariners",
-          "date": "2026-09-09",
-          "home_win_prob": 0.536,
-          "pick": "Seattle Mariners",
-          "pick_prob": 0.536,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Cleveland Guardians",
-          "home": "Baltimore Orioles",
-          "date": "2026-09-09",
-          "home_win_prob": 0.551,
-          "pick": "Baltimore Orioles",
-          "pick_prob": 0.551,
-          "confidence": "Lean"
-        },
-        {
-          "away": "New York Mets",
-          "home": "Miami Marlins",
-          "date": "2026-09-09",
-          "home_win_prob": 0.61,
-          "pick": "Miami Marlins",
-          "pick_prob": 0.61,
+          "away": "Tampa Bay Rays",
+          "home": "Atlanta Braves",
+          "date": "2026-09-10",
+          "home_win_prob": 0.615,
+          "pick": "Atlanta Braves",
+          "pick_prob": 0.615,
           "confidence": "Lean"
         },
         {
           "away": "Houston Astros",
           "home": "Philadelphia Phillies",
-          "date": "2026-09-09",
-          "home_win_prob": 0.627,
+          "date": "2026-09-10",
+          "home_win_prob": 0.625,
           "pick": "Philadelphia Phillies",
-          "pick_prob": 0.627,
+          "pick_prob": 0.625,
           "confidence": "Lean"
         },
         {
-          "away": "Los Angeles Angels",
-          "home": "Boston Red Sox",
-          "date": "2026-09-09",
-          "home_win_prob": 0.708,
-          "pick": "Boston Red Sox",
-          "pick_prob": 0.708,
-          "confidence": "Moderate"
+          "away": "Texas Rangers",
+          "home": "Seattle Mariners",
+          "date": "2026-09-10",
+          "home_win_prob": 0.527,
+          "pick": "Seattle Mariners",
+          "pick_prob": 0.527,
+          "confidence": "Toss-up"
         },
         {
           "away": "Colorado Rockies",
           "home": "New York Yankees",
-          "date": "2026-09-09",
-          "home_win_prob": 0.776,
+          "date": "2026-09-10",
+          "home_win_prob": 0.778,
           "pick": "New York Yankees",
-          "pick_prob": 0.776,
+          "pick_prob": 0.778,
           "confidence": "Moderate"
-        },
-        {
-          "away": "Tampa Bay Rays",
-          "home": "Atlanta Braves",
-          "date": "2026-09-09",
-          "home_win_prob": 0.626,
-          "pick": "Atlanta Braves",
-          "pick_prob": 0.626,
-          "confidence": "Lean"
         },
         {
           "away": "Pittsburgh Pirates",
           "home": "Chicago White Sox",
-          "date": "2026-09-09",
-          "home_win_prob": 0.583,
+          "date": "2026-09-10",
+          "home_win_prob": 0.571,
           "pick": "Chicago White Sox",
-          "pick_prob": 0.583,
+          "pick_prob": 0.571,
           "confidence": "Lean"
-        },
-        {
-          "away": "Arizona Diamondbacks",
-          "home": "Kansas City Royals",
-          "date": "2026-09-09",
-          "home_win_prob": 0.479,
-          "pick": "Arizona Diamondbacks",
-          "pick_prob": 0.521,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Chicago Cubs",
-          "home": "Milwaukee Brewers",
-          "date": "2026-09-09",
-          "home_win_prob": 0.596,
-          "pick": "Milwaukee Brewers",
-          "pick_prob": 0.596,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Cincinnati Reds",
-          "home": "Los Angeles Dodgers",
-          "date": "2026-09-09",
-          "home_win_prob": 0.78,
-          "pick": "Los Angeles Dodgers",
-          "pick_prob": 0.78,
-          "confidence": "Moderate"
         }
       ]
     },
@@ -591,23 +501,23 @@
         "Manchester City": 0.556,
         "Arsenal": 0.556,
         "Hull City": 0.333,
-        "Chelsea": 0.111,
-        "Liverpool": 0.222,
         "Brentford": 0.333,
+        "Brighton and Hove Albion": 0.333,
+        "Chelsea": 0.111,
         "Newcastle United": 0.222,
+        "Liverpool": 0.222,
         "Everton": 0.222,
         "Leeds United": 0.111,
-        "Brighton and Hove Albion": 0.333,
         "Manchester United": 0.111,
         "Sunderland": 0.0,
         "Ipswich Town": -0.444,
+        "Crystal Palace": -0.444,
         "AFC Bournemouth": -0.111,
         "Nottingham Forest": -0.111,
-        "Fulham": -0.333,
-        "Coventry City": -0.556,
-        "Crystal Palace": -0.444,
+        "Tottenham Hotspur": -0.556,
         "Aston Villa": -0.556,
-        "Tottenham Hotspur": -0.556
+        "Fulham": -0.333,
+        "Coventry City": -0.556
       },
       "games": [
         {
@@ -713,26 +623,26 @@
         "Chicago Fire": 0.393,
         "New England Revolution": 0.276,
         "Charlotte FC": 0.276,
-        "San Diego FC": 0.207,
         "San Jose Earthquakes": 0.207,
+        "San Diego FC": 0.207,
         "FC Dallas": 0.172,
-        "Houston Dynamo": 0.138,
         "St. Louis City SC": 0.172,
-        "Colorado Rapids": 0.0,
         "New York City FC": 0.172,
-        "Minnesota United": -0.103,
+        "Houston Dynamo": 0.138,
         "Real Salt Lake": 0.036,
-        "FC Cincinnati": -0.071,
         "Portland Timbers": 0.034,
-        "Toronto FC": -0.207,
-        "Columbus Crew": -0.172,
-        "D.C. United": -0.286,
-        "Seattle Sounders FC": -0.179,
+        "Colorado Rapids": 0.0,
+        "Minnesota United": -0.103,
         "Philadelphia Union": -0.103,
-        "New York Red Bulls": -0.483,
+        "Toronto FC": -0.207,
+        "Seattle Sounders FC": -0.179,
+        "Columbus Crew": -0.172,
         "LA Galaxy": -0.2,
+        "D.C. United": -0.286,
+        "FC Cincinnati": -0.071,
         "Atlanta United": -0.448,
         "Austin FC": -0.448,
+        "New York Red Bulls": -0.483,
         "Orlando City SC": -0.552,
         "CF Montreal": -0.621,
         "Sporting Kansas City": -1.207
@@ -986,108 +896,101 @@
   "horse_racing": {
     "races": [
       {
-        "race": "Blackwood Dueling Grounds Oaks Invitational Stakes",
-        "grade": "G3",
-        "track": "Kentucky Downs",
-        "date": "2026-09-09",
+        "race": "betPARX Pennsylvania Derby",
+        "grade": "G1",
+        "track": "Parx Racing",
+        "date": "2026-09-19",
         "field": [
           {
-            "post": 9,
-            "horse": "Kentucky Belle",
-            "ml_odds": "3-1",
-            "raw_prob": 0.25,
-            "norm_prob": 0.1945
-          },
-          {
             "post": 8,
-            "horse": "La Fogata",
-            "ml_odds": "4-1",
-            "raw_prob": 0.2,
-            "norm_prob": 0.1556
-          },
-          {
-            "post": 11,
-            "horse": "Time to Dream",
-            "ml_odds": "9-2",
-            "raw_prob": 0.1818,
-            "norm_prob": 0.1414
-          },
-          {
-            "post": 7,
-            "horse": "Bohemian",
-            "ml_odds": "8-1",
-            "raw_prob": 0.1111,
-            "norm_prob": 0.0864
-          },
-          {
-            "post": 10,
-            "horse": "Dakotah Blue",
-            "ml_odds": "8-1",
-            "raw_prob": 0.1111,
-            "norm_prob": 0.0864
-          },
-          {
-            "post": 3,
-            "horse": "Haute Diva",
-            "ml_odds": "10-1",
-            "raw_prob": 0.0909,
-            "norm_prob": 0.0707
+            "horse": "Baeza",
+            "ml_odds": "2-1",
+            "raw_prob": 0.3333,
+            "norm_prob": 0.2179
           },
           {
             "post": 4,
-            "horse": "Turner's Charm",
-            "ml_odds": "10-1",
-            "raw_prob": 0.0909,
-            "norm_prob": 0.0707
-          },
-          {
-            "post": 5,
-            "horse": "Embrace Time",
-            "ml_odds": "12-1",
-            "raw_prob": 0.0769,
-            "norm_prob": 0.0598
-          },
-          {
-            "post": 1,
-            "horse": "Bless Her",
-            "ml_odds": "15-1",
-            "raw_prob": 0.0625,
-            "norm_prob": 0.0486
+            "horse": "David Of Athens",
+            "ml_odds": "5-2",
+            "raw_prob": 0.2857,
+            "norm_prob": 0.1868
           },
           {
             "post": 6,
-            "horse": "Call On Me",
+            "horse": "Goal Oriented",
+            "ml_odds": "5-2",
+            "raw_prob": 0.2857,
+            "norm_prob": 0.1868
+          },
+          {
+            "post": 9,
+            "horse": "Gosger",
+            "ml_odds": "4-1",
+            "raw_prob": 0.2,
+            "norm_prob": 0.1307
+          },
+          {
+            "post": 3,
+            "horse": "Magnitute",
+            "ml_odds": "6-1",
+            "raw_prob": 0.1429,
+            "norm_prob": 0.0934
+          },
+          {
+            "post": 7,
+            "horse": "Big Truzz",
+            "ml_odds": "10-1",
+            "raw_prob": 0.0909,
+            "norm_prob": 0.0594
+          },
+          {
+            "post": 10,
+            "horse": "Mo Plex",
+            "ml_odds": "12-1",
+            "raw_prob": 0.0769,
+            "norm_prob": 0.0503
+          },
+          {
+            "post": 1,
+            "horse": "So Sandy",
             "ml_odds": "15-1",
             "raw_prob": 0.0625,
-            "norm_prob": 0.0486
+            "norm_prob": 0.0409
+          },
+          {
+            "post": 5,
+            "horse": "Happily Delusional",
+            "ml_odds": "30-1",
+            "raw_prob": 0.0323,
+            "norm_prob": 0.0211
           },
           {
             "post": 2,
-            "horse": "Charm of Venice",
-            "ml_odds": "20-1",
-            "raw_prob": 0.0476,
-            "norm_prob": 0.037
+            "horse": "Altobelli",
+            "ml_odds": "50-1",
+            "raw_prob": 0.0196,
+            "norm_prob": 0.0128
           }
         ],
-        "overround": 1.2854,
-        "pick": "Kentucky Belle",
-        "pick_prob": 0.1945,
+        "overround": 1.5298,
+        "pick": "Baeza",
+        "pick_prob": 0.2179,
         "confidence": "Moderate favorite",
-        "fair_share_ratio": 2.14
+        "fair_share_ratio": 2.18
       }
     ]
   },
   "accuracy": {
     "team_sports": {
-      "n": 121,
-      "accuracy": 0.545,
-      "brier": 0.2331,
+      "n": 137,
+      "accuracy": 0.555,
+      "brier": 0.2334,
       "by_league": {
         "mlb": {
-          "n": 85,
-          "correct": 50,
-          "accuracy": 0.588,
-          "brier": 0.2397
+          "n": 100,
+          "correct": 59,
+          "accuracy": 0.59,
+          "brier": 0.2396
         },
         "epl": {
           "n": 7,
@@ -1112,26 +1015,32 @@
           "correct": 4,
           "accuracy": 1.0,
           "brier": 0.0009
+        },
+        "nfl": {
+          "n": 1,
+          "correct": 1,
+          "accuracy": 1.0,
+          "brier": 0.1849
         }
       },
       "by_confidence": {
         "Toss-up": {
-          "n": 55,
-          "correct": 27,
-          "accuracy": 0.491,
+          "n": 58,
+          "correct": 29,
+          "accuracy": 0.5,
           "avg_predicted_prob": 0.525
         },
         "Moderate": {
-          "n": 13,
-          "correct": 10,
-          "accuracy": 0.769,
-          "avg_predicted_prob": 0.71
+          "n": 17,
+          "correct": 13,
+          "accuracy": 0.765,
+          "avg_predicted_prob": 0.715
         },
         "Lean": {
-          "n": 48,
-          "correct": 24,
-          "accuracy": 0.5,
-          "avg_predicted_prob": 0.593
+          "n": 57,
+          "correct": 29,
+          "accuracy": 0.509,
+          "avg_predicted_prob": 0.592
         },
         "Strong": {
           "n": 5,
@@ -1141,26 +1050,26 @@
         }
       },
       "home_vs_away_pick": {
-        "home_picks": 69,
-        "home_pick_accuracy": 0.594,
-        "away_picks": 52,
-        "away_pick_accuracy": 0.481
+        "home_picks": 83,
+        "home_pick_accuracy": 0.614,
+        "away_picks": 54,
+        "away_pick_accuracy": 0.463
       },
       "big_favorite_vs_close": {
-        "big_favorite_n": 19,
-        "big_favorite_accuracy": 0.789,
-        "close_call_n": 102,
-        "close_call_accuracy": 0.5
+        "big_favorite_n": 23,
+        "big_favorite_accuracy": 0.783,
+        "close_call_n": 114,
+        "close_call_accuracy": 0.509
       }
     },
     "horse_racing": {
-      "n": 4,
-      "accuracy": 0.25,
+      "n": 5,
+      "accuracy": 0.4,
       "by_confidence": {
         "Moderate favorite": {
-          "n": 3,
-          "correct": 0,
-          "accuracy": 0.0
+          "n": 4,
+          "correct": 1,
+          "accuracy": 0.25
         },
         "Strong favorite": {
           "n": 1,
@@ -2138,6 +2047,134 @@
         "pick": "Los Angeles Dodgers",
         "pick_prob": 0.776,
         "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "nfl",
+        "matchup": "New England Patriots @ Seattle Seahawks",
+        "pick": "Seattle Seahawks",
+        "pick_prob": 0.57,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Minnesota Twins @ Detroit Tigers",
+        "pick": "Detroit Tigers",
+        "pick_prob": 0.651,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Toronto Blue Jays @ Athletics",
+        "pick": "Toronto Blue Jays",
+        "pick_prob": 0.576,
+        "correct": false
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "St. Louis Cardinals @ San Francisco Giants",
+        "pick": "San Francisco Giants",
+        "pick_prob": 0.502,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Washington Nationals @ San Diego Padres",
+        "pick": "San Diego Padres",
+        "pick_prob": 0.562,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Texas Rangers @ Seattle Mariners",
+        "pick": "Seattle Mariners",
+        "pick_prob": 0.536,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Cleveland Guardians @ Baltimore Orioles",
+        "pick": "Baltimore Orioles",
+        "pick_prob": 0.551,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "New York Mets @ Miami Marlins",
+        "pick": "Miami Marlins",
+        "pick_prob": 0.61,
+        "correct": false
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Houston Astros @ Philadelphia Phillies",
+        "pick": "Philadelphia Phillies",
+        "pick_prob": 0.627,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Los Angeles Angels @ Boston Red Sox",
+        "pick": "Boston Red Sox",
+        "pick_prob": 0.708,
+        "correct": false
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Colorado Rockies @ New York Yankees",
+        "pick": "New York Yankees",
+        "pick_prob": 0.776,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Tampa Bay Rays @ Atlanta Braves",
+        "pick": "Atlanta Braves",
+        "pick_prob": 0.626,
+        "correct": false
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Pittsburgh Pirates @ Chicago White Sox",
+        "pick": "Chicago White Sox",
+        "pick_prob": 0.583,
+        "correct": false
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Arizona Diamondbacks @ Kansas City Royals",
+        "pick": "Arizona Diamondbacks",
+        "pick_prob": 0.521,
+        "correct": false
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Chicago Cubs @ Milwaukee Brewers",
+        "pick": "Milwaukee Brewers",
+        "pick_prob": 0.596,
+        "correct": true
+      },
+      {
+        "date": "2026-09-09",
+        "league": "mlb",
+        "matchup": "Cincinnati Reds @ Los Angeles Dodgers",
+        "pick": "Los Angeles Dodgers",
+        "pick_prob": 0.78,
+        "correct": true
       }
     ],
     "graded_log_horse": [
@@ -2168,6 +2205,13 @@
         "pick": "Aplyland",
         "pick_prob": 0.194,
         "correct": false
+      },
+      {
+        "date": "2026-09-09",
+        "race": "Blackwood Dueling Grounds Oaks Invitational Stakes",
+        "pick": "Kentucky Belle",
+        "pick_prob": 0.1945,
+        "correct": true
       }
     ]
   }
