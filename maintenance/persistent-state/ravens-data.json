@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-09",
+  "as_of": "2026-09-10",
   "record": {
     "w": 0,
     "l": 0,
@@ -13,7 +13,7 @@
       "New offensive coordinator: Declan Doyle",
       "New defensive coordinator: Anthony Weaver",
       "New special teams coordinator: Anthony Levine Sr.",
-      "Updated 2026-09-09: Minter named five permanent captains for 2026 — Lamar Jackson (QB), Derrick Henry (RB), Roquan Smith (ILB), Kyle Hamilton (S), Calais Campbell (DL)."
+      "Updated 2026-09-09: Minter named five permanent captains for 2026 \u2014 Lamar Jackson (QB), Derrick Henry (RB), Roquan Smith (ILB), Kyle Hamilton (S), Calais Campbell (DL)."
     ]
   },
   "roster_changes": {
@@ -158,12 +158,12 @@
     {
       "player": "Nnamdi Madubuike",
       "pos": "DT",
-      "note": "Updated 2026-09-06: still unresolved for Week 1 \u2014 as of 2026-08-24 the coaching staff had no definitive answer on his availability (limited to individual work, no live contact); as of 2026-08-31 the Ravens notably did NOT place him on short-term IR, seen as a positive signal but a roster decision, not medical clearance. Recovering from a neck injury."
+      "note": "Updated 2026-09-06: still unresolved for Week 1 \u2014 as of 2026-08-24 the coaching staff had no definitive answer on his availability (limited to individual work, no live contact); as of 2026-08-31 the Ravens notably did NOT place him on short-term IR, seen as a positive signal but a roster decision, not medical clearance. Recovering from a neck injury. Updated 2026-09-09: listed limited on the Ravens' first official Week 1 injury report (neck); DC Anthony Weaver said he's \"looked fantastic\" in recent work and HC Jesse Minter is \"not ruling anyone out\" for Sunday."
     },
     {
       "player": "Teddye Buchanan",
       "pos": "ILB",
-      "note": "Recovering from an ACL tear; kept on the active roster"
+      "note": "Recovering from an ACL tear; kept on the active roster Updated 2026-09-09: listed limited on the first official Week 1 injury report (knee); not ruled out for Sunday at Indianapolis."
     },
     {
       "player": "Adam Randall",
@@ -193,7 +193,7 @@
     {
       "player": "Zay Flowers",
       "pos": "WR",
-      "note": "Updated 2026-09-06: confirmed trending positive \u2014 per a 2026-09-01 report the full expectation is he'll be good to go for Week 1 vs. the Colts; back at full practice as of Sept 3 after a two-week absence with a lower-body (thigh/quad) contusion"
+      "note": "Updated 2026-09-06: confirmed trending positive \u2014 per a 2026-09-01 report the full expectation is he'll be good to go for Week 1 vs. the Colts; back at full practice as of Sept 3 after a two-week absence with a lower-body (thigh/quad) contusion Updated 2026-09-09: listed limited on the first official Week 1 injury report (hamstring); says he feels \"better than ever\" and expects to play."
     },
     {
       "player": "Travis Jones",
@@ -233,7 +233,7 @@
     {
       "player": "Devontez Walker",
       "pos": "WR",
-      "note": "New (as of 2026-09-09): listed Questionable for Week 1, undisclosed injury."
+      "note": "New (as of 2026-09-09): listed Questionable for Week 1, undisclosed injury. Updated 2026-09-09: did not practice Tuesday, returned to limited practice Wednesday (groin strain); being handled cautiously for Week 1."
     }
   ],
   "super_bowl_odds_history": [

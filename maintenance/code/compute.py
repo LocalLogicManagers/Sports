@@ -196,7 +196,7 @@ for a, h, d in nfl_week1:
     nfl_games.append(g)
 results["leagues"]["nfl"] = {
     "label": "NFL",
-    "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Week 1 not yet played",
+    "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Week 1 underway — some games final, rest kick off Sept 13-14",
     "model_version": 2,
     "ratings": nfl_ratings, "games": nfl_games,
 }
