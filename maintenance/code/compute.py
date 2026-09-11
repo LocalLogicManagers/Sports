@@ -167,7 +167,7 @@ NFL_MARKET_ODDS = {
     ("Tampa Bay Buccaneers", "Cincinnati Bengals"): {"home_ml": "+166", "away_ml": "-198", "spread": "TB -3.5", "book": "FanDuel"},
     ("New Orleans Saints", "Detroit Lions"): {"home_ml": "-360", "away_ml": "+290", "spread": "DET -7.0", "book": "FanDuel"},
     ("Buffalo Bills", "Houston Texans"): {"home_ml": "-102", "away_ml": "-116", "spread": "BUF -1.5", "book": "FanDuel"},
-    ("Baltimore Ravens", "Indianapolis Colts"): {"home_ml": "+164", "away_ml": "-196", "spread": "BAL -3.5", "book": "FanDuel"},
+    ("Baltimore Ravens", "Indianapolis Colts"): {"home_ml": "+152", "away_ml": "-180", "spread": "BAL -3.5", "book": "FanDuel (2026-09-11)"},
     ("Cleveland Browns", "Jacksonville Jaguars"): {"home_ml": "-420", "away_ml": "+330", "spread": "JAX -7.5", "book": "FanDuel"},
     ("Atlanta Falcons", "Pittsburgh Steelers"): {"home_ml": "-168", "away_ml": "+142", "spread": "PIT -3.0", "book": "FanDuel"},
     ("New York Jets", "Tennessee Titans"): {"home_ml": "-138", "away_ml": "+118", "spread": "TEN -2.5", "book": "FanDuel"},
