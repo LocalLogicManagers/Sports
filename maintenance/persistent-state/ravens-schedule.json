@@ -6,11 +6,11 @@
     "date": "2026-09-13",
     "neutral": false,
     "market_odds": {
-      "ravens": "-178",
-      "opponent": "+150",
+      "ravens": "-180",
+      "opponent": "+152",
       "spread": "Ravens -3.5",
       "total": 47.5,
-      "book": "FanDuel"
+      "book": "FanDuel (2026-09-11)"
     }
   },
   {
@@ -20,11 +20,11 @@
     "date": "2026-09-20",
     "neutral": false,
     "market_odds": {
-      "ravens": "-345",
-      "opponent": "+285",
+      "ravens": "-355",
+      "opponent": "+360",
       "spread": "Ravens -7.5",
       "total": 46.5,
-      "book": "Oddschecker consensus (2026-09-09)"
+      "book": "Oddschecker consensus (2026-09-11)"
     }
   },
   {
