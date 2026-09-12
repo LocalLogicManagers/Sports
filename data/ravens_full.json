@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-12",
   "record": {
     "w": 0,
     "l": 0,
@@ -158,12 +158,12 @@
     {
       "player": "Nnamdi Madubuike",
       "pos": "DT",
-      "note": "Updated 2026-09-06: still unresolved for Week 1 \u2014 as of 2026-08-24 the coaching staff had no definitive answer on his availability (limited to individual work, no live contact); as of 2026-08-31 the Ravens notably did NOT place him on short-term IR, seen as a positive signal but a roster decision, not medical clearance. Recovering from a neck injury. Updated 2026-09-09: listed limited on the Ravens' first official Week 1 injury report (neck); DC Anthony Weaver said he's \"looked fantastic\" in recent work and HC Jesse Minter is \"not ruling anyone out\" for Sunday. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh."
+      "note": "Updated 2026-09-06: still unresolved for Week 1 \u2014 as of 2026-08-24 the coaching staff had no definitive answer on his availability (limited to individual work, no live contact); as of 2026-08-31 the Ravens notably did NOT place him on short-term IR, seen as a positive signal but a roster decision, not medical clearance. Recovering from a neck injury. Updated 2026-09-09: listed limited on the Ravens' first official Week 1 injury report (neck); DC Anthony Weaver said he's \"looked fantastic\" in recent work and HC Jesse Minter is \"not ruling anyone out\" for Sunday. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh. Updated 2026-09-12: officially ruled OUT on the Friday (9/11) final Week 1 injury report \u2014 will miss the opener at Indianapolis."
     },
     {
       "player": "Teddye Buchanan",
       "pos": "ILB",
-      "note": "Recovering from an ACL tear; kept on the active roster Updated 2026-09-09: listed limited on the first official Week 1 injury report (knee); not ruled out for Sunday at Indianapolis. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh."
+      "note": "Recovering from an ACL tear; kept on the active roster Updated 2026-09-09: listed limited on the first official Week 1 injury report (knee); not ruled out for Sunday at Indianapolis. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh. Updated 2026-09-12: officially ruled OUT on the Friday (9/11) final Week 1 injury report \u2014 will miss the opener at Indianapolis while continuing ACL rehab."
     },
     {
       "player": "Adam Randall",
@@ -193,7 +193,7 @@
     {
       "player": "Zay Flowers",
       "pos": "WR",
-      "note": "Updated 2026-09-06: confirmed trending positive \u2014 per a 2026-09-01 report the full expectation is he'll be good to go for Week 1 vs. the Colts; back at full practice as of Sept 3 after a two-week absence with a lower-body (thigh/quad) contusion Updated 2026-09-09: listed limited on the first official Week 1 injury report (hamstring); says he feels \"better than ever\" and expects to play. Updated 2026-09-11: upgraded to full participation Thursday \u2014 \"I feel great... I am ready to play football.\""
+      "note": "Updated 2026-09-06: confirmed trending positive \u2014 per a 2026-09-01 report the full expectation is he'll be good to go for Week 1 vs. the Colts; back at full practice as of Sept 3 after a two-week absence with a lower-body (thigh/quad) contusion Updated 2026-09-09: listed limited on the first official Week 1 injury report (hamstring); says he feels \"better than ever\" and expects to play. Updated 2026-09-11: upgraded to full participation Thursday \u2014 \"I feel great... I am ready to play football.\" Updated 2026-09-12: no designation on the Friday (9/11) final injury report after a full practice \u2014 cleared to play Week 1."
     },
     {
       "player": "Travis Jones",
@@ -213,12 +213,12 @@
     {
       "player": "Aeneas Peebles",
       "pos": "DT",
-      "note": "New (as of 2026-09-05): listed Questionable for Week 1, undisclosed injury"
+      "note": "New (as of 2026-09-05): listed Questionable for Week 1, undisclosed injury. Updated 2026-09-12: not listed on the Friday (9/11) final Week 1 injury report \u2014 appears available."
     },
     {
       "player": "Jay Higgins",
       "pos": "LB",
-      "note": "New (as of 2026-09-05): listed Questionable for Week 1 with a concussion"
+      "note": "New (as of 2026-09-05): listed Questionable for Week 1 with a concussion. Updated 2026-09-12: cleared protocol and not listed on the Friday (9/11) final Week 1 injury report \u2014 appears available."
     },
     {
       "player": "Center battle",
@@ -233,7 +233,7 @@
     {
       "player": "Devontez Walker",
       "pos": "WR",
-      "note": "New (as of 2026-09-09): listed Questionable for Week 1, undisclosed injury. Updated 2026-09-09: did not practice Tuesday, returned to limited practice Wednesday (groin strain); being handled cautiously for Week 1. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh."
+      "note": "New (as of 2026-09-09): listed Questionable for Week 1, undisclosed injury. Updated 2026-09-09: did not practice Tuesday, returned to limited practice Wednesday (groin strain); being handled cautiously for Week 1. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh. Updated 2026-09-12: listed Questionable on the Friday (9/11) final Week 1 injury report (groin) \u2014 game-time decision."
     }
   ],
   "super_bowl_odds_history": [
@@ -499,18 +499,18 @@
       "date": "2026-09-13",
       "neutral": false,
       "market_odds": {
-        "ravens": "-180",
-        "opponent": "+152",
+        "ravens": "-176",
+        "opponent": "+148",
         "spread": "Ravens -3.5",
         "total": 47.5,
-        "book": "FanDuel (2026-09-11)"
+        "book": "FanDuel (2026-09-12)"
       },
       "ravens_win_prob": 0.422,
       "model_odds": "+125",
       "value_bet": {
-        "market_implied_prob": 0.643,
+        "market_implied_prob": 0.638,
         "model_prob": 0.422,
-        "edge_pts": -0.221,
+        "edge_pts": -0.216,
         "read": "Large disagreement with the market \u2014 more likely our simple model is missing context (injuries, coaching change, roster turnover) than a real edge over Vegas's pricing.",
         "large_disagreement": true
       }
@@ -522,18 +522,18 @@
       "date": "2026-09-20",
       "neutral": false,
       "market_odds": {
-        "ravens": "-355",
-        "opponent": "+360",
+        "ravens": "-375",
+        "opponent": "+295",
         "spread": "Ravens -7.5",
         "total": 46.5,
-        "book": "Oddschecker consensus (2026-09-11)"
+        "book": "VegasInsider consensus (2026-09-12)"
       },
       "ravens_win_prob": 0.665,
       "model_odds": "-217",
       "value_bet": {
-        "market_implied_prob": 0.78,
+        "market_implied_prob": 0.789,
         "model_prob": 0.665,
-        "edge_pts": -0.115,
+        "edge_pts": -0.124,
         "read": "Model leans slightly more toward the opponent than the market does.",
         "large_disagreement": false
       }
