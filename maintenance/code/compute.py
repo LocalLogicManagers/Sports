@@ -87,8 +87,9 @@ NFL_INJURY_TURNOVER = {
     "Baltimore Ravens": {
         "injuries": [
             {"pos": "C", "severity": "out"},              # Danny Pinter, out extended time
-            {"pos": "DT", "severity": "positive_return"},  # Nnamdi Madubuike, back to full-contact practice
-            {"pos": "ILB", "severity": "questionable"},    # Teddye Buchanan, recovering from ACL tear, Week 1 status unconfirmed as of 2026-09-08
+            {"pos": "DT", "severity": "out"},              # Nnamdi Madubuike, officially OUT for Week 1 per 2026-09-11 final injury report (neck)
+            {"pos": "ILB", "severity": "out"},             # Teddye Buchanan, officially OUT for Week 1 per 2026-09-11 final injury report (knee/ACL)
+            {"pos": "WR", "severity": "questionable"},     # Devontez Walker, Questionable Week 1 (groin) per 2026-09-11 final injury report
         ],
         "departures": ["TE", "FB", "OT", "P", "S", "CB", "OLB", "WR"],  # Likely, Ricard, Faalele, Stout, Washington, Alexander, Oweh, C.Johnson
         "acquisitions": ["OLB", "S", "CB", "LB", "ILB"],                 # D.Jones, Gilman, White, Hendrickson, Barrett
