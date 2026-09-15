@@ -84,12 +84,23 @@ NFL_NEW_HC_TEAMS = {  # first season under a new head coach, 2026 -- drives the 
 # work per the Ravens diagnostic. Extend opportunistically as real injury/
 # transaction news gets sourced for other teams.
 NFL_INJURY_TURNOVER = {
+    # 2026-09-15: refreshed for Week 2 (vs New Orleans Saints, 09-20). Ravens beat the
+    # Colts 41-23 in Week 1 -- Madubuike and Buchanan (both OUT Week 1) are now trending
+    # toward playing and were upgraded to Questionable per early-week reports (2026-09-14);
+    # two new in-game injuries from the Week 1 win: Zay Flowers re-aggravated his hamstring
+    # (Questionable) and rookie WR Ja'Kobi Lane suffered a fractured wrist (expected out
+    # several weeks -- treated as "out" here despite an early "Doubtful" tag, since a
+    # multi-week wrist fracture is very unlikely to be ready this soon). T.J. Tampa (CB,
+    # knee) is a new Questionable add.
     "Baltimore Ravens": {
         "injuries": [
-            {"pos": "C", "severity": "out"},              # Danny Pinter, out extended time
-            {"pos": "DT", "severity": "out"},              # Nnamdi Madubuike, officially OUT for Week 1 per 2026-09-11 final injury report (neck)
-            {"pos": "ILB", "severity": "out"},             # Teddye Buchanan, officially OUT for Week 1 per 2026-09-11 final injury report (knee/ACL)
-            {"pos": "WR", "severity": "questionable"},     # Devontez Walker, Questionable Week 1 (groin) per 2026-09-11 final injury report
+            {"pos": "C", "severity": "out"},              # Danny Pinter, out for the season
+            {"pos": "DT", "severity": "questionable"},     # Nnamdi Madubuike, neck -- upgraded from Week 1 OUT
+            {"pos": "ILB", "severity": "questionable"},    # Teddye Buchanan, knee/ACL -- upgraded from Week 1 OUT
+            {"pos": "WR", "severity": "questionable"},     # Devontez Walker, groin -- still Questionable
+            {"pos": "WR", "severity": "questionable"},     # Zay Flowers, hamstring re-aggravation in Wk1 win (new)
+            {"pos": "WR", "severity": "out"},              # Ja'Kobi Lane, fractured wrist in Wk1 -- expected out several weeks (new)
+            {"pos": "CB", "severity": "questionable"},     # T.J. Tampa, knee (new)
         ],
         "departures": ["TE", "FB", "OT", "P", "S", "CB", "OLB", "WR"],  # Likely, Ricard, Faalele, Stout, Washington, Alexander, Oweh, C.Johnson
         "acquisitions": ["OLB", "S", "CB", "LB", "ILB"],                 # D.Jones, Gilman, White, Hendrickson, Barrett
@@ -153,31 +164,32 @@ for team, win_total in NFL_SEASON_WIN_TOTALS.items():
 
 # 2026-09-08: was a hardcoded Week-1-only literal list; now reads from nfl_slate.csv
 # (away,home,date -- same convention as mlb_slate.csv/epl_fixtures.csv/etc.) so adding Week 2+
-# is a data update, not a code change. Currently seeded with the same 16 Week 1 games as before
-# (byte-identical behavior) -- replace/append rows in nfl_slate.csv once Week 1 is played and a
-# real Week 2 slate is sourced. log_predictions.py's append-only/no-duplicate logic still governs
-# whether new rows here actually produce new logged picks.
+# is a data update, not a code change. 2026-09-15: Week 1 is complete (all 16 games graded --
+# see predictions-history.json) and nfl_slate.csv now holds the real Week 2 slate (Sept 17-21).
+# log_predictions.py's append-only/no-duplicate logic still governs whether new rows here
+# actually produce new logged picks.
 nfl_week1 = [(r["away"], r["home"], r["date"]) for r in read_csv("nfl_slate.csv")]
-# Real current market lines for the open Week 1 slate (FanDuel moneylines, sourced
-# via WebSearch/WebFetch, 2026-08-31) -- keyed by (away, home). A game not in this
-# dict just doesn't get a market_odds/value_bet/blended_prob block attached.
+# Real current market lines for the open Week 2 slate (FanDuel/Covers.com moneylines, sourced
+# via WebSearch/WebFetch, 2026-09-14; Ravens game uses the more specific VegasInsider consensus
+# line already tracked in ravens-schedule.json for consistency) -- keyed by (away, home). A game
+# not in this dict just doesn't get a market_odds/value_bet/blended_prob block attached.
 NFL_MARKET_ODDS = {
-    ("New England Patriots", "Seattle Seahawks"): {"home_ml": "+164", "away_ml": "-196", "spread": "NE -3.5", "book": "FanDuel"},
-    ("San Francisco 49ers", "Los Angeles Rams"): {"home_ml": "+168", "away_ml": "-200", "spread": "SF -3.5", "book": "FanDuel"},
-    ("Chicago Bears", "Carolina Panthers"): {"home_ml": "+132", "away_ml": "-156", "spread": "CHI -2.5", "book": "FanDuel"},
-    ("Tampa Bay Buccaneers", "Cincinnati Bengals"): {"home_ml": "+166", "away_ml": "-198", "spread": "TB -3.5", "book": "FanDuel"},
-    ("New Orleans Saints", "Detroit Lions"): {"home_ml": "-360", "away_ml": "+290", "spread": "DET -7.0", "book": "FanDuel"},
-    ("Buffalo Bills", "Houston Texans"): {"home_ml": "-102", "away_ml": "-116", "spread": "BUF -1.5", "book": "FanDuel"},
-    ("Baltimore Ravens", "Indianapolis Colts"): {"home_ml": "+152", "away_ml": "-180", "spread": "BAL -3.5", "book": "FanDuel (2026-09-11)"},
-    ("Cleveland Browns", "Jacksonville Jaguars"): {"home_ml": "-420", "away_ml": "+330", "spread": "JAX -7.5", "book": "FanDuel"},
-    ("Atlanta Falcons", "Pittsburgh Steelers"): {"home_ml": "-168", "away_ml": "+142", "spread": "PIT -3.0", "book": "FanDuel"},
-    ("New York Jets", "Tennessee Titans"): {"home_ml": "-138", "away_ml": "+118", "spread": "TEN -2.5", "book": "FanDuel"},
-    ("Arizona Cardinals", "Los Angeles Chargers"): {"home_ml": "-650", "away_ml": "+480", "spread": "LAC -10.5", "book": "FanDuel"},
-    ("Miami Dolphins", "Las Vegas Raiders"): {"home_ml": "+162", "away_ml": "-194", "spread": "MIA -3.5", "book": "FanDuel"},
-    ("Green Bay Packers", "Minnesota Vikings"): {"home_ml": "-118", "away_ml": "+100", "spread": "MIN -1.5", "book": "FanDuel"},
-    ("Washington Commanders", "Philadelphia Eagles"): {"home_ml": "-240", "away_ml": "+198", "spread": "PHI -5.5", "book": "FanDuel"},
-    ("Dallas Cowboys", "New York Giants"): {"home_ml": "+122", "away_ml": "-144", "spread": "DAL -2.5", "book": "FanDuel"},
-    ("Denver Broncos", "Kansas City Chiefs"): {"home_ml": "-144", "away_ml": "+122", "spread": "KC -2.5", "book": "FanDuel"},
+    ("Detroit Lions", "Buffalo Bills"): {"home_ml": "-196", "away_ml": "+164", "book": "FanDuel (2026-09-14)"},
+    ("Carolina Panthers", "Atlanta Falcons"): {"home_ml": "+100", "away_ml": "-118", "book": "FanDuel (2026-09-14)"},
+    ("New Orleans Saints", "Baltimore Ravens"): {"home_ml": "-360", "away_ml": "+285", "spread": "BAL -7.5", "book": "VegasInsider (2026-09-14)"},
+    ("Minnesota Vikings", "Chicago Bears"): {"home_ml": "-240", "away_ml": "+198", "book": "FanDuel (2026-09-14)"},
+    ("Cincinnati Bengals", "Houston Texans"): {"home_ml": "-156", "away_ml": "+132", "book": "FanDuel (2026-09-14)"},
+    ("Pittsburgh Steelers", "New England Patriots"): {"home_ml": "-235", "away_ml": "+194", "book": "FanDuel (2026-09-14)"},
+    ("Green Bay Packers", "New York Jets"): {"home_ml": "+176", "away_ml": "-210", "book": "FanDuel (2026-09-14)"},
+    ("Cleveland Browns", "Tampa Bay Buccaneers"): {"home_ml": "-450", "away_ml": "+350", "book": "FanDuel (2026-09-14)"},
+    ("Philadelphia Eagles", "Tennessee Titans"): {"home_ml": "+285", "away_ml": "-355", "book": "FanDuel (2026-09-14)"},
+    ("Jacksonville Jaguars", "Denver Broncos"): {"home_ml": "-142", "away_ml": "+120", "book": "FanDuel (2026-09-14)"},
+    ("Las Vegas Raiders", "Los Angeles Chargers"): {"home_ml": "-360", "away_ml": "+290", "book": "FanDuel (2026-09-14)"},
+    ("Seattle Seahawks", "Arizona Cardinals"): {"home_ml": "+194", "away_ml": "-235", "book": "FanDuel (2026-09-14)"},
+    ("Washington Commanders", "Dallas Cowboys"): {"home_ml": "-190", "away_ml": "+160", "book": "FanDuel (2026-09-14)"},
+    ("Miami Dolphins", "San Francisco 49ers"): {"home_ml": "-950", "away_ml": "+640", "book": "FanDuel (2026-09-14)"},
+    ("Indianapolis Colts", "Kansas City Chiefs"): {"home_ml": "-290", "away_ml": "+235", "book": "FanDuel (2026-09-14)"},
+    ("New York Giants", "Los Angeles Rams"): {"home_ml": "-370", "away_ml": "+295", "book": "FanDuel (2026-09-14)"},
 }
 
 nfl_games = []
@@ -197,7 +209,7 @@ for a, h, d in nfl_week1:
     nfl_games.append(g)
 results["leagues"]["nfl"] = {
     "label": "NFL",
-    "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Week 1 underway — some games final, rest kick off Sept 13-14",
+    "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Week 1 complete (all graded), Week 2 slate below (Sept 17-21)",
     "model_version": 2,
     "ratings": nfl_ratings, "games": nfl_games,
 }
