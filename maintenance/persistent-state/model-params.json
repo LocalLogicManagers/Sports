@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_calibrated": "2026-09-11",
+  "last_calibrated": "2026-09-12",
   "leagues": {
     "nfl": {
       "home_adv": 1.5,
@@ -112,6 +112,17 @@
       "n": 105,
       "old_brier": 0.2358,
       "new_brier": 0.2358
+    },
+    {
+      "date": "2026-09-12",
+      "league": "mlb",
+      "old_home_adv": 0.4,
+      "new_home_adv": 0.4,
+      "old_sigma": 2.6,
+      "new_sigma": 2.6,
+      "n": 120,
+      "old_brier": 0.2305,
+      "new_brier": 0.2305
     }
   ]
 }

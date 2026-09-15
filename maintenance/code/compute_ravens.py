@@ -197,9 +197,9 @@ for g in non_bye:
     })
 bet_log.sort(key=lambda c: c["week"])
 
-# No actual results known yet this session (2026 season hasn't kicked off) -- once
-# games are played, pass {week: actual_winner_team_name} here to grade them.
-bet_log = grade_ravens_calls(bet_log, {})
+# Actual results for weeks played so far -- pass {week: actual_winner_team_name}.
+# Week 1: Ravens beat the Colts 41-23 at Indianapolis (2026-09-13).
+bet_log = grade_ravens_calls(bet_log, {1: "Baltimore Ravens"})
 
 with open(bet_log_path, "w") as f:
     json.dump(bet_log, f, indent=2)
