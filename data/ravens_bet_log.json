@@ -13,8 +13,8 @@
     "headline": "Model and market disagree too much to trust here",
     "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 66%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.",
     "logged_at": "2026-08-29",
-    "graded": false,
-    "actual_winner": null,
+    "graded": true,
+    "actual_winner": "Baltimore Ravens",
     "side_won": null
   },
   {
