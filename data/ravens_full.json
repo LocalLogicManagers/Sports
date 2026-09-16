@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-15",
+  "as_of": "2026-09-16",
   "record": {
     "w": 1,
     "l": 0,
@@ -194,7 +194,7 @@
     {
       "player": "Zay Flowers",
       "pos": "WR",
-      "note": "Updated 2026-09-06: confirmed trending positive \u2014 per a 2026-09-01 report the full expectation is he'll be good to go for Week 1 vs. the Colts; back at full practice as of Sept 3 after a two-week absence with a lower-body (thigh/quad) contusion Updated 2026-09-09: listed limited on the first official Week 1 injury report (hamstring); says he feels \"better than ever\" and expects to play. Updated 2026-09-11: upgraded to full participation Thursday \u2014 \"I feel great... I am ready to play football.\" Updated 2026-09-12: no designation on the Friday (9/11) final injury report after a full practice \u2014 cleared to play Week 1."
+      "note": "Updated 2026-09-06: confirmed trending positive \u2014 per a 2026-09-01 report the full expectation is he'll be good to go for Week 1 vs. the Colts; back at full practice as of Sept 3 after a two-week absence with a lower-body (thigh/quad) contusion Updated 2026-09-09: listed limited on the first official Week 1 injury report (hamstring); says he feels \"better than ever\" and expects to play. Updated 2026-09-11: upgraded to full participation Thursday \u2014 \"I feel great... I am ready to play football.\" Updated 2026-09-12: no designation on the Friday (9/11) final injury report after a full practice \u2014 cleared to play Week 1. Updated 2026-09-15: re-aggravated the hamstring in the Week 1 win at Indianapolis, listed Questionable for Week 2 vs New Orleans; per Ian Rapoport it \"isn't considered serious\" \u2014 would have played through it in a playoff game \u2014 and HC Jesse Minter called him day-to-day."
     },
     {
       "player": "Travis Jones",
@@ -538,20 +538,20 @@
       "date": "2026-09-20",
       "neutral": false,
       "market_odds": {
-        "ravens": "-360",
-        "opponent": "+285",
-        "spread": "Ravens -7.5",
-        "total": 46.5,
-        "book": "VegasInsider consensus (2026-09-14)"
+        "ravens": "-450",
+        "opponent": "+350",
+        "spread": "Ravens -8.5",
+        "total": 47.5,
+        "book": "FanDuel (2026-09-15)"
       },
       "ravens_win_prob": 0.665,
       "model_odds": "-217",
       "value_bet": {
-        "market_implied_prob": 0.783,
+        "market_implied_prob": 0.818,
         "model_prob": 0.665,
-        "edge_pts": -0.118,
-        "read": "Model leans slightly more toward the opponent than the market does.",
-        "large_disagreement": false
+        "edge_pts": -0.153,
+        "read": "Large disagreement with the market \u2014 more likely our simple model is missing context (injuries, coaching change, roster turnover) than a real edge over Vegas's pricing.",
+        "large_disagreement": true
       }
     },
     {

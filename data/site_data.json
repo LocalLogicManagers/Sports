@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15",
+  "generated_at": "2026-09-16",
   "model_version": 1,
   "leagues": {
     "nfl": {
@@ -95,15 +95,15 @@
           "pick_prob": 0.598,
           "confidence": "Lean",
           "market_odds": {
-            "home_ml": "-360",
-            "away_ml": "+285",
-            "spread": "BAL -7.5",
-            "book": "VegasInsider (2026-09-14)"
+            "home_ml": "-450",
+            "away_ml": "+350",
+            "spread": "BAL -8.5",
+            "book": "FanDuel (2026-09-15)"
           },
           "value_bet": {
-            "market_implied_prob": 0.751,
+            "market_implied_prob": 0.786,
             "model_prob": 0.598,
-            "edge_pts": -0.153,
+            "edge_pts": -0.188,
             "read": "Large disagreement with the market \u2014 more likely our simple model is missing context than a real edge over the book's pricing.",
             "large_disagreement": true
           }
@@ -400,171 +400,171 @@
       "label": "MLB",
       "status": "in season",
       "ratings": {
-        "Tampa Bay Rays": 0.408,
-        "New York Yankees": 0.74,
-        "Boston Red Sox": 0.518,
-        "Toronto Blue Jays": -0.182,
-        "Baltimore Orioles": -0.206,
-        "Chicago White Sox": 0.201,
-        "Cleveland Guardians": -0.041,
-        "Detroit Tigers": 0.414,
-        "Minnesota Twins": -0.367,
-        "Kansas City Royals": -0.553,
-        "Houston Astros": -0.312,
-        "Texas Rangers": -0.259,
-        "Seattle Mariners": -0.341,
-        "Athletics": -1.194,
-        "Los Angeles Angels": -0.45,
-        "Atlanta Braves": 0.682,
-        "Philadelphia Phillies": 0.182,
-        "Miami Marlins": 0.035,
-        "Washington Nationals": 0.018,
-        "New York Mets": -0.201,
-        "Milwaukee Brewers": 1.147,
-        "Chicago Cubs": 0.812,
-        "Pittsburgh Pirates": 0.153,
-        "St. Louis Cardinals": -0.041,
-        "Cincinnati Reds": -0.858,
-        "Los Angeles Dodgers": 1.006,
-        "San Diego Padres": 0.13,
-        "Arizona Diamondbacks": 0.012,
-        "San Francisco Giants": -0.453,
-        "Colorado Rockies": -1.0
+        "Tampa Bay Rays": 0.412,
+        "New York Yankees": 0.801,
+        "Boston Red Sox": 0.503,
+        "Toronto Blue Jays": -0.238,
+        "Baltimore Orioles": -0.186,
+        "Chicago White Sox": 0.216,
+        "Cleveland Guardians": -0.058,
+        "Detroit Tigers": 0.468,
+        "Minnesota Twins": -0.433,
+        "Kansas City Royals": -0.561,
+        "Houston Astros": -0.298,
+        "Texas Rangers": -0.246,
+        "Seattle Mariners": -0.351,
+        "Athletics": -1.193,
+        "Los Angeles Angels": -0.435,
+        "Atlanta Braves": 0.669,
+        "Philadelphia Phillies": 0.164,
+        "Miami Marlins": 0.029,
+        "Washington Nationals": 0.035,
+        "New York Mets": -0.216,
+        "Milwaukee Brewers": 1.164,
+        "Chicago Cubs": 0.808,
+        "Pittsburgh Pirates": 0.129,
+        "St. Louis Cardinals": -0.076,
+        "Cincinnati Reds": -0.889,
+        "Los Angeles Dodgers": 1.035,
+        "San Diego Padres": 0.099,
+        "Arizona Diamondbacks": 0.018,
+        "San Francisco Giants": -0.413,
+        "Colorado Rockies": -0.959
       },
       "games": [
         {
-          "away": "Los Angeles Dodgers",
-          "home": "Cincinnati Reds",
-          "date": "2026-09-15",
-          "home_win_prob": 0.287,
-          "pick": "Los Angeles Dodgers",
-          "pick_prob": 0.713,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Athletics",
-          "home": "Tampa Bay Rays",
-          "date": "2026-09-15",
-          "home_win_prob": 0.779,
-          "pick": "Tampa Bay Rays",
-          "pick_prob": 0.779,
-          "confidence": "Moderate"
-        },
-        {
           "away": "Chicago White Sox",
           "home": "Cleveland Guardians",
-          "date": "2026-09-15",
-          "home_win_prob": 0.524,
+          "date": "2026-09-16",
+          "home_win_prob": 0.519,
           "pick": "Cleveland Guardians",
-          "pick_prob": 0.524,
+          "pick_prob": 0.519,
           "confidence": "Toss-up"
         },
         {
-          "away": "Milwaukee Brewers",
-          "home": "Pittsburgh Pirates",
-          "date": "2026-09-15",
-          "home_win_prob": 0.41,
-          "pick": "Milwaukee Brewers",
-          "pick_prob": 0.59,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Philadelphia Phillies",
-          "home": "Washington Nationals",
-          "date": "2026-09-15",
-          "home_win_prob": 0.536,
-          "pick": "Washington Nationals",
-          "pick_prob": 0.536,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Detroit Tigers",
-          "home": "Toronto Blue Jays",
-          "date": "2026-09-15",
-          "home_win_prob": 0.47,
-          "pick": "Detroit Tigers",
-          "pick_prob": 0.53,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Baltimore Orioles",
-          "home": "New York Mets",
-          "date": "2026-09-15",
-          "home_win_prob": 0.562,
-          "pick": "New York Mets",
-          "pick_prob": 0.562,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Atlanta Braves",
-          "home": "Chicago Cubs",
-          "date": "2026-09-15",
-          "home_win_prob": 0.581,
-          "pick": "Chicago Cubs",
-          "pick_prob": 0.581,
+          "away": "San Francisco Giants",
+          "home": "St. Louis Cardinals",
+          "date": "2026-09-16",
+          "home_win_prob": 0.612,
+          "pick": "St. Louis Cardinals",
+          "pick_prob": 0.612,
           "confidence": "Lean"
         },
         {
           "away": "New York Yankees",
           "home": "Minnesota Twins",
-          "date": "2026-09-15",
-          "home_win_prob": 0.393,
+          "date": "2026-09-16",
+          "home_win_prob": 0.374,
           "pick": "New York Yankees",
-          "pick_prob": 0.607,
+          "pick_prob": 0.626,
           "confidence": "Lean"
         },
         {
-          "away": "San Francisco Giants",
-          "home": "St. Louis Cardinals",
-          "date": "2026-09-15",
-          "home_win_prob": 0.623,
-          "pick": "St. Louis Cardinals",
-          "pick_prob": 0.623,
+          "away": "Detroit Tigers",
+          "home": "Toronto Blue Jays",
+          "date": "2026-09-16",
+          "home_win_prob": 0.453,
+          "pick": "Detroit Tigers",
+          "pick_prob": 0.547,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Los Angeles Dodgers",
+          "home": "Cincinnati Reds",
+          "date": "2026-09-16",
+          "home_win_prob": 0.279,
+          "pick": "Los Angeles Dodgers",
+          "pick_prob": 0.721,
+          "confidence": "Moderate"
+        },
+        {
+          "away": "Milwaukee Brewers",
+          "home": "Pittsburgh Pirates",
+          "date": "2026-09-16",
+          "home_win_prob": 0.404,
+          "pick": "Milwaukee Brewers",
+          "pick_prob": 0.596,
+          "confidence": "Lean"
+        },
+        {
+          "away": "Athletics",
+          "home": "Tampa Bay Rays",
+          "date": "2026-09-16",
+          "home_win_prob": 0.78,
+          "pick": "Tampa Bay Rays",
+          "pick_prob": 0.78,
+          "confidence": "Moderate"
+        },
+        {
+          "away": "Philadelphia Phillies",
+          "home": "Washington Nationals",
+          "date": "2026-09-16",
+          "home_win_prob": 0.542,
+          "pick": "Washington Nationals",
+          "pick_prob": 0.542,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Baltimore Orioles",
+          "home": "New York Mets",
+          "date": "2026-09-16",
+          "home_win_prob": 0.557,
+          "pick": "New York Mets",
+          "pick_prob": 0.557,
+          "confidence": "Lean"
+        },
+        {
+          "away": "Atlanta Braves",
+          "home": "Chicago Cubs",
+          "date": "2026-09-16",
+          "home_win_prob": 0.582,
+          "pick": "Chicago Cubs",
+          "pick_prob": 0.582,
           "confidence": "Lean"
         },
         {
           "away": "Boston Red Sox",
           "home": "Texas Rangers",
-          "date": "2026-09-15",
-          "home_win_prob": 0.442,
+          "date": "2026-09-16",
+          "home_win_prob": 0.447,
           "pick": "Boston Red Sox",
-          "pick_prob": 0.558,
+          "pick_prob": 0.553,
           "confidence": "Lean"
         },
         {
           "away": "Kansas City Royals",
           "home": "Houston Astros",
-          "date": "2026-09-15",
-          "home_win_prob": 0.597,
+          "date": "2026-09-16",
+          "home_win_prob": 0.601,
           "pick": "Houston Astros",
-          "pick_prob": 0.597,
+          "pick_prob": 0.601,
           "confidence": "Lean"
         },
         {
           "away": "San Diego Padres",
           "home": "Colorado Rockies",
-          "date": "2026-09-15",
-          "home_win_prob": 0.389,
+          "date": "2026-09-16",
+          "home_win_prob": 0.4,
           "pick": "San Diego Padres",
-          "pick_prob": 0.611,
+          "pick_prob": 0.6,
           "confidence": "Lean"
         },
         {
           "away": "Seattle Mariners",
           "home": "Los Angeles Angels",
-          "date": "2026-09-15",
-          "home_win_prob": 0.545,
+          "date": "2026-09-16",
+          "home_win_prob": 0.548,
           "pick": "Los Angeles Angels",
-          "pick_prob": 0.545,
+          "pick_prob": 0.548,
           "confidence": "Toss-up"
         },
         {
           "away": "Miami Marlins",
           "home": "Arizona Diamondbacks",
-          "date": "2026-09-15",
-          "home_win_prob": 0.558,
+          "date": "2026-09-16",
+          "home_win_prob": 0.559,
           "pick": "Arizona Diamondbacks",
-          "pick_prob": 0.558,
+          "pick_prob": 0.559,
           "confidence": "Lean"
         }
       ]
@@ -977,95 +977,102 @@
         "date": "2026-09-19",
         "field": [
           {
-            "post": 8,
-            "horse": "Baeza",
+            "post": 7,
+            "horse": "Further Ado",
             "ml_odds": "2-1",
             "raw_prob": 0.3333,
-            "norm_prob": 0.2179
-          },
-          {
-            "post": 4,
-            "horse": "David Of Athens",
-            "ml_odds": "5-2",
-            "raw_prob": 0.2857,
-            "norm_prob": 0.1868
+            "norm_prob": 0.2453
           },
           {
             "post": 6,
-            "horse": "Goal Oriented",
-            "ml_odds": "5-2",
-            "raw_prob": 0.2857,
-            "norm_prob": 0.1868
-          },
-          {
-            "post": 9,
-            "horse": "Gosger",
+            "horse": "The Puma",
             "ml_odds": "4-1",
             "raw_prob": 0.2,
-            "norm_prob": 0.1307
-          },
-          {
-            "post": 3,
-            "horse": "Magnitute",
-            "ml_odds": "6-1",
-            "raw_prob": 0.1429,
-            "norm_prob": 0.0934
-          },
-          {
-            "post": 7,
-            "horse": "Big Truzz",
-            "ml_odds": "10-1",
-            "raw_prob": 0.0909,
-            "norm_prob": 0.0594
-          },
-          {
-            "post": 10,
-            "horse": "Mo Plex",
-            "ml_odds": "12-1",
-            "raw_prob": 0.0769,
-            "norm_prob": 0.0503
-          },
-          {
-            "post": 1,
-            "horse": "So Sandy",
-            "ml_odds": "15-1",
-            "raw_prob": 0.0625,
-            "norm_prob": 0.0409
-          },
-          {
-            "post": 5,
-            "horse": "Happily Delusional",
-            "ml_odds": "30-1",
-            "raw_prob": 0.0323,
-            "norm_prob": 0.0211
+            "norm_prob": 0.1472
           },
           {
             "post": 2,
-            "horse": "Altobelli",
-            "ml_odds": "50-1",
-            "raw_prob": 0.0196,
-            "norm_prob": 0.0128
+            "horse": "Iron Honor",
+            "ml_odds": "5-1",
+            "raw_prob": 0.1667,
+            "norm_prob": 0.1226
+          },
+          {
+            "post": 1,
+            "horse": "Zihnal",
+            "ml_odds": "8-1",
+            "raw_prob": 0.1111,
+            "norm_prob": 0.0818
+          },
+          {
+            "post": 3,
+            "horse": "Our Moneyman",
+            "ml_odds": "8-1",
+            "raw_prob": 0.1111,
+            "norm_prob": 0.0818
+          },
+          {
+            "post": 4,
+            "horse": "Igniter",
+            "ml_odds": "8-1",
+            "raw_prob": 0.1111,
+            "norm_prob": 0.0818
+          },
+          {
+            "post": 9,
+            "horse": "Sassmaster",
+            "ml_odds": "10-1",
+            "raw_prob": 0.0909,
+            "norm_prob": 0.0669
+          },
+          {
+            "post": 5,
+            "horse": "Talk to Me Jimmy",
+            "ml_odds": "12-1",
+            "raw_prob": 0.0769,
+            "norm_prob": 0.0566
+          },
+          {
+            "post": 10,
+            "horse": "Micanopy",
+            "ml_odds": "15-1",
+            "raw_prob": 0.0625,
+            "norm_prob": 0.046
+          },
+          {
+            "post": 8,
+            "horse": "Freedom's Echo",
+            "ml_odds": "20-1",
+            "raw_prob": 0.0476,
+            "norm_prob": 0.035
+          },
+          {
+            "post": 11,
+            "horse": "Ponder and Dream",
+            "ml_odds": "20-1",
+            "raw_prob": 0.0476,
+            "norm_prob": 0.035
           }
         ],
-        "overround": 1.5298,
-        "pick": "Baeza",
-        "pick_prob": 0.2179,
+        "overround": 1.3589,
+        "pick": "Further Ado",
+        "pick_prob": 0.2453,
         "confidence": "Moderate favorite",
-        "fair_share_ratio": 2.18
+        "fair_share_ratio": 2.7
       }
     ]
   },
   "accuracy": {
     "team_sports": {
-      "n": 216,
-      "accuracy": 0.556,
-      "brier": 0.2378,
+      "n": 231,
+      "accuracy": 0.558,
+      "brier": 0.2376,
       "by_league": {
         "mlb": {
-          "n": 135,
-          "correct": 84,
-          "accuracy": 0.622,
-          "brier": 0.2301
+          "n": 150,
+          "correct": 93,
+          "accuracy": 0.62,
+          "brier": 0.2306
         },
         "epl": {
           "n": 17,
@@ -1100,21 +1107,21 @@
       },
       "by_confidence": {
         "Toss-up": {
-          "n": 83,
-          "correct": 43,
-          "accuracy": 0.518,
-          "avg_predicted_prob": 0.525
+          "n": 87,
+          "correct": 47,
+          "accuracy": 0.54,
+          "avg_predicted_prob": 0.526
         },
         "Moderate": {
-          "n": 36,
-          "correct": 24,
-          "accuracy": 0.667,
-          "avg_predicted_prob": 0.722
+          "n": 38,
+          "correct": 26,
+          "accuracy": 0.684,
+          "avg_predicted_prob": 0.723
         },
         "Lean": {
-          "n": 91,
-          "correct": 48,
-          "accuracy": 0.527,
+          "n": 100,
+          "correct": 51,
+          "accuracy": 0.51,
           "avg_predicted_prob": 0.595
         },
         "Strong": {
@@ -1125,16 +1132,16 @@
         }
       },
       "home_vs_away_pick": {
-        "home_picks": 141,
-        "home_pick_accuracy": 0.603,
-        "away_picks": 75,
-        "away_pick_accuracy": 0.467
+        "home_picks": 150,
+        "home_pick_accuracy": 0.6,
+        "away_picks": 81,
+        "away_pick_accuracy": 0.481
       },
       "big_favorite_vs_close": {
-        "big_favorite_n": 43,
-        "big_favorite_accuracy": 0.674,
-        "close_call_n": 173,
-        "close_call_accuracy": 0.526
+        "big_favorite_n": 45,
+        "big_favorite_accuracy": 0.689,
+        "close_call_n": 186,
+        "close_call_accuracy": 0.527
       }
     },
     "horse_racing": {
@@ -2882,6 +2889,126 @@
         "pick": "Seattle Mariners",
         "pick_prob": 0.542,
         "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Los Angeles Dodgers @ Cincinnati Reds",
+        "pick": "Los Angeles Dodgers",
+        "pick_prob": 0.713,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Athletics @ Tampa Bay Rays",
+        "pick": "Tampa Bay Rays",
+        "pick_prob": 0.779,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Chicago White Sox @ Cleveland Guardians",
+        "pick": "Cleveland Guardians",
+        "pick_prob": 0.524,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Milwaukee Brewers @ Pittsburgh Pirates",
+        "pick": "Milwaukee Brewers",
+        "pick_prob": 0.59,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Philadelphia Phillies @ Washington Nationals",
+        "pick": "Washington Nationals",
+        "pick_prob": 0.536,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Detroit Tigers @ Toronto Blue Jays",
+        "pick": "Detroit Tigers",
+        "pick_prob": 0.53,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Baltimore Orioles @ New York Mets",
+        "pick": "New York Mets",
+        "pick_prob": 0.562,
+        "correct": false
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Atlanta Braves @ Chicago Cubs",
+        "pick": "Chicago Cubs",
+        "pick_prob": 0.581,
+        "correct": false
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "New York Yankees @ Minnesota Twins",
+        "pick": "New York Yankees",
+        "pick_prob": 0.607,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "San Francisco Giants @ St. Louis Cardinals",
+        "pick": "St. Louis Cardinals",
+        "pick_prob": 0.623,
+        "correct": false
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Boston Red Sox @ Texas Rangers",
+        "pick": "Boston Red Sox",
+        "pick_prob": 0.558,
+        "correct": false
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Kansas City Royals @ Houston Astros",
+        "pick": "Houston Astros",
+        "pick_prob": 0.597,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "San Diego Padres @ Colorado Rockies",
+        "pick": "San Diego Padres",
+        "pick_prob": 0.611,
+        "correct": false
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Seattle Mariners @ Los Angeles Angels",
+        "pick": "Los Angeles Angels",
+        "pick_prob": 0.545,
+        "correct": true
+      },
+      {
+        "date": "2026-09-15",
+        "league": "mlb",
+        "matchup": "Miami Marlins @ Arizona Diamondbacks",
+        "pick": "Arizona Diamondbacks",
+        "pick_prob": 0.558,
+        "correct": false
       }
     ],
     "graded_log_horse": [
