@@ -1,6 +1,6 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-16",
+  "as_of": "2026-09-17",
   "record": {
     "w": 1,
     "l": 0,
@@ -159,12 +159,12 @@
     {
       "player": "Nnamdi Madubuike",
       "pos": "DT",
-      "note": "Updated 2026-09-06: still unresolved for Week 1 \u2014 as of 2026-08-24 the coaching staff had no definitive answer on his availability (limited to individual work, no live contact); as of 2026-08-31 the Ravens notably did NOT place him on short-term IR, seen as a positive signal but a roster decision, not medical clearance. Recovering from a neck injury. Updated 2026-09-09: listed limited on the Ravens' first official Week 1 injury report (neck); DC Anthony Weaver said he's \"looked fantastic\" in recent work and HC Jesse Minter is \"not ruling anyone out\" for Sunday. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh. Updated 2026-09-12: officially ruled OUT on the Friday (9/11) final Week 1 injury report \u2014 will miss the opener at Indianapolis. Updated 2026-09-15: back in team drills and trending better; listed Questionable for Week 2 vs New Orleans (no formal Wednesday practice report yet as of this refresh)."
+      "note": "Updated 2026-09-06: still unresolved for Week 1 \u2014 as of 2026-08-24 the coaching staff had no definitive answer on his availability (limited to individual work, no live contact); as of 2026-08-31 the Ravens notably did NOT place him on short-term IR, seen as a positive signal but a roster decision, not medical clearance. Recovering from a neck injury. Updated 2026-09-09: listed limited on the Ravens' first official Week 1 injury report (neck); DC Anthony Weaver said he's \"looked fantastic\" in recent work and HC Jesse Minter is \"not ruling anyone out\" for Sunday. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh. Updated 2026-09-12: officially ruled OUT on the Friday (9/11) final Week 1 injury report \u2014 will miss the opener at Indianapolis. Updated 2026-09-15: back in team drills and trending better; listed Questionable for Week 2 vs New Orleans (no formal Wednesday practice report yet as of this refresh). Updated 2026-09-16: upgraded to Limited participation at Wednesday practice ahead of Week 2 vs New Orleans."
     },
     {
       "player": "Teddye Buchanan",
       "pos": "ILB",
-      "note": "Recovering from an ACL tear; kept on the active roster Updated 2026-09-09: listed limited on the first official Week 1 injury report (knee); not ruled out for Sunday at Indianapolis. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh. Updated 2026-09-12: officially ruled OUT on the Friday (9/11) final Week 1 injury report \u2014 will miss the opener at Indianapolis while continuing ACL rehab. Updated 2026-09-15: back in team drills; listed Questionable for Week 2 vs New Orleans (no formal Wednesday practice report yet as of this refresh)."
+      "note": "Recovering from an ACL tear; kept on the active roster Updated 2026-09-09: listed limited on the first official Week 1 injury report (knee); not ruled out for Sunday at Indianapolis. Updated 2026-09-11: still limited in practice through Thursday; no Friday designation published yet as of this refresh. Updated 2026-09-12: officially ruled OUT on the Friday (9/11) final Week 1 injury report \u2014 will miss the opener at Indianapolis while continuing ACL rehab. Updated 2026-09-15: back in team drills; listed Questionable for Week 2 vs New Orleans (no formal Wednesday practice report yet as of this refresh). Updated 2026-09-16: also upgraded to Limited participation at Wednesday practice ahead of Week 2."
     },
     {
       "player": "Adam Randall",
@@ -239,12 +239,32 @@
     {
       "player": "Ja'Kobi Lane",
       "pos": "WR",
-      "note": "New (as of 2026-09-15): fractured his wrist in the first half of the Week 1 win at Indianapolis (1 catch, 11 yards before exiting); MRI confirmed the break. Expected out several weeks (at least ~4). Early outlook pieces tagged him Doubtful for Week 2 vs New Orleans."
+      "note": "New (as of 2026-09-15): fractured his wrist in the first half of the Week 1 win at Indianapolis (1 catch, 11 yards before exiting); MRI confirmed the break. Expected out several weeks (at least ~4). Early outlook pieces tagged him Doubtful for Week 2 vs New Orleans. Updated 2026-09-16: officially placed on Injured Reserve after wrist surgery that morning; minimum IR stay makes him eligible to return Week 6 vs Cleveland at the earliest. HC Jesse Minter: \"The minimum IR stay is what we'll be shooting for,\" said he has \"a really good chance of coming back here pretty quick.\""
     },
     {
       "player": "T.J. Tampa",
       "pos": "CB",
       "note": "New (as of 2026-09-15): listed Questionable for Week 2 vs New Orleans with a knee issue (no formal Wednesday practice report yet as of this refresh)."
+    },
+    {
+      "player": "Trey Hendrickson",
+      "pos": "OLB",
+      "note": "New (as of 2026-09-16): did not practice Wednesday with a finger injury ahead of Week 2 vs New Orleans. Offseason free-agent addition; had 8 pressures in the Week 1 win."
+    },
+    {
+      "player": "Ronnie Stanley",
+      "pos": "OT",
+      "note": "New (as of 2026-09-16): did not practice Wednesday with a toe injury ahead of Week 2 \u2014 a real concern for Lamar Jackson's protection given he starts at left tackle."
+    },
+    {
+      "player": "John Simpson",
+      "pos": "G",
+      "note": "New (as of 2026-09-16): did not practice Wednesday with a groin injury ahead of Week 2."
+    },
+    {
+      "player": "Keondre Jackson",
+      "pos": "S",
+      "note": "New (as of 2026-09-16): limited at Wednesday practice with a shoulder injury ahead of Week 2."
     }
   ],
   "super_bowl_odds_history": [
@@ -267,6 +287,11 @@
       "date": "2026-09-14",
       "american_odds": "+900",
       "book": "SI.com power rankings \u2014 Ravens moved to the #1 Super Bowl favorite after the 41-point Week 1 blowout win at Indianapolis"
+    },
+    {
+      "date": "2026-09-17",
+      "american_odds": "+1100",
+      "book": "FanDuel (current team page) \u2014 similar range to the +900 to +1100 seen since the Week 1 win; no meaningful movement this week"
     }
   ],
   "projected_record_note": "Outside consensus projection: 13-4, 6-0 AFC North (RotoWire, as of 2026-08-29 \u2014 a projection, not a guarantee)",
@@ -538,20 +563,20 @@
       "date": "2026-09-20",
       "neutral": false,
       "market_odds": {
-        "ravens": "-450",
-        "opponent": "+350",
+        "ravens": "-400",
+        "opponent": "+315",
         "spread": "Ravens -8.5",
-        "total": 47.5,
-        "book": "FanDuel (2026-09-15)"
+        "total": 46.5,
+        "book": "FanDuel (2026-09-17)"
       },
       "ravens_win_prob": 0.665,
       "model_odds": "-217",
       "value_bet": {
-        "market_implied_prob": 0.818,
+        "market_implied_prob": 0.8,
         "model_prob": 0.665,
-        "edge_pts": -0.153,
-        "read": "Large disagreement with the market \u2014 more likely our simple model is missing context (injuries, coaching change, roster turnover) than a real edge over Vegas's pricing.",
-        "large_disagreement": true
+        "edge_pts": -0.135,
+        "read": "Model leans slightly more toward the opponent than the market does.",
+        "large_disagreement": false
       }
     },
     {
