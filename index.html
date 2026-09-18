@@ -258,20 +258,26 @@
   .stat-tile .value{font-family:"Space Grotesk";font-size:26px;font-weight:600;color:var(--ink);}
   .stat-tile .value.muted{color:var(--ink-muted);font-size:20px;}
 
-  /* hero brier-score badge -- headline credibility metric, above the fold */
+  /* hero brier-score badge -- headline credibility metric, above the fold. Reports by league (2026-09-17). */
   .hero-stat{margin:18px 0 4px;padding:20px 24px;background:var(--surface);border:1px solid var(--border);
-    border-radius:14px;box-shadow:var(--shadow), var(--glow);display:flex;flex-wrap:wrap;align-items:baseline;
-    gap:14px 22px;}
+    border-radius:14px;box-shadow:var(--shadow), var(--glow);}
   .hero-stat .hs-label{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:0.04em;text-transform:uppercase;
-    color:var(--pick);flex-basis:100%;}
-  .hero-stat .hs-value{font-family:"Space Grotesk";font-size:44px;font-weight:700;color:var(--ink);line-height:1;}
-  .hero-stat .hs-value.muted{color:var(--ink-muted);font-size:22px;font-weight:600;}
-  .hero-stat .hs-context{font-family:"IBM Plex Sans";font-size:13px;color:var(--ink-2);max-width:520px;}
+    color:var(--pick);margin-bottom:4px;}
+  .hero-stat .hs-value.muted{color:var(--ink-muted);font-size:22px;font-weight:600;font-family:"Space Grotesk";}
+  .hero-stat .hs-context{font-family:"IBM Plex Sans";font-size:13px;color:var(--ink-2);max-width:640px;margin-bottom:14px;}
   .hero-stat .hs-context a{color:var(--pick);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--pick) 50%, transparent);}
   .hero-stat .hs-context a:hover{border-bottom-color:var(--pick);}
+  .hero-stat .hs-league-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;}
+  .hero-stat .hs-league-chip{border:1px solid var(--border);border-radius:10px;padding:10px 12px;
+    background:color-mix(in srgb, var(--surface) 92%, var(--pick) 3%);}
+  .hero-stat .hs-league-chip .hs-lg-name{font-family:"IBM Plex Mono";font-size:10.5px;letter-spacing:0.03em;
+    text-transform:uppercase;color:var(--ink-muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hero-stat .hs-league-chip .hs-lg-brier{font-family:"Space Grotesk";font-weight:700;font-size:22px;line-height:1.1;color:var(--ink);}
+  .hero-stat .hs-league-chip .hs-lg-n{font-family:"IBM Plex Mono";font-size:11px;color:var(--ink-muted);margin-top:3px;}
+  .hero-stat .hs-league-chip.thin-sample{border-style:dashed;opacity:0.82;}
   @media (max-width:640px){
     .hero-stat{padding:16px 18px;}
-    .hero-stat .hs-value{font-size:34px;}
+    .hero-stat .hs-league-chip .hs-lg-brier{font-size:19px;}
   }
   .projections-section{margin:18px 0 4px;}
   .projections-section .proj-block{margin-bottom:14px;}
@@ -943,10 +949,26 @@ function buildHeroStat(){
     return;
   }
   const since = new Date(DATA.accuracy.tracking_since + "T12:00:00Z").toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
+  const THIN_SAMPLE = 5;
+  const byLeague = ts.by_league || {};
+  const LEAGUE_ORDER = ["nfl","mlb","epl","mls","pll","ncaaf","nba","ncaab","ucl"];
+  const entries = LEAGUE_ORDER
+    .filter(code => byLeague[code] && byLeague[code].n > 0)
+    .map(code => ({
+      code,
+      label: (DATA.leagues[code] && DATA.leagues[code].sport_label) || code.toUpperCase(),
+      ...byLeague[code]
+    }));
+  const chips = entries.map(e => `
+    <div class="hs-league-chip${e.n < THIN_SAMPLE ? ' thin-sample' : ''}">
+      <div class="hs-lg-name">${e.label}</div>
+      <div class="hs-lg-brier">${e.brier.toFixed(3)}</div>
+      <div class="hs-lg-n">n=${e.n}</div>
+    </div>`).join("");
   el.innerHTML = `
-    <div class="hs-label">$ model_brier_score</div>
-    <div class="hs-value">${ts.brier.toFixed(3)}</div>
-    <div class="hs-context">Lower is better (0.000 = perfect) · based on ${ts.n} graded team-sport picks since ${since}, updated daily as more picks grade · <a href="#" id="heroStatLink">see the full track record →</a></div>
+    <div class="hs-label">$ model_brier_score — by league</div>
+    <div class="hs-context">Lower is better (0.000 = perfect) · each league graded and scored independently, sample size shown so a thin one isn't mistaken for a proven one · updated daily as more picks grade since ${since} · <a href="#" id="heroStatLink">see the full track record →</a></div>
+    <div class="hs-league-grid">${chips}</div>
   `;
   const link = document.getElementById("heroStatLink");
   if(link){
