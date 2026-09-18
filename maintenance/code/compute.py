@@ -179,7 +179,7 @@ nfl_week1 = [(r["away"], r["home"], r["date"]) for r in read_csv("nfl_slate.csv"
 NFL_MARKET_ODDS = {
     ("Detroit Lions", "Buffalo Bills"): {"home_ml": "-196", "away_ml": "+164", "book": "FanDuel (2026-09-14)"},
     ("Carolina Panthers", "Atlanta Falcons"): {"home_ml": "+100", "away_ml": "-118", "book": "FanDuel (2026-09-14)"},
-    ("New Orleans Saints", "Baltimore Ravens"): {"home_ml": "-400", "away_ml": "+315", "spread": "BAL -8.5", "book": "FanDuel (2026-09-17)"},
+    ("New Orleans Saints", "Baltimore Ravens"): {"home_ml": "-420", "away_ml": "+330", "spread": "BAL -8.5", "book": "FanDuel (2026-09-17, 1:05pm ET)"},
     ("Minnesota Vikings", "Chicago Bears"): {"home_ml": "-240", "away_ml": "+198", "book": "FanDuel (2026-09-14)"},
     ("Cincinnati Bengals", "Houston Texans"): {"home_ml": "-156", "away_ml": "+132", "book": "FanDuel (2026-09-14)"},
     ("Pittsburgh Steelers", "New England Patriots"): {"home_ml": "-235", "away_ml": "+194", "book": "FanDuel (2026-09-14)"},
