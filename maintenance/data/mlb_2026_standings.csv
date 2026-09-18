@@ -4,19 +4,19 @@ New York Yankees,88,64,136
 Boston Red Sox,82,70,82
 Toronto Blue Jays,76,77,-37
 Baltimore Orioles,75,78,-26
-Chicago White Sox,77,75,34
 Cleveland Guardians,78,75,-7
+Chicago White Sox,77,75,34
 Detroit Tigers,72,80,76
 Minnesota Twins,71,81,-73
 Kansas City Royals,67,85,-93
 Houston Astros,76,76,-54
 Texas Rangers,76,76,-38
-Seattle Mariners,71,81,-55
+Seattle Mariners,71,82,-56
 Athletics,61,91,-205
-Los Angeles Angels,57,94,-79
+Los Angeles Angels,58,94,-78
 Atlanta Braves,89,64,111
 Philadelphia Phillies,84,68,31
-Miami Marlins,75,77,6
+Miami Marlins,76,77,8
 Washington Nationals,71,82,3
 New York Mets,69,83,-43
 Milwaukee Brewers,95,57,200
@@ -26,6 +26,6 @@ St. Louis Cardinals,75,78,-14
 Cincinnati Reds,71,81,-148
 Los Angeles Dodgers,92,60,173
 San Diego Padres,83,69,23
-Arizona Diamondbacks,80,72,2
+Arizona Diamondbacks,80,73,0
 San Francisco Giants,64,89,-70
 Colorado Rockies,56,96,-170
