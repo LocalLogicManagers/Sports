@@ -33,7 +33,14 @@
     "location": "away",
     "date": "2026-09-27",
     "neutral": true,
-    "site": "Rio de Janeiro, Brazil"
+    "site": "Rio de Janeiro, Brazil",
+    "market_odds": {
+      "ravens": "-176",
+      "opponent": "+148",
+      "spread": "Ravens -3",
+      "total": 52.5,
+      "book": "FanDuel via Oddschecker consensus (2026-09-20)"
+    }
   },
   {
     "week": 4,
