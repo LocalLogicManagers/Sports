@@ -84,26 +84,25 @@ NFL_NEW_HC_TEAMS = {  # first season under a new head coach, 2026 -- drives the 
 # work per the Ravens diagnostic. Extend opportunistically as real injury/
 # transaction news gets sourced for other teams.
 NFL_INJURY_TURNOVER = {
-    # 2026-09-16: refreshed again for Week 2 (vs New Orleans Saints, 09-20) off the Wednesday
-    # practice report. Madubuike and Buchanan (both Questionable, trending up) were upgraded
-    # to Limited participation -- still carried as questionable here. Ja'Kobi Lane (fractured
-    # wrist in the Wk1 win) was officially placed on IR 09-16 after wrist surgery, min. return
-    # Week 6 -- stays "out". Four new DNP/Limited injuries surfaced this week: Trey Hendrickson
-    # (OLB, finger, DNP), Ronnie Stanley (OT, toe, DNP -- a real pass-protection concern),
-    # John Simpson (G, groin, DNP), and Keondre Jackson (S, shoulder, Limited).
+    # 2026-09-19: refreshed off the Friday final Week 2 injury report + Saturday roster move.
+    # Madubuike (neck), Buchanan (knee), Tampa (knee), and Flowers (hamstring, downgraded
+    # Saturday as a caution) all moved to OUT for Week 2 vs New Orleans. Walker (groin) and
+    # Jackson (shoulder) were upgraded to full practice and are no longer carried as injury
+    # concerns. Ja'Kobi Lane remains out (IR, wrist surgery). Hendrickson (finger) and Simpson
+    # (groin) remain Questionable (Limited again Friday); Stanley (toe) also remains
+    # Questionable, though the Saturday practice-squad elevation of an extra tackle is a
+    # cautionary signal, not an official downgrade.
     "Baltimore Ravens": {
         "injuries": [
             {"pos": "C", "severity": "out"},              # Danny Pinter, out for the season
-            {"pos": "DT", "severity": "questionable"},     # Nnamdi Madubuike, neck -- Limited practice 09-16
-            {"pos": "ILB", "severity": "questionable"},    # Teddye Buchanan, knee/ACL -- Limited practice 09-16
-            {"pos": "WR", "severity": "questionable"},     # Devontez Walker, groin -- still Questionable
-            {"pos": "WR", "severity": "questionable"},     # Zay Flowers, hamstring re-aggravation in Wk1 win
+            {"pos": "DT", "severity": "out"},              # Nnamdi Madubuike, neck -- OUT for Week 2 (09-18)
+            {"pos": "ILB", "severity": "out"},             # Teddye Buchanan, knee -- OUT for Week 2 (09-18)
+            {"pos": "WR", "severity": "out"},              # Zay Flowers, hamstring -- OUT for Week 2 (09-19, caution)
             {"pos": "WR", "severity": "out"},              # Ja'Kobi Lane, officially placed on IR 09-16 (wrist surgery)
-            {"pos": "CB", "severity": "questionable"},     # T.J. Tampa, knee
-            {"pos": "OLB", "severity": "questionable"},    # Trey Hendrickson, finger, DNP 09-16 (new)
-            {"pos": "OT", "severity": "questionable"},     # Ronnie Stanley, toe, DNP 09-16 (new)
-            {"pos": "G", "severity": "questionable"},      # John Simpson, groin, DNP 09-16 (new)
-            {"pos": "S", "severity": "questionable"},      # Keondre Jackson, shoulder, Limited 09-16 (new)
+            {"pos": "CB", "severity": "out"},              # T.J. Tampa, knee -- OUT for Week 2 (09-18)
+            {"pos": "OLB", "severity": "questionable"},    # Trey Hendrickson, finger, Limited again 09-18
+            {"pos": "OT", "severity": "questionable"},     # Ronnie Stanley, toe -- Questionable, PS tackle elevated as insurance
+            {"pos": "G", "severity": "questionable"},      # John Simpson, groin, Limited again 09-18
         ],
         "departures": ["TE", "FB", "OT", "P", "S", "CB", "OLB", "WR"],  # Likely, Ricard, Faalele, Stout, Washington, Alexander, Oweh, C.Johnson
         "acquisitions": ["OLB", "S", "CB", "LB", "ILB"],                 # D.Jones, Gilman, White, Hendrickson, Barrett
