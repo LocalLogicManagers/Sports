@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18",
+  "generated_at": "2026-09-20",
   "model_version": 1,
   "leagues": {
     "nfl": {
@@ -9,7 +9,7 @@
       "ratings": {
         "Arizona Cardinals": -12.5,
         "Atlanta Falcons": -5.0,
-        "Baltimore Ravens": -2.755,
+        "Baltimore Ravens": -5.555,
         "Buffalo Bills": 5.0,
         "Carolina Panthers": -5.5,
         "Chicago Bears": 2.5,
@@ -89,10 +89,10 @@
           "away": "New Orleans Saints",
           "home": "Baltimore Ravens",
           "date": "2026-09-20",
-          "home_win_prob": 0.532,
+          "home_win_prob": 0.46,
           "model_version": 2,
-          "pick": "Baltimore Ravens",
-          "pick_prob": 0.532,
+          "pick": "New Orleans Saints",
+          "pick_prob": 0.54,
           "confidence": "Toss-up",
           "market_odds": {
             "home_ml": "-420",
@@ -102,8 +102,8 @@
           },
           "value_bet": {
             "market_implied_prob": 0.776,
-            "model_prob": 0.532,
-            "edge_pts": -0.244,
+            "model_prob": 0.46,
+            "edge_pts": -0.316,
             "read": "Large disagreement with the market \u2014 more likely our simple model is missing context than a real edge over the book's pricing.",
             "large_disagreement": true
           }
@@ -400,172 +400,172 @@
       "label": "MLB",
       "status": "in season",
       "ratings": {
-        "Tampa Bay Rays": 0.415,
-        "New York Yankees": 0.791,
-        "Boston Red Sox": 0.477,
-        "Toronto Blue Jays": -0.214,
-        "Baltimore Orioles": -0.15,
-        "Cleveland Guardians": -0.04,
-        "Chicago White Sox": 0.198,
-        "Detroit Tigers": 0.442,
-        "Minnesota Twins": -0.424,
-        "Kansas City Royals": -0.541,
-        "Houston Astros": -0.314,
-        "Texas Rangers": -0.221,
-        "Seattle Mariners": -0.324,
-        "Athletics": -1.192,
-        "Los Angeles Angels": -0.453,
-        "Atlanta Braves": 0.642,
-        "Philadelphia Phillies": 0.18,
-        "Miami Marlins": 0.046,
-        "Washington Nationals": 0.017,
-        "New York Mets": -0.25,
-        "Milwaukee Brewers": 1.163,
-        "Chicago Cubs": 0.827,
-        "Pittsburgh Pirates": 0.122,
-        "St. Louis Cardinals": -0.081,
-        "Cincinnati Reds": -0.86,
-        "Los Angeles Dodgers": 1.006,
-        "San Diego Padres": 0.134,
-        "Arizona Diamondbacks": 0.0,
-        "San Francisco Giants": -0.405,
-        "Colorado Rockies": -0.988
+        "Tampa Bay Rays": 0.451,
+        "New York Yankees": 0.827,
+        "Boston Red Sox": 0.489,
+        "Toronto Blue Jays": -0.247,
+        "Baltimore Orioles": -0.155,
+        "Cleveland Guardians": -0.029,
+        "Chicago White Sox": 0.19,
+        "Detroit Tigers": 0.443,
+        "Minnesota Twins": -0.408,
+        "Kansas City Royals": -0.575,
+        "Houston Astros": -0.31,
+        "Texas Rangers": -0.19,
+        "Seattle Mariners": -0.316,
+        "Athletics": -1.241,
+        "Los Angeles Angels": -0.46,
+        "Atlanta Braves": 0.661,
+        "Philadelphia Phillies": 0.178,
+        "Miami Marlins": 0.011,
+        "Washington Nationals": 0.063,
+        "New York Mets": -0.247,
+        "Milwaukee Brewers": 1.138,
+        "Chicago Cubs": 0.81,
+        "Pittsburgh Pirates": 0.155,
+        "St. Louis Cardinals": -0.126,
+        "Cincinnati Reds": -0.874,
+        "Los Angeles Dodgers": 1.063,
+        "San Diego Padres": 0.207,
+        "Arizona Diamondbacks": -0.04,
+        "San Francisco Giants": -0.437,
+        "Colorado Rockies": -1.023
       },
       "games": [
         {
-          "away": "Chicago Cubs",
-          "home": "Cincinnati Reds",
-          "date": "2026-09-18",
-          "home_win_prob": 0.31,
-          "pick": "Chicago Cubs",
-          "pick_prob": 0.69,
-          "confidence": "Moderate"
+          "away": "Philadelphia Phillies",
+          "home": "New York Mets",
+          "date": "2026-09-20",
+          "home_win_prob": 0.496,
+          "pick": "Philadelphia Phillies",
+          "pick_prob": 0.504,
+          "confidence": "Toss-up"
         },
         {
           "away": "Kansas City Royals",
           "home": "Pittsburgh Pirates",
-          "date": "2026-09-18",
-          "home_win_prob": 0.659,
+          "date": "2026-09-20",
+          "home_win_prob": 0.668,
           "pick": "Pittsburgh Pirates",
-          "pick_prob": 0.659,
+          "pick_prob": 0.668,
           "confidence": "Moderate"
         },
         {
-          "away": "Milwaukee Brewers",
-          "home": "Baltimore Orioles",
-          "date": "2026-09-18",
-          "home_win_prob": 0.363,
-          "pick": "Milwaukee Brewers",
-          "pick_prob": 0.637,
-          "confidence": "Lean"
+          "away": "Chicago Cubs",
+          "home": "Cincinnati Reds",
+          "date": "2026-09-20",
+          "home_win_prob": 0.311,
+          "pick": "Chicago Cubs",
+          "pick_prob": 0.689,
+          "confidence": "Moderate"
         },
         {
           "away": "Athletics",
           "home": "Cleveland Guardians",
-          "date": "2026-09-18",
-          "home_win_prob": 0.725,
+          "date": "2026-09-20",
+          "home_win_prob": 0.732,
           "pick": "Cleveland Guardians",
-          "pick_prob": 0.725,
+          "pick_prob": 0.732,
           "confidence": "Moderate"
         },
         {
           "away": "Boston Red Sox",
           "home": "Tampa Bay Rays",
-          "date": "2026-09-18",
-          "home_win_prob": 0.552,
+          "date": "2026-09-20",
+          "home_win_prob": 0.555,
           "pick": "Tampa Bay Rays",
-          "pick_prob": 0.552,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Philadelphia Phillies",
-          "home": "New York Mets",
-          "date": "2026-09-18",
-          "home_win_prob": 0.495,
-          "pick": "Philadelphia Phillies",
-          "pick_prob": 0.505,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Detroit Tigers",
-          "home": "Chicago White Sox",
-          "date": "2026-09-18",
-          "home_win_prob": 0.524,
-          "pick": "Chicago White Sox",
-          "pick_prob": 0.524,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Toronto Blue Jays",
-          "home": "Texas Rangers",
-          "date": "2026-09-18",
-          "home_win_prob": 0.56,
-          "pick": "Texas Rangers",
-          "pick_prob": 0.56,
+          "pick_prob": 0.555,
           "confidence": "Lean"
         },
         {
           "away": "Atlanta Braves",
           "home": "Houston Astros",
-          "date": "2026-09-18",
-          "home_win_prob": 0.415,
+          "date": "2026-09-20",
+          "home_win_prob": 0.413,
           "pick": "Atlanta Braves",
-          "pick_prob": 0.585,
+          "pick_prob": 0.587,
           "confidence": "Lean"
         },
         {
-          "away": "Seattle Mariners",
-          "home": "Colorado Rockies",
-          "date": "2026-09-18",
-          "home_win_prob": 0.46,
-          "pick": "Seattle Mariners",
-          "pick_prob": 0.54,
+          "away": "Detroit Tigers",
+          "home": "Chicago White Sox",
+          "date": "2026-09-20",
+          "home_win_prob": 0.523,
+          "pick": "Chicago White Sox",
+          "pick_prob": 0.523,
           "confidence": "Toss-up"
         },
         {
           "away": "Washington Nationals",
           "home": "St. Louis Cardinals",
-          "date": "2026-09-18",
-          "home_win_prob": 0.546,
+          "date": "2026-09-20",
+          "home_win_prob": 0.532,
           "pick": "St. Louis Cardinals",
-          "pick_prob": 0.546,
+          "pick_prob": 0.532,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Toronto Blue Jays",
+          "home": "Texas Rangers",
+          "date": "2026-09-20",
+          "home_win_prob": 0.57,
+          "pick": "Texas Rangers",
+          "pick_prob": 0.57,
+          "confidence": "Lean"
+        },
+        {
+          "away": "Seattle Mariners",
+          "home": "Colorado Rockies",
+          "date": "2026-09-20",
+          "home_win_prob": 0.453,
+          "pick": "Seattle Mariners",
+          "pick_prob": 0.547,
           "confidence": "Toss-up"
         },
         {
           "away": "Minnesota Twins",
           "home": "Los Angeles Angels",
-          "date": "2026-09-18",
-          "home_win_prob": 0.557,
+          "date": "2026-09-20",
+          "home_win_prob": 0.553,
           "pick": "Los Angeles Angels",
-          "pick_prob": 0.557,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Miami Marlins",
-          "home": "San Diego Padres",
-          "date": "2026-09-18",
-          "home_win_prob": 0.574,
-          "pick": "San Diego Padres",
-          "pick_prob": 0.574,
-          "confidence": "Lean"
-        },
-        {
-          "away": "New York Yankees",
-          "home": "Arizona Diamondbacks",
-          "date": "2026-09-18",
-          "home_win_prob": 0.44,
-          "pick": "New York Yankees",
-          "pick_prob": 0.56,
+          "pick_prob": 0.553,
           "confidence": "Lean"
         },
         {
           "away": "San Francisco Giants",
           "home": "Los Angeles Dodgers",
-          "date": "2026-09-18",
-          "home_win_prob": 0.757,
+          "date": "2026-09-20",
+          "home_win_prob": 0.768,
           "pick": "Los Angeles Dodgers",
-          "pick_prob": 0.757,
+          "pick_prob": 0.768,
           "confidence": "Moderate"
+        },
+        {
+          "away": "Miami Marlins",
+          "home": "San Diego Padres",
+          "date": "2026-09-20",
+          "home_win_prob": 0.591,
+          "pick": "San Diego Padres",
+          "pick_prob": 0.591,
+          "confidence": "Lean"
+        },
+        {
+          "away": "New York Yankees",
+          "home": "Arizona Diamondbacks",
+          "date": "2026-09-20",
+          "home_win_prob": 0.429,
+          "pick": "New York Yankees",
+          "pick_prob": 0.571,
+          "confidence": "Lean"
+        },
+        {
+          "away": "Milwaukee Brewers",
+          "home": "Baltimore Orioles",
+          "date": "2026-09-20",
+          "home_win_prob": 0.366,
+          "pick": "Milwaukee Brewers",
+          "pick_prob": 0.634,
+          "confidence": "Lean"
         }
       ]
     },
@@ -573,117 +573,117 @@
       "label": "Premier League",
       "status": "in season \u2014 early-season ratings are heavily shrunk toward league average",
       "ratings": {
-        "Arsenal": 0.7,
-        "Manchester City": 0.6,
+        "Arsenal": 0.364,
+        "Manchester City": 0.545,
         "Leeds United": 0.4,
-        "Hull City": 0.3,
-        "Brighton and Hove Albion": 0.8,
-        "Chelsea": 0.1,
-        "Brentford": 0.3,
+        "Hull City": 0.182,
+        "Brighton and Hove Albion": 1.0,
+        "Chelsea": -0.182,
+        "Brentford": 0.545,
         "Liverpool": 0.2,
-        "Everton": 0.2,
-        "Ipswich Town": -0.3,
-        "Nottingham Forest": 0.0,
-        "Newcastle United": -0.1,
-        "Manchester United": 0.0,
-        "Sunderland": -0.2,
+        "Everton": 0.273,
+        "Ipswich Town": -0.364,
+        "Nottingham Forest": -0.091,
+        "Newcastle United": 0.0,
+        "Manchester United": 0.091,
+        "Sunderland": -0.182,
         "AFC Bournemouth": -0.1,
         "Crystal Palace": -0.5,
-        "Tottenham Hotspur": -0.5,
-        "Fulham": -0.3,
-        "Aston Villa": -0.6,
-        "Coventry City": -1.0
+        "Tottenham Hotspur": -0.545,
+        "Fulham": -0.182,
+        "Aston Villa": -0.455,
+        "Coventry City": -0.818
       },
       "games": [
         {
-          "away": "Chelsea",
-          "home": "Brentford",
-          "date": "2026-09-18",
-          "home_win_prob": 0.627,
+          "away": "Leeds United",
+          "home": "Arsenal",
+          "date": "2026-10-10",
+          "home_win_prob": 0.573,
+          "pick": "Arsenal",
+          "pick_prob": 0.573,
+          "confidence": "Lean"
+        },
+        {
+          "away": "Brentford",
+          "home": "Aston Villa",
+          "date": "2026-10-10",
+          "home_win_prob": 0.351,
           "pick": "Brentford",
-          "pick_prob": 0.627,
+          "pick_prob": 0.649,
           "confidence": "Lean"
         },
         {
-          "away": "Aston Villa",
-          "home": "Tottenham Hotspur",
-          "date": "2026-09-19",
-          "home_win_prob": 0.604,
-          "pick": "Tottenham Hotspur",
-          "pick_prob": 0.604,
+          "away": "AFC Bournemouth",
+          "home": "Chelsea",
+          "date": "2026-10-10",
+          "home_win_prob": 0.563,
+          "pick": "Chelsea",
+          "pick_prob": 0.563,
           "confidence": "Lean"
         },
         {
-          "away": "Arsenal",
-          "home": "Brighton and Hove Albion",
-          "date": "2026-09-19",
-          "home_win_prob": 0.604,
+          "away": "Fulham",
+          "home": "Ipswich Town",
+          "date": "2026-10-10",
+          "home_win_prob": 0.539,
+          "pick": "Ipswich Town",
+          "pick_prob": 0.539,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Brighton and Hove Albion",
+          "home": "Sunderland",
+          "date": "2026-10-10",
+          "home_win_prob": 0.312,
           "pick": "Brighton and Hove Albion",
-          "pick_prob": 0.604,
+          "pick_prob": 0.688,
+          "confidence": "Moderate"
+        },
+        {
+          "away": "Tottenham Hotspur",
+          "home": "Manchester United",
+          "date": "2026-10-10",
+          "home_win_prob": 0.719,
+          "pick": "Manchester United",
+          "pick_prob": 0.719,
+          "confidence": "Moderate"
+        },
+        {
+          "away": "Nottingham Forest",
+          "home": "Crystal Palace",
+          "date": "2026-10-11",
+          "home_win_prob": 0.486,
+          "pick": "Nottingham Forest",
+          "pick_prob": 0.514,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Everton",
+          "home": "Hull City",
+          "date": "2026-10-11",
+          "home_win_prob": 0.561,
+          "pick": "Hull City",
+          "pick_prob": 0.561,
           "confidence": "Lean"
         },
         {
-          "away": "Ipswich Town",
-          "home": "Everton",
-          "date": "2026-09-19",
-          "home_win_prob": 0.691,
-          "pick": "Everton",
-          "pick_prob": 0.691,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Hull City",
-          "home": "Newcastle United",
-          "date": "2026-09-19",
-          "home_win_prob": 0.488,
-          "pick": "Hull City",
-          "pick_prob": 0.512,
+          "away": "Manchester City",
+          "home": "Liverpool",
+          "date": "2026-10-11",
+          "home_win_prob": 0.501,
+          "pick": "Liverpool",
+          "pick_prob": 0.501,
           "confidence": "Toss-up"
         },
         {
-          "away": "Coventry City",
-          "home": "Nottingham Forest",
-          "date": "2026-09-19",
-          "home_win_prob": 0.786,
-          "pick": "Nottingham Forest",
-          "pick_prob": 0.786,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Liverpool",
-          "home": "AFC Bournemouth",
-          "date": "2026-09-20",
-          "home_win_prob": 0.512,
-          "pick": "AFC Bournemouth",
-          "pick_prob": 0.512,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Crystal Palace",
-          "home": "Leeds United",
-          "date": "2026-09-20",
-          "home_win_prob": 0.769,
-          "pick": "Leeds United",
-          "pick_prob": 0.769,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Sunderland",
-          "home": "Manchester City",
-          "date": "2026-09-20",
-          "home_win_prob": 0.751,
-          "pick": "Manchester City",
-          "pick_prob": 0.751,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Manchester United",
-          "home": "Fulham",
-          "date": "2026-09-20",
-          "home_win_prob": 0.512,
-          "pick": "Fulham",
-          "pick_prob": 0.512,
-          "confidence": "Toss-up"
+          "away": "Newcastle United",
+          "home": "Coventry City",
+          "date": "2026-10-12",
+          "home_win_prob": 0.392,
+          "pick": "Newcastle United",
+          "pick_prob": 0.608,
+          "confidence": "Lean"
         }
       ]
     },
@@ -691,172 +691,172 @@
       "label": "MLS",
       "status": "in season",
       "ratings": {
-        "Nashville SC": 0.935,
+        "Nashville SC": 1.0,
         "Vancouver Whitecaps": 1.0,
         "Inter Miami CF": 0.484,
-        "New England Revolution": 0.323,
-        "FC Dallas": 0.226,
-        "Houston Dynamo": 0.129,
-        "San Jose Earthquakes": 0.258,
-        "St. Louis City SC": 0.226,
-        "LAFC": 0.438,
-        "Charlotte FC": 0.29,
-        "Chicago Fire": 0.333,
-        "Colorado Rapids": 0.032,
-        "Orlando City SC": -0.387,
-        "Philadelphia Union": 0.226,
-        "New York City FC": 0.194,
-        "Portland Timbers": 0.0,
-        "FC Cincinnati": -0.233,
+        "New England Revolution": 0.375,
+        "FC Dallas": 0.219,
+        "Houston Dynamo": 0.125,
+        "San Jose Earthquakes": 0.25,
+        "St. Louis City SC": 0.281,
+        "LAFC": 0.424,
+        "Charlotte FC": 0.312,
+        "Chicago Fire": 0.226,
+        "Colorado Rapids": 0.031,
+        "Orlando City SC": -0.438,
+        "Philadelphia Union": 0.25,
+        "New York City FC": 0.156,
+        "Portland Timbers": -0.031,
+        "FC Cincinnati": -0.226,
         "San Diego FC": 0.0,
-        "LA Galaxy": -0.281,
-        "New York Red Bulls": -0.484,
-        "Real Salt Lake": -0.067,
-        "Minnesota United": -0.194,
-        "D.C. United": -0.233,
-        "Toronto FC": -0.258,
-        "Austin FC": -0.387,
-        "Seattle Sounders FC": -0.172,
-        "Columbus Crew": -0.226,
-        "Atlanta United": -0.452,
-        "CF Montreal": -0.645,
-        "Sporting Kansas City": -1.1
+        "LA Galaxy": -0.242,
+        "New York Red Bulls": -0.438,
+        "Real Salt Lake": -0.097,
+        "Minnesota United": -0.219,
+        "D.C. United": -0.258,
+        "Toronto FC": -0.312,
+        "Austin FC": -0.375,
+        "Seattle Sounders FC": -0.167,
+        "Columbus Crew": -0.156,
+        "Atlanta United": -0.406,
+        "CF Montreal": -0.688,
+        "Sporting Kansas City": -1.097
       },
       "games": [
         {
-          "away": "New York Red Bulls",
-          "home": "New York City FC",
-          "date": "2026-09-18",
-          "home_win_prob": 0.712,
+          "away": "New York City FC",
+          "home": "Atlanta United",
+          "date": "2026-09-26",
+          "home_win_prob": 0.44,
           "pick": "New York City FC",
-          "pick_prob": 0.712,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Charlotte FC",
-          "home": "D.C. United",
-          "date": "2026-09-19",
-          "home_win_prob": 0.449,
-          "pick": "Charlotte FC",
-          "pick_prob": 0.551,
+          "pick_prob": 0.56,
           "confidence": "Lean"
-        },
-        {
-          "away": "Columbus Crew",
-          "home": "CF Montreal",
-          "date": "2026-09-19",
-          "home_win_prob": 0.473,
-          "pick": "Columbus Crew",
-          "pick_prob": 0.527,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Orlando City SC",
-          "home": "New England Revolution",
-          "date": "2026-09-19",
-          "home_win_prob": 0.718,
-          "pick": "New England Revolution",
-          "pick_prob": 0.718,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "LAFC",
-          "home": "San Jose Earthquakes",
-          "date": "2026-09-19",
-          "home_win_prob": 0.527,
-          "pick": "San Jose Earthquakes",
-          "pick_prob": 0.527,
-          "confidence": "Toss-up"
-        },
-        {
-          "away": "Austin FC",
-          "home": "FC Dallas",
-          "date": "2026-09-19",
-          "home_win_prob": 0.699,
-          "pick": "FC Dallas",
-          "pick_prob": 0.699,
-          "confidence": "Moderate"
         },
         {
           "away": "FC Cincinnati",
-          "home": "Houston Dynamo",
-          "date": "2026-09-19",
-          "home_win_prob": 0.647,
-          "pick": "Houston Dynamo",
-          "pick_prob": 0.647,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Philadelphia Union",
-          "home": "Sporting Kansas City",
-          "date": "2026-09-19",
-          "home_win_prob": 0.279,
-          "pick": "Philadelphia Union",
-          "pick_prob": 0.721,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "LA Galaxy",
-          "home": "Minnesota United",
-          "date": "2026-09-19",
-          "home_win_prob": 0.588,
-          "pick": "Minnesota United",
-          "pick_prob": 0.588,
-          "confidence": "Lean"
-        },
-        {
-          "away": "Toronto FC",
-          "home": "St. Louis City SC",
-          "date": "2026-09-19",
-          "home_win_prob": 0.673,
-          "pick": "St. Louis City SC",
-          "pick_prob": 0.673,
-          "confidence": "Moderate"
-        },
-        {
-          "away": "Seattle Sounders FC",
-          "home": "Colorado Rapids",
-          "date": "2026-09-19",
-          "home_win_prob": 0.613,
-          "pick": "Colorado Rapids",
-          "pick_prob": 0.613,
-          "confidence": "Lean"
+          "home": "CF Montreal",
+          "date": "2026-09-26",
+          "home_win_prob": 0.463,
+          "pick": "FC Cincinnati",
+          "pick_prob": 0.537,
+          "confidence": "Toss-up"
         },
         {
           "away": "Chicago Fire",
-          "home": "Nashville SC",
-          "date": "2026-09-19",
-          "home_win_prob": 0.697,
-          "pick": "Nashville SC",
-          "pick_prob": 0.697,
-          "confidence": "Moderate"
+          "home": "Charlotte FC",
+          "date": "2026-09-26",
+          "home_win_prob": 0.587,
+          "pick": "Charlotte FC",
+          "pick_prob": 0.587,
+          "confidence": "Lean"
         },
         {
-          "away": "Vancouver Whitecaps",
-          "home": "Real Salt Lake",
-          "date": "2026-09-19",
-          "home_win_prob": 0.331,
-          "pick": "Vancouver Whitecaps",
-          "pick_prob": 0.669,
-          "confidence": "Moderate"
+          "away": "St. Louis City SC",
+          "home": "New York Red Bulls",
+          "date": "2026-09-26",
+          "home_win_prob": 0.405,
+          "pick": "St. Louis City SC",
+          "pick_prob": 0.595,
+          "confidence": "Lean"
         },
         {
-          "away": "Atlanta United",
-          "home": "Portland Timbers",
-          "date": "2026-09-19",
-          "home_win_prob": 0.666,
-          "pick": "Portland Timbers",
-          "pick_prob": 0.666,
+          "away": "Orlando City SC",
+          "home": "Philadelphia Union",
+          "date": "2026-09-26",
+          "home_win_prob": 0.714,
+          "pick": "Philadelphia Union",
+          "pick_prob": 0.714,
           "confidence": "Moderate"
         },
         {
           "away": "San Diego FC",
-          "home": "Inter Miami CF",
-          "date": "2026-09-20",
-          "home_win_prob": 0.673,
+          "home": "Austin FC",
+          "date": "2026-09-26",
+          "home_win_prob": 0.483,
+          "pick": "San Diego FC",
+          "pick_prob": 0.517,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "LAFC",
+          "home": "FC Dallas",
+          "date": "2026-09-26",
+          "home_win_prob": 0.522,
+          "pick": "FC Dallas",
+          "pick_prob": 0.522,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Sporting Kansas City",
+          "home": "Houston Dynamo",
+          "date": "2026-09-26",
+          "home_win_prob": 0.808,
+          "pick": "Houston Dynamo",
+          "pick_prob": 0.808,
+          "confidence": "Strong"
+        },
+        {
+          "away": "Toronto FC",
+          "home": "Nashville SC",
+          "date": "2026-09-26",
+          "home_win_prob": 0.822,
+          "pick": "Nashville SC",
+          "pick_prob": 0.822,
+          "confidence": "Strong"
+        },
+        {
+          "away": "Minnesota United",
+          "home": "Seattle Sounders FC",
+          "date": "2026-09-26",
+          "home_win_prob": 0.58,
+          "pick": "Seattle Sounders FC",
+          "pick_prob": 0.58,
+          "confidence": "Lean"
+        },
+        {
+          "away": "New England Revolution",
+          "home": "Real Salt Lake",
+          "date": "2026-09-26",
+          "home_win_prob": 0.461,
+          "pick": "New England Revolution",
+          "pick_prob": 0.539,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Colorado Rapids",
+          "home": "LA Galaxy",
+          "date": "2026-09-26",
+          "home_win_prob": 0.506,
+          "pick": "LA Galaxy",
+          "pick_prob": 0.506,
+          "confidence": "Toss-up"
+        },
+        {
+          "away": "Portland Timbers",
+          "home": "San Jose Earthquakes",
+          "date": "2026-09-26",
+          "home_win_prob": 0.63,
+          "pick": "San Jose Earthquakes",
+          "pick_prob": 0.63,
+          "confidence": "Lean"
+        },
+        {
+          "away": "D.C. United",
+          "home": "Vancouver Whitecaps",
+          "date": "2026-09-26",
+          "home_win_prob": 0.813,
+          "pick": "Vancouver Whitecaps",
+          "pick_prob": 0.813,
+          "confidence": "Strong"
+        },
+        {
+          "away": "Inter Miami CF",
+          "home": "Columbus Crew",
+          "date": "2026-09-27",
+          "home_win_prob": 0.423,
           "pick": "Inter Miami CF",
-          "pick_prob": 0.673,
-          "confidence": "Moderate"
+          "pick_prob": 0.577,
+          "confidence": "Lean"
         }
       ]
     },
@@ -969,122 +969,31 @@
     }
   },
   "horse_racing": {
-    "races": [
-      {
-        "race": "Pennsylvania Derby",
-        "grade": "G1",
-        "track": "Parx Racing",
-        "date": "2026-09-19",
-        "field": [
-          {
-            "post": 7,
-            "horse": "Further Ado",
-            "ml_odds": "2-1",
-            "raw_prob": 0.3333,
-            "norm_prob": 0.2453
-          },
-          {
-            "post": 6,
-            "horse": "The Puma",
-            "ml_odds": "4-1",
-            "raw_prob": 0.2,
-            "norm_prob": 0.1472
-          },
-          {
-            "post": 2,
-            "horse": "Iron Honor",
-            "ml_odds": "5-1",
-            "raw_prob": 0.1667,
-            "norm_prob": 0.1226
-          },
-          {
-            "post": 1,
-            "horse": "Zihnal",
-            "ml_odds": "8-1",
-            "raw_prob": 0.1111,
-            "norm_prob": 0.0818
-          },
-          {
-            "post": 3,
-            "horse": "Our Moneyman",
-            "ml_odds": "8-1",
-            "raw_prob": 0.1111,
-            "norm_prob": 0.0818
-          },
-          {
-            "post": 4,
-            "horse": "Igniter",
-            "ml_odds": "8-1",
-            "raw_prob": 0.1111,
-            "norm_prob": 0.0818
-          },
-          {
-            "post": 9,
-            "horse": "Sassmaster",
-            "ml_odds": "10-1",
-            "raw_prob": 0.0909,
-            "norm_prob": 0.0669
-          },
-          {
-            "post": 5,
-            "horse": "Talk to Me Jimmy",
-            "ml_odds": "12-1",
-            "raw_prob": 0.0769,
-            "norm_prob": 0.0566
-          },
-          {
-            "post": 10,
-            "horse": "Micanopy",
-            "ml_odds": "15-1",
-            "raw_prob": 0.0625,
-            "norm_prob": 0.046
-          },
-          {
-            "post": 8,
-            "horse": "Freedom's Echo",
-            "ml_odds": "20-1",
-            "raw_prob": 0.0476,
-            "norm_prob": 0.035
-          },
-          {
-            "post": 11,
-            "horse": "Ponder and Dream",
-            "ml_odds": "20-1",
-            "raw_prob": 0.0476,
-            "norm_prob": 0.035
-          }
-        ],
-        "overround": 1.3589,
-        "pick": "Further Ado",
-        "pick_prob": 0.2453,
-        "confidence": "Moderate favorite",
-        "fair_share_ratio": 2.7
-      }
-    ]
+    "races": []
   },
   "accuracy": {
     "team_sports": {
-      "n": 256,
-      "accuracy": 0.559,
-      "brier": 0.2382,
+      "n": 293,
+      "accuracy": 0.553,
+      "brier": 0.2404,
       "by_league": {
         "mlb": {
-          "n": 174,
-          "correct": 106,
-          "accuracy": 0.609,
-          "brier": 0.2328
+          "n": 189,
+          "correct": 115,
+          "accuracy": 0.608,
+          "brier": 0.2316
         },
         "epl": {
-          "n": 17,
-          "correct": 9,
-          "accuracy": 0.529,
-          "brier": 0.2386
+          "n": 25,
+          "correct": 12,
+          "accuracy": 0.48,
+          "brier": 0.2608
         },
         "mls": {
-          "n": 36,
-          "correct": 10,
-          "accuracy": 0.278,
-          "brier": 0.2801
+          "n": 50,
+          "correct": 17,
+          "accuracy": 0.34,
+          "brier": 0.2766
         },
         "pll": {
           "n": 4,
@@ -1107,22 +1016,22 @@
       },
       "by_confidence": {
         "Toss-up": {
-          "n": 94,
-          "correct": 51,
-          "accuracy": 0.543,
+          "n": 102,
+          "correct": 53,
+          "accuracy": 0.52,
           "avg_predicted_prob": 0.526
         },
         "Moderate": {
-          "n": 42,
-          "correct": 29,
-          "accuracy": 0.69,
-          "avg_predicted_prob": 0.726
+          "n": 57,
+          "correct": 38,
+          "accuracy": 0.667,
+          "avg_predicted_prob": 0.721
         },
         "Lean": {
-          "n": 114,
-          "correct": 58,
-          "accuracy": 0.509,
-          "avg_predicted_prob": 0.594
+          "n": 128,
+          "correct": 66,
+          "accuracy": 0.516,
+          "avg_predicted_prob": 0.593
         },
         "Strong": {
           "n": 6,
@@ -1132,26 +1041,26 @@
         }
       },
       "home_vs_away_pick": {
-        "home_picks": 164,
-        "home_pick_accuracy": 0.598,
-        "away_picks": 92,
-        "away_pick_accuracy": 0.489
+        "home_picks": 190,
+        "home_pick_accuracy": 0.574,
+        "away_picks": 103,
+        "away_pick_accuracy": 0.515
       },
       "big_favorite_vs_close": {
-        "big_favorite_n": 49,
-        "big_favorite_accuracy": 0.694,
-        "close_call_n": 207,
-        "close_call_accuracy": 0.527
+        "big_favorite_n": 64,
+        "big_favorite_accuracy": 0.672,
+        "close_call_n": 229,
+        "close_call_accuracy": 0.52
       }
     },
     "horse_racing": {
-      "n": 6,
-      "accuracy": 0.5,
+      "n": 7,
+      "accuracy": 0.429,
       "by_confidence": {
         "Moderate favorite": {
-          "n": 4,
+          "n": 5,
           "correct": 1,
-          "accuracy": 0.25
+          "accuracy": 0.2
         },
         "Strong favorite": {
           "n": 2,
@@ -3209,6 +3118,302 @@
         "pick": "Los Angeles Angels",
         "pick_prob": 0.555,
         "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "epl",
+        "matchup": "Chelsea @ Brentford",
+        "pick": "Brentford",
+        "pick_prob": 0.627,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "epl",
+        "matchup": "Aston Villa @ Tottenham Hotspur",
+        "pick": "Tottenham Hotspur",
+        "pick_prob": 0.604,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "epl",
+        "matchup": "Arsenal @ Brighton and Hove Albion",
+        "pick": "Brighton and Hove Albion",
+        "pick_prob": 0.604,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "epl",
+        "matchup": "Ipswich Town @ Everton",
+        "pick": "Everton",
+        "pick_prob": 0.691,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "epl",
+        "matchup": "Hull City @ Newcastle United",
+        "pick": "Hull City",
+        "pick_prob": 0.512,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "epl",
+        "matchup": "Coventry City @ Nottingham Forest",
+        "pick": "Nottingham Forest",
+        "pick_prob": 0.786,
+        "correct": false
+      },
+      {
+        "date": "2026-09-20",
+        "league": "epl",
+        "matchup": "Sunderland @ Manchester City",
+        "pick": "Manchester City",
+        "pick_prob": 0.751,
+        "correct": false
+      },
+      {
+        "date": "2026-09-20",
+        "league": "epl",
+        "matchup": "Manchester United @ Fulham",
+        "pick": "Fulham",
+        "pick_prob": 0.512,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mls",
+        "matchup": "New York Red Bulls @ New York City FC",
+        "pick": "New York City FC",
+        "pick_prob": 0.712,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Charlotte FC @ D.C. United",
+        "pick": "Charlotte FC",
+        "pick_prob": 0.551,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Columbus Crew @ CF Montreal",
+        "pick": "Columbus Crew",
+        "pick_prob": 0.527,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Orlando City SC @ New England Revolution",
+        "pick": "New England Revolution",
+        "pick_prob": 0.718,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "LAFC @ San Jose Earthquakes",
+        "pick": "San Jose Earthquakes",
+        "pick_prob": 0.527,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Austin FC @ FC Dallas",
+        "pick": "FC Dallas",
+        "pick_prob": 0.699,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "FC Cincinnati @ Houston Dynamo",
+        "pick": "Houston Dynamo",
+        "pick_prob": 0.647,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Philadelphia Union @ Sporting Kansas City",
+        "pick": "Philadelphia Union",
+        "pick_prob": 0.721,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "LA Galaxy @ Minnesota United",
+        "pick": "Minnesota United",
+        "pick_prob": 0.588,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Toronto FC @ St. Louis City SC",
+        "pick": "St. Louis City SC",
+        "pick_prob": 0.673,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Seattle Sounders FC @ Colorado Rapids",
+        "pick": "Colorado Rapids",
+        "pick_prob": 0.613,
+        "correct": false
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Chicago Fire @ Nashville SC",
+        "pick": "Nashville SC",
+        "pick_prob": 0.697,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Vancouver Whitecaps @ Real Salt Lake",
+        "pick": "Vancouver Whitecaps",
+        "pick_prob": 0.669,
+        "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "league": "mls",
+        "matchup": "Atlanta United @ Portland Timbers",
+        "pick": "Portland Timbers",
+        "pick_prob": 0.666,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Chicago Cubs @ Cincinnati Reds",
+        "pick": "Chicago Cubs",
+        "pick_prob": 0.69,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Kansas City Royals @ Pittsburgh Pirates",
+        "pick": "Pittsburgh Pirates",
+        "pick_prob": 0.659,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Milwaukee Brewers @ Baltimore Orioles",
+        "pick": "Milwaukee Brewers",
+        "pick_prob": 0.637,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Athletics @ Cleveland Guardians",
+        "pick": "Cleveland Guardians",
+        "pick_prob": 0.725,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Boston Red Sox @ Tampa Bay Rays",
+        "pick": "Tampa Bay Rays",
+        "pick_prob": 0.552,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Philadelphia Phillies @ New York Mets",
+        "pick": "Philadelphia Phillies",
+        "pick_prob": 0.505,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Detroit Tigers @ Chicago White Sox",
+        "pick": "Chicago White Sox",
+        "pick_prob": 0.524,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Toronto Blue Jays @ Texas Rangers",
+        "pick": "Texas Rangers",
+        "pick_prob": 0.56,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Atlanta Braves @ Houston Astros",
+        "pick": "Atlanta Braves",
+        "pick_prob": 0.585,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Seattle Mariners @ Colorado Rockies",
+        "pick": "Seattle Mariners",
+        "pick_prob": 0.54,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Washington Nationals @ St. Louis Cardinals",
+        "pick": "St. Louis Cardinals",
+        "pick_prob": 0.546,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Minnesota Twins @ Los Angeles Angels",
+        "pick": "Los Angeles Angels",
+        "pick_prob": 0.557,
+        "correct": false
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "Miami Marlins @ San Diego Padres",
+        "pick": "San Diego Padres",
+        "pick_prob": 0.574,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "New York Yankees @ Arizona Diamondbacks",
+        "pick": "New York Yankees",
+        "pick_prob": 0.56,
+        "correct": true
+      },
+      {
+        "date": "2026-09-18",
+        "league": "mlb",
+        "matchup": "San Francisco Giants @ Los Angeles Dodgers",
+        "pick": "Los Angeles Dodgers",
+        "pick_prob": 0.757,
+        "correct": true
       }
     ],
     "graded_log_horse": [
@@ -3253,6 +3458,13 @@
         "pick": "Notable Speech",
         "pick_prob": 0.393,
         "correct": true
+      },
+      {
+        "date": "2026-09-19",
+        "race": "Pennsylvania Derby",
+        "pick": "Further Ado",
+        "pick_prob": 0.2453,
+        "correct": false
       }
     ]
   }
