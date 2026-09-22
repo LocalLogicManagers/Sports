@@ -84,34 +84,27 @@ NFL_NEW_HC_TEAMS = {  # first season under a new head coach, 2026 -- drives the 
 # work per the Ravens diagnostic. Extend opportunistically as real injury/
 # transaction news gets sourced for other teams.
 NFL_INJURY_TURNOVER = {
-    # 2026-09-19: refreshed off the Friday final Week 2 injury report + Saturday roster move.
-    # Madubuike (neck), Buchanan (knee), Tampa (knee), and Flowers (hamstring, downgraded
-    # Saturday as a caution) all moved to OUT for Week 2 vs New Orleans. Walker (groin) and
-    # Jackson (shoulder) were upgraded to full practice and are no longer carried as injury
-    # concerns. Ja'Kobi Lane remains out (IR, wrist surgery). Hendrickson (finger) and Simpson
-    # (groin) remain Questionable (Limited again Friday); Stanley (toe) also remains
-    # Questionable, though the Saturday practice-squad elevation of an extra tackle is a
-    # cautionary signal, not an official downgrade.
+    # 2026-09-21: refreshed for Week 3 off HC Jesse Minter's post-Week-2 press conference
+    # (Flowers/Stanley/Madubuike specifically named as trending toward availability, final call
+    # Wednesday 9/23 -- so downgraded from "out" to "questionable" rather than assumed clear) plus
+    # the FantasyPros Week 3 injury roundup. Ja'Kobi Lane placed on IR (wrist surgery) -- out for
+    # the season. Buchanan/Tampa had no fresh Week 3 update, so softened from Week 2's definitive
+    # "out" to "questionable" rather than carried forward as still-out with no supporting news.
     "Baltimore Ravens": {
         "injuries": [
             {"pos": "C", "severity": "out"},              # Danny Pinter, out for the season
-            {"pos": "DT", "severity": "out"},              # Nnamdi Madubuike, neck -- OUT for Week 2 (09-18)
-            {"pos": "ILB", "severity": "out"},             # Teddye Buchanan, knee -- OUT for Week 2 (09-18)
-            {"pos": "WR", "severity": "out"},              # Zay Flowers, hamstring -- OUT for Week 2 (09-19, caution)
-            {"pos": "WR", "severity": "out"},              # Ja'Kobi Lane, officially placed on IR 09-16 (wrist surgery)
-            {"pos": "CB", "severity": "out"},              # T.J. Tampa, knee -- OUT for Week 2 (09-18)
-            {"pos": "OLB", "severity": "questionable"},    # Trey Hendrickson, finger, Limited again 09-18
-            {"pos": "OT", "severity": "questionable"},     # Ronnie Stanley, toe -- Questionable, PS tackle elevated as insurance
-            {"pos": "G", "severity": "questionable"},      # John Simpson, groin, Limited again 09-18
+            {"pos": "WR", "severity": "out"},              # Ja'Kobi Lane, IR (wrist surgery), out for the season
+            {"pos": "WR", "severity": "questionable"},     # Zay Flowers, hamstring, trending toward playing (final call 9/23)
+            {"pos": "OT", "severity": "questionable"},     # Ronnie Stanley, toe, trending toward playing (final call 9/23)
+            {"pos": "DT", "severity": "questionable"},     # Nnamdi Madubuike, neck, trending toward playing (final call 9/23)
+            {"pos": "ILB", "severity": "questionable"},    # Teddye Buchanan, knee, no fresh Week 3 update
+            {"pos": "CB", "severity": "questionable"},     # T.J. Tampa, knee, no fresh Week 3 update
+            {"pos": "OLB", "severity": "questionable"},    # Trey Hendrickson, finger, recurring
+            {"pos": "G", "severity": "questionable"},      # John Simpson, groin, recurring
         ],
         "departures": ["TE", "FB", "OT", "P", "S", "CB", "OLB", "WR"],  # Likely, Ricard, Faalele, Stout, Washington, Alexander, Oweh, C.Johnson
         "acquisitions": ["OLB", "S", "CB", "LB", "ILB"],                 # D.Jones, Gilman, White, Hendrickson, Barrett
     },
-    # 2026-09-08: extended beyond the Ravens for the first time, sourced via WebSearch/WebFetch
-    # (Bleacher Report injury roundup + NFL.com's Week 1 report). Injuries only -- no sourced
-    # roster-turnover (departures/acquisitions) data for these teams yet, an honest default per the
-    # same convention as every other team. Only covers teams playing in the currently-tracked Week 1
-    # slate; extend opportunistically as news comes in.
     "Carolina Panthers": {
         "injuries": [
             {"pos": "OT", "severity": "out"},  # Ikem Ekwonu, ruptured patellar tendon, out most/all season
@@ -127,29 +120,76 @@ NFL_INJURY_TURNOVER = {
     "Green Bay Packers": {
         "injuries": [
             {"pos": "EDGE", "severity": "out"},  # Micah Parsons, torn ACL, targeting a playoff return
+            {"pos": "WR", "severity": "out"},    # Jayden Reed, neck/spinal injury (stretchered off Week 2), 2026-09-21
         ],
     },
     "Seattle Seahawks": {
         "injuries": [
-            {"pos": "RB", "severity": "out"},  # Zach Charbonnet, torn ACL, timing unfavorable for Week 1
+            {"pos": "RB", "severity": "out"},          # Zach Charbonnet, torn ACL, out extended time
+            {"pos": "RB", "severity": "questionable"},  # Jadarian Price, chest injury, 2026-09-21
         ],
     },
     "San Francisco 49ers": {
         "injuries": [
-            {"pos": "TE", "severity": "questionable"},  # George Kittle, Achilles, Week 1 return unlikely per reports but not ruled out
+            {"pos": "TE", "severity": "questionable"},  # George Kittle, Achilles, recovery timeline unclear
+            {"pos": "WR", "severity": "out"},           # De'Zhaun Stribling, ankle (IR, ~10wk), 2026-09-21
         ],
     },
-    # 2026-09-08: two more Week 1 injury items sourced (WebSearch: Heavy.com/Colts beat,
-    # The Big Lead RB roundup + Adam Schefter report) -- both teams playing in the
-    # currently-tracked Week 1 slate.
     "Indianapolis Colts": {
         "injuries": [
-            {"pos": "S", "severity": "questionable"},  # AJ Haulcy, rookie 3rd-rounder, ankle, Week 1 status undecided per HC Steichen (9/8)
+            {"pos": "WR", "severity": "out"},  # Alec Pierce, left heel (prior surgical site), 2026-09-21
         ],
     },
-    "New England Patriots": {
+    # 2026-09-21 additions (FantasyPros Week 3 injury roundup + team beat reporting), teams newly
+    # entering the currently-tracked Week 3 slate.
+    "Chicago Bears": {
         "injuries": [
-            {"pos": "RB", "severity": "out"},  # TreVeyon Henderson, ankle -- Schefter: "hard to imagine he's going to play" Week 1
+            {"pos": "QB", "severity": "questionable"},  # Caleb Williams, hamstring strain, week-to-week per HC Ben Johnson
+        ],
+    },
+    "Washington Commanders": {
+        "injuries": [
+            {"pos": "QB", "severity": "out"},  # Jayden Daniels, left elbow dislocation
+        ],
+    },
+    "Philadelphia Eagles": {
+        "injuries": [
+            {"pos": "TE", "severity": "out"},           # Dallas Goedert, right knee
+            {"pos": "RB", "severity": "questionable"},  # Saquon Barkley, left shoulder stinger, day-to-day
+        ],
+    },
+    "Denver Broncos": {
+        "injuries": [
+            {"pos": "RB", "severity": "questionable"},  # J.K. Dobbins, hamstring
+            {"pos": "RB", "severity": "out"},           # RJ Harvey, hamstring strain
+        ],
+    },
+    "Minnesota Vikings": {
+        "injuries": [
+            {"pos": "RB", "severity": "out"},  # Jordan Mason, fractured right thumb (surgical, IR)
+        ],
+    },
+    "Atlanta Falcons": {
+        "injuries": [
+            {"pos": "QB", "severity": "positive_return"},  # Michael Penix Jr., back from 2025 ACL tear, season debut expected
+        ],
+    },
+    "Houston Texans": {
+        "injuries": [
+            {"pos": "WR", "severity": "out"},  # Nico Collins, grade 1 hamstring strain, likely out
+        ],
+    },
+    "Las Vegas Raiders": {
+        "injuries": [
+            {"pos": "TE", "severity": "out"},  # Brock Bowers, meniscus trim (right knee), expected back soon
+        ],
+    },
+    "Dallas Cowboys": {
+        "injuries": [
+            {"pos": "S", "severity": "out"},            # P.J. Locke, foot (non-contact)
+            {"pos": "CB", "severity": "out"},           # Cobie Durant, hamstring
+            {"pos": "ILB", "severity": "questionable"},  # Dee Winters, shoulder
+            {"pos": "ILB", "severity": "questionable"},  # Jaishawn Barham, stinger
         ],
     },
 }
@@ -171,27 +211,27 @@ for team, win_total in NFL_SEASON_WIN_TOTALS.items():
 # log_predictions.py's append-only/no-duplicate logic still governs whether new rows here
 # actually produce new logged picks.
 nfl_week1 = [(r["away"], r["home"], r["date"]) for r in read_csv("nfl_slate.csv")]
-# Real current market lines for the open Week 2 slate (FanDuel/Covers.com moneylines, sourced
-# via WebSearch/WebFetch, 2026-09-14; Ravens game uses the more specific VegasInsider consensus
-# line already tracked in ravens-schedule.json for consistency) -- keyed by (away, home). A game
-# not in this dict just doesn't get a market_odds/value_bet/blended_prob block attached.
+# Real current market lines for the open Week 3 slate (FanDuel Research moneylines, sourced
+# via WebSearch/WebFetch, 2026-09-21; Ravens game uses the more specific FanDuel line already
+# tracked in ravens-schedule.json for consistency) -- keyed by (away, home). A game not in this
+# dict just doesn't get a market_odds/value_bet/blended_prob block attached.
 NFL_MARKET_ODDS = {
-    ("Detroit Lions", "Buffalo Bills"): {"home_ml": "-196", "away_ml": "+164", "book": "FanDuel (2026-09-14)"},
-    ("Carolina Panthers", "Atlanta Falcons"): {"home_ml": "+100", "away_ml": "-118", "book": "FanDuel (2026-09-14)"},
-    ("New Orleans Saints", "Baltimore Ravens"): {"home_ml": "-420", "away_ml": "+330", "spread": "BAL -8.5", "book": "FanDuel (2026-09-17, 1:05pm ET)"},
-    ("Minnesota Vikings", "Chicago Bears"): {"home_ml": "-240", "away_ml": "+198", "book": "FanDuel (2026-09-14)"},
-    ("Cincinnati Bengals", "Houston Texans"): {"home_ml": "-156", "away_ml": "+132", "book": "FanDuel (2026-09-14)"},
-    ("Pittsburgh Steelers", "New England Patriots"): {"home_ml": "-235", "away_ml": "+194", "book": "FanDuel (2026-09-14)"},
-    ("Green Bay Packers", "New York Jets"): {"home_ml": "+176", "away_ml": "-210", "book": "FanDuel (2026-09-14)"},
-    ("Cleveland Browns", "Tampa Bay Buccaneers"): {"home_ml": "-450", "away_ml": "+350", "book": "FanDuel (2026-09-14)"},
-    ("Philadelphia Eagles", "Tennessee Titans"): {"home_ml": "+285", "away_ml": "-355", "book": "FanDuel (2026-09-14)"},
-    ("Jacksonville Jaguars", "Denver Broncos"): {"home_ml": "-142", "away_ml": "+120", "book": "FanDuel (2026-09-14)"},
-    ("Las Vegas Raiders", "Los Angeles Chargers"): {"home_ml": "-360", "away_ml": "+290", "book": "FanDuel (2026-09-14)"},
-    ("Seattle Seahawks", "Arizona Cardinals"): {"home_ml": "+194", "away_ml": "-235", "book": "FanDuel (2026-09-14)"},
-    ("Washington Commanders", "Dallas Cowboys"): {"home_ml": "-190", "away_ml": "+160", "book": "FanDuel (2026-09-14)"},
-    ("Miami Dolphins", "San Francisco 49ers"): {"home_ml": "-950", "away_ml": "+640", "book": "FanDuel (2026-09-14)"},
-    ("Indianapolis Colts", "Kansas City Chiefs"): {"home_ml": "-290", "away_ml": "+235", "book": "FanDuel (2026-09-14)"},
-    ("New York Giants", "Los Angeles Rams"): {"home_ml": "-370", "away_ml": "+295", "book": "FanDuel (2026-09-14)"},
+    ("Atlanta Falcons", "Green Bay Packers"): {"home_ml": "-270", "away_ml": "+220", "book": "FanDuel (2026-09-21)"},
+    ("Los Angeles Chargers", "Buffalo Bills"): {"home_ml": "-360", "away_ml": "+290", "book": "FanDuel (2026-09-21)"},
+    ("Carolina Panthers", "Cleveland Browns"): {"home_ml": "+124", "away_ml": "-146", "book": "FanDuel (2026-09-21)"},
+    ("New York Jets", "Detroit Lions"): {"home_ml": "-335", "away_ml": "+270", "book": "FanDuel (2026-09-21)"},
+    ("Houston Texans", "Indianapolis Colts"): {"home_ml": "+128", "away_ml": "-152", "book": "FanDuel (2026-09-21)"},
+    ("New England Patriots", "Jacksonville Jaguars"): {"home_ml": "-156", "away_ml": "+132", "book": "FanDuel (2026-09-21)"},
+    ("Kansas City Chiefs", "Miami Dolphins"): {"home_ml": "+540", "away_ml": "-770", "book": "FanDuel (2026-09-21)"},
+    ("Tennessee Titans", "New York Giants"): {"home_ml": "-194", "away_ml": "+162", "book": "FanDuel (2026-09-21)"},
+    ("Cincinnati Bengals", "Pittsburgh Steelers"): {"home_ml": "+144", "away_ml": "-172", "book": "FanDuel (2026-09-21)"},
+    ("Seattle Seahawks", "Washington Commanders"): {"home_ml": "+245", "away_ml": "-300", "book": "FanDuel (2026-09-21)"},
+    ("Arizona Cardinals", "San Francisco 49ers"): {"home_ml": "-460", "away_ml": "+360", "book": "FanDuel (2026-09-21)"},
+    ("Minnesota Vikings", "Tampa Bay Buccaneers"): {"home_ml": "+102", "away_ml": "-120", "book": "FanDuel (2026-09-21)"},
+    ("Las Vegas Raiders", "New Orleans Saints"): {"home_ml": "-168", "away_ml": "+142", "book": "FanDuel (2026-09-21)"},
+    ("Baltimore Ravens", "Dallas Cowboys"): {"home_ml": "+130", "away_ml": "-154", "book": "FanDuel (2026-09-21)"},
+    ("Los Angeles Rams", "Denver Broncos"): {"home_ml": "+118", "away_ml": "-138", "book": "FanDuel (2026-09-21)"},
+    ("Philadelphia Eagles", "Chicago Bears"): {"home_ml": "+146", "away_ml": "-174", "book": "FanDuel (2026-09-21)"},
 }
 
 nfl_games = []
@@ -211,7 +251,7 @@ for a, h, d in nfl_week1:
     nfl_games.append(g)
 results["leagues"]["nfl"] = {
     "label": "NFL",
-    "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Week 1 complete (all graded), Week 2 slate below (Sept 17-21)",
+    "status": "v2 ratings (win-total baseline + injury/turnover/regime-change adjustments) — Weeks 1-2 complete (all graded), Week 3 slate below (Sept 24-28, incl. Ravens-Cowboys in Rio de Janeiro)",
     "model_version": 2,
     "ratings": nfl_ratings, "games": nfl_games,
 }
@@ -280,7 +320,7 @@ pll_fixtures = [(r["away"], r["home"], r["date"], r["note"]) for r in read_csv("
 pll_games = [build_game("pll", a, h, d, pll_ratings.get(h, 0), pll_ratings.get(a, 0), note) for a, h, d, note in pll_fixtures]
 results["leagues"]["pll"] = {
     "label": "PLL Lacrosse",
-    "status": "championship (Sept 20, neutral site — Sports Illustrated Stadium, Harrison NJ) — no home advantage applied",
+    "status": "2026 season concluded — Philadelphia Waterdogs defeated Denver Outlaws 14-4 in the Sept 20 championship (Sports Illustrated Stadium, Harrison NJ) for their 2nd PLL title. No further games until the 2027 season.",
     "ratings": pll_ratings, "games": pll_games,
 }
 
