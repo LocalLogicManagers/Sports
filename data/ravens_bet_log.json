@@ -11,8 +11,8 @@
     "side_prob": 0.422,
     "tone": "warn",
     "headline": "Model and market disagree too much to trust here",
-    "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 66%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.",
-    "logged_at": "2026-08-29",
+    "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 64%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.",
+    "logged_at": "2026-09-22",
     "graded": true,
     "actual_winner": "Baltimore Ravens",
     "side_won": null
@@ -29,11 +29,11 @@
     "side_prob": 0.665,
     "tone": "ravens",
     "headline": "Model likes the Ravens here (moderate favorite)",
-    "reasoning": "The model gives the Ravens a 66% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
-    "graded": false,
-    "actual_winner": null,
-    "side_won": null
+    "reasoning": "The model gives the Ravens a 66% win probability (Moderate tier) in this matchup \u2014 and model leans slightly more toward the opponent than the market does..",
+    "logged_at": "2026-09-22",
+    "graded": true,
+    "actual_winner": "New Orleans Saints",
+    "side_won": false
   },
   {
     "week": 3,
@@ -47,8 +47,8 @@
     "side_prob": 0.58,
     "tone": "ravens",
     "headline": "Model likes the Ravens here (lean favorite)",
-    "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup \u2014 and model leans slightly more toward the opponent than the market does..",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -66,7 +66,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (moderate favorite)",
     "reasoning": "The model gives the Ravens a 78% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -84,7 +84,7 @@
     "tone": "off",
     "headline": "Too close to call",
     "reasoning": "The model has this game at 55% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -102,7 +102,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (lean favorite)",
     "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -120,7 +120,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (moderate favorite)",
     "reasoning": "The model gives the Ravens a 67% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -138,7 +138,7 @@
     "tone": "away",
     "headline": "Model favors the opponent here (moderate favorite)",
     "reasoning": "The model gives the Ravens only a 35% win probability (Moderate tier against them) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -156,7 +156,7 @@
     "tone": "away",
     "headline": "Model favors the opponent here (lean favorite)",
     "reasoning": "The model gives the Ravens only a 41% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -174,7 +174,7 @@
     "tone": "off",
     "headline": "Too close to call",
     "reasoning": "The model has this game at 54% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -192,7 +192,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (lean favorite)",
     "reasoning": "The model gives the Ravens a 57% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -210,7 +210,7 @@
     "tone": "away",
     "headline": "Model favors the opponent here (lean favorite)",
     "reasoning": "The model gives the Ravens only a 36% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -228,7 +228,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (lean favorite)",
     "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -246,7 +246,7 @@
     "tone": "off",
     "headline": "Too close to call",
     "reasoning": "The model has this game at 48% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -264,7 +264,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (moderate favorite)",
     "reasoning": "The model gives the Ravens a 69% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -282,7 +282,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (lean favorite)",
     "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
@@ -300,7 +300,7 @@
     "tone": "ravens",
     "headline": "Model likes the Ravens here (lean favorite)",
     "reasoning": "The model gives the Ravens a 56% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
