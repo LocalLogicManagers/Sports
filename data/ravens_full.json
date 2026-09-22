@@ -1,11 +1,11 @@
 {
   "team": "Baltimore Ravens",
-  "as_of": "2026-09-20",
+  "as_of": "2026-09-22",
   "record": {
     "w": 1,
-    "l": 0,
+    "l": 1,
     "t": 0,
-    "note": "Opened the Jesse Minter era 1-0 with a 41-23 win at Indianapolis in Week 1 (2026-09-13) \u2014 Lamar Jackson threw for 324 total yards/2 TDs; next up: home vs New Orleans Saints, Week 2 (2026-09-20)"
+    "note": "Fell to 1-1 under HC Jesse Minter after a 24-17 home loss to the New Orleans Saints in Week 2 (2026-09-20) \u2014 blew a 14-3 lead; Minter cited third-down defense breakdowns and mental/operational penalties as the difference. Next up: Week 3 at Dallas Cowboys, a neutral-site game in Rio de Janeiro, Brazil (2026-09-27)."
   },
   "coaching_change": {
     "headline": "New head coach for 2026: Jesse Minter (4th HC in franchise history), replacing John Harbaugh after 18 seasons.",
@@ -17,7 +17,8 @@
       "Updated 2026-09-15: Minter picked up his first career win as a head coach in the Week 1 blowout at Indianapolis (41-23), notably played near his hometown of Yorktown, Indiana \u2014 greeted postgame by his family, including his father Rick, also on the Ravens coaching staff.",
       "Updated 2026-09-17: Thursday practice report ahead of Week 2 vs. New Orleans (9/20) \u2014 WR Zay Flowers (hamstring), LT Ronnie Stanley (toe), and LG John Simpson (groin) did not practice; OLB Trey Hendrickson (hand) and CB T.J. Tampa (knee) limited. Roster moves: K Jake Moody released after Tyler Loop's strong Week 1 kicking; WR Chris Moore re-signed to the 53-man roster.",
       "Updated 2026-09-18: Friday's final Week 2 injury report brought several downgrades \u2014 DT Nnamdi Madubuike (neck) and ILB Teddye Buchanan (knee) both upgraded from Limited to OUT; CB T.J. Tampa (knee) did not practice and was ruled OUT. WR Devontez Walker (groin) and S Keondre Jackson (shoulder) were upgraded to full practice, trending toward playing. OLB Trey Hendrickson (finger) and G John Simpson (groin) remain Questionable (Limited again Friday).",
-      "Updated 2026-09-19: WR Zay Flowers (hamstring), Doubtful after Friday's Limited practice, was downgraded further to OUT for Week 2 as a caution \u2014 team and reports (Ian Rapoport) describe it as not serious. Ravens also elevated OT Gerad Christian-Lichtenhan from the practice squad; reporters (ESPN's Jamison Hensley, The Athletic's Jeff Zrebiec) read this as a bad sign for Ronnie Stanley's toe injury \u2014 if Stanley sits, rookie Carson Vinson would start at left tackle, a tough early test against Saints EDGE Chase Young."
+      "Updated 2026-09-19: WR Zay Flowers (hamstring), Doubtful after Friday's Limited practice, was downgraded further to OUT for Week 2 as a caution \u2014 team and reports (Ian Rapoport) describe it as not serious. Ravens also elevated OT Gerad Christian-Lichtenhan from the practice squad; reporters (ESPN's Jamison Hensley, The Athletic's Jeff Zrebiec) read this as a bad sign for Ronnie Stanley's toe injury \u2014 if Stanley sits, rookie Carson Vinson would start at left tackle, a tough early test against Saints EDGE Chase Young.",
+      "Updated 2026-09-21: Minter's Week 2 postgame/weekly press conference (his first loss as a head coach) \u2014 defended the failed 3rd-and-1 call, called penalties a \"major point of emphasis,\" and cited third-down defensive breakdowns (coverage leverage, unabated pressure, missed tackles on checkdowns). Said the team has \"a good shot with a lot of guys this week\" (WR Zay Flowers, OT Ronnie Stanley, DT Nnamdi Madubuike all trending toward playing Week 3; final call expected Wednesday 9/23). ILB Trenton Simpson praised as \"playing like one of our best players\"; WR Rashod Bateman stepped up with Flowers out; CB Chidobe Awuzie flagged as needing more snaps. WR Ja'Kobi Lane placed on IR (wrist surgery) \u2014 out for the season. Attention now turns to the Week 3 trip to Rio de Janeiro to face Dallas."
     ]
   },
   "roster_changes": {
@@ -590,18 +591,18 @@
       "neutral": true,
       "site": "Rio de Janeiro, Brazil",
       "market_odds": {
-        "ravens": "-176",
-        "opponent": "+148",
+        "ravens": "-154",
+        "opponent": "+130",
         "spread": "Ravens -3",
         "total": 52.5,
-        "book": "FanDuel via Oddschecker consensus (2026-09-20)"
+        "book": "FanDuel (2026-09-21)"
       },
       "ravens_win_prob": 0.58,
       "model_odds": "-151",
       "value_bet": {
-        "market_implied_prob": 0.638,
+        "market_implied_prob": 0.606,
         "model_prob": 0.58,
-        "edge_pts": -0.058,
+        "edge_pts": -0.026,
         "read": "Model leans slightly more toward the opponent than the market does.",
         "large_disagreement": false
       }
@@ -754,8 +755,8 @@
       "side_prob": 0.422,
       "tone": "warn",
       "headline": "Model and market disagree too much to trust here",
-      "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 66%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.",
-      "logged_at": "2026-08-29",
+      "reasoning": "Our model and the actual sportsbook line are far enough apart (model 42% vs. market-implied 64%) that the gap is more likely a blind spot in our simple model than a real edge over Vegas. Sitting this one out is the honest call.",
+      "logged_at": "2026-09-22",
       "graded": true,
       "actual_winner": "Baltimore Ravens",
       "side_won": null
@@ -772,11 +773,11 @@
       "side_prob": 0.665,
       "tone": "ravens",
       "headline": "Model likes the Ravens here (moderate favorite)",
-      "reasoning": "The model gives the Ravens a 66% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
-      "graded": false,
-      "actual_winner": null,
-      "side_won": null
+      "reasoning": "The model gives the Ravens a 66% win probability (Moderate tier) in this matchup \u2014 and model leans slightly more toward the opponent than the market does..",
+      "logged_at": "2026-09-22",
+      "graded": true,
+      "actual_winner": "New Orleans Saints",
+      "side_won": false
     },
     {
       "week": 3,
@@ -790,8 +791,8 @@
       "side_prob": 0.58,
       "tone": "ravens",
       "headline": "Model likes the Ravens here (lean favorite)",
-      "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup \u2014 and model leans slightly more toward the opponent than the market does..",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -809,7 +810,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (moderate favorite)",
       "reasoning": "The model gives the Ravens a 78% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -827,7 +828,7 @@
       "tone": "off",
       "headline": "Too close to call",
       "reasoning": "The model has this game at 55% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -845,7 +846,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (lean favorite)",
       "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -863,7 +864,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (moderate favorite)",
       "reasoning": "The model gives the Ravens a 67% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -881,7 +882,7 @@
       "tone": "away",
       "headline": "Model favors the opponent here (moderate favorite)",
       "reasoning": "The model gives the Ravens only a 35% win probability (Moderate tier against them) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -899,7 +900,7 @@
       "tone": "away",
       "headline": "Model favors the opponent here (lean favorite)",
       "reasoning": "The model gives the Ravens only a 41% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -917,7 +918,7 @@
       "tone": "off",
       "headline": "Too close to call",
       "reasoning": "The model has this game at 54% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -935,7 +936,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (lean favorite)",
       "reasoning": "The model gives the Ravens a 57% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -953,7 +954,7 @@
       "tone": "away",
       "headline": "Model favors the opponent here (lean favorite)",
       "reasoning": "The model gives the Ravens only a 36% win probability (Lean tier against them) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -971,7 +972,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (lean favorite)",
       "reasoning": "The model gives the Ravens a 61% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -989,7 +990,7 @@
       "tone": "off",
       "headline": "Too close to call",
       "reasoning": "The model has this game at 48% for the Ravens \u2014 close enough to a coin flip that there's no real edge either way.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -1007,7 +1008,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (moderate favorite)",
       "reasoning": "The model gives the Ravens a 69% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -1025,7 +1026,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (lean favorite)",
       "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -1043,7 +1044,7 @@
       "tone": "ravens",
       "headline": "Model likes the Ravens here (lean favorite)",
       "reasoning": "The model gives the Ravens a 56% win probability (Lean tier) in this matchup, though we don't have a real market line to compare against yet.",
-      "logged_at": "2026-08-29",
+      "logged_at": "2026-09-22",
       "graded": false,
       "actual_winner": null,
       "side_won": null
@@ -1051,31 +1052,31 @@
   ],
   "bet_track_record": {
     "total_calls": 17,
-    "graded": 1,
-    "pending": 16,
+    "graded": 2,
+    "pending": 15,
     "pass_calls": 4,
-    "actionable_graded": 0,
+    "actionable_graded": 1,
     "wins": 0,
-    "losses": 0,
-    "hit_rate": null,
-    "flat_50_staked": 0.0,
+    "losses": 1,
+    "hit_rate": 0.0,
+    "flat_50_staked": 50.0,
     "flat_50_returned": 0.0,
-    "flat_50_profit": 0.0
+    "flat_50_profit": -50.0
   },
   "this_week_call": {
-    "week": 2,
-    "opponent": "New Orleans Saints",
-    "date": "2026-09-20",
-    "location": "home",
-    "ravens_win_prob": 0.665,
-    "model_odds": "-217",
-    "verdict": "BET RAVENS",
+    "week": 3,
+    "opponent": "Dallas Cowboys",
+    "date": "2026-09-27",
+    "location": "away",
+    "ravens_win_prob": 0.58,
+    "model_odds": "-151",
+    "verdict": "LEAN RAVENS",
     "side": "ravens",
-    "side_prob": 0.665,
+    "side_prob": 0.58,
     "tone": "ravens",
-    "headline": "Model likes the Ravens here (moderate favorite)",
-    "reasoning": "The model gives the Ravens a 66% win probability (Moderate tier) in this matchup, though we don't have a real market line to compare against yet.",
-    "logged_at": "2026-08-29",
+    "headline": "Model likes the Ravens here (lean favorite)",
+    "reasoning": "The model gives the Ravens a 58% win probability (Lean tier) in this matchup \u2014 and model leans slightly more toward the opponent than the market does..",
+    "logged_at": "2026-09-22",
     "graded": false,
     "actual_winner": null,
     "side_won": null
